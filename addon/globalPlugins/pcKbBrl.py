@@ -43,15 +43,37 @@ VKCODES_TO_DOTS = {
 	32: " ", # space,
 }
 
+VKCODES_TO_DOTS_ONE_HAND = {
+	70: DOT1, # f
+	68: DOT2, # d
+	83: DOT3, # s
+	74: DOT1, # j
+	75: DOT2, # k
+	76: DOT3, # l
+	65: DOT7, # a
+	186: DOT8, # ;
+	82: DOT4, # r
+	69: DOT5, # e
+	87: DOT6, # w
+	85: DOT4, # u
+	73: DOT5, # i
+	79: DOT6, # o
+	81: DOT7, # q
+	80: DOT8, # p
+	32: " ", # space,
+}
+
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	scriptCategory = globalCommands.SCRCAT_BRAILLE
 
 	def __init__(self):
 		super(GlobalPlugin, self).__init__()
 		self.isEnabled = False
+		self.oneHandMode = False
 
 	def terminate(self):
 		self.disable()
+		self.oneHandMode = False
 
 	def enable(self):
 		if self.isEnabled:
@@ -76,13 +98,19 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.isEnabled = False
 
 	def _keyDown(self, vkCode, scanCode, extended, injected):
-		dot = VKCODES_TO_DOTS.get(vkCode)
-		if dot is None:
+		if not self.oneHandMode:
+			dot = VKCODES_TO_DOTS.get(vkCode)
+		else:
+			if vkCode in (84, 89): # t, y
+				self._gesture = None
+				return False
+			dot = VKCODES_TO_DOTS_ONE_HAND.get(vkCode)
+		if dot is None and not (self.oneHandMode and vkCode in (71, 72)): # g, h
 			return self._oldKeyDown(vkCode, scanCode, extended, injected)
 		self._trappedKeys.add(vkCode)
 		if not self._gesture:
 			self._gesture = brailleInput.BrailleInputGesture()
-		if dot is " ":
+		if dot is " ": 
 			self._gesture.space = True
 		else:
 			self._gesture.dots |= dot
@@ -91,7 +119,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def _keyUp(self, vkCode, scanCode, extended, injected):
 		if vkCode not in self._trappedKeys:
 			return self._oldKeyUp(vkCode, scanCode, extended, injected)
-		self._trappedKeys.discard(vkCode)
+		if self.oneHandMode and vkCode in (71, 72): # g, h
+			self._trappedKeys.clear()
+		if not self.oneHandMode or self._gesture.space:
+			self._trappedKeys.discard(vkCode)
 		if not self._trappedKeys:
 			try:
 				inputCore.manager.executeGesture(self._gesture)
@@ -112,6 +143,23 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	# Translators: Describes a command.
 	script_toggleInput.__doc__ = _("Toggles braille input from the PC keyboard.")
 
+	def script_toggleOneHandMode(self, gesture):
+		if not self.isEnabled:
+			return
+		if self.oneHandMode:
+			self._trappedKeys.clear()
+			self._gesture = None
+			self.oneHandMode = False
+			# Translators: Reported when One Hand Mode is disabled.
+			ui.message(_("One Hand Mode disabled"))
+		else:
+			self.oneHandMode = True
+			# Translators: Reported when One Hand Mode is enabled.
+			ui.message(_("One Hand Mode enabled"))
+	# Translators: Describes a command.
+	script_toggleOneHandMode.__doc__ = _("Toggles One Hand Mode")
+
 	__gestures = {
 		"kb:NVDA+z": "toggleInput",
+		"kb:NVDA+x": "toggleOneHandMode",
 	}
