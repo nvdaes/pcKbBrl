@@ -6,6 +6,7 @@
 
 import globalPluginHandler
 import winInputHook
+import winUser
 import ui
 import inputCore
 import brailleInput
@@ -63,6 +64,10 @@ VKCODES_TO_DOTS_ONE_HAND = {
 	32: " ", # space,
 }
 
+VKCODES_SEMICOLON = {
+	3082: 192, # International Spanish
+}
+
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	scriptCategory = globalCommands.SCRCAT_BRAILLE
 
@@ -75,11 +80,25 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.disable()
 		self.oneHandMode = False
 
+	def getKeyboardLanguage(self):
+		# Code borrowed from sayCurrentKeyboardLanguage add-on, by Abdel:
+		# https://github.com/abdel792/sayCurrentKeyboardLanguage
+		# Getting the handle of the foreground window.
+		curWindow = winUser.getForegroundWindow()
+		# Getting the threadID.
+		threadID = winUser.getWindowThreadProcessID(curWindow)[1]
+		# Getting the keyboard layout iD.
+		klID = winUser.getKeyboardLayout(threadID)
+		# Extract language ID from klID.
+		lID = klID & (2**16 - 1)
+		return lID
+
 	def enable(self):
 		if self.isEnabled:
 			return
 		self._trappedKeys = set()
 		self._gesture = None
+		self._keyboardLanguage = self.getKeyboardLanguage()
 		# Monkey patch keyboard handling callbacks.
 		# This is pretty evil, but we need low level keyboard handling.
 		self._oldKeyDown = winInputHook.keyDownCallback
@@ -95,9 +114,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		winInputHook.keyUpCallback = self._oldKeyUp
 		self._gesture = None
 		self._trappedKeys = None
+		self._keyboardLanguage = None
 		self.isEnabled = False
 
 	def _keyDown(self, vkCode, scanCode, extended, injected):
+		if vkCode == VKCODES_SEMICOLON.get(self._keyboardLanguage):
+			vkCode = 186 # ;
 		if not self.oneHandMode:
 			dot = VKCODES_TO_DOTS.get(vkCode)
 		else:
@@ -117,6 +139,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		return False
 
 	def _keyUp(self, vkCode, scanCode, extended, injected):
+		if vkCode == VKCODES_SEMICOLON.get(self._keyboardLanguage):
+			vkCode = 186 # ;
 		if vkCode not in self._trappedKeys:
 			return self._oldKeyUp(vkCode, scanCode, extended, injected)
 		if self.oneHandMode and vkCode in (71, 72): # g, h
