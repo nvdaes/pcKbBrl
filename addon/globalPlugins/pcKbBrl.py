@@ -126,6 +126,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self._trappedKeys = None
 		self._keyboardLanguage = None
 		self._oneHandMode = None
+		self._shouldCopySemicolonKeyInfo = False
 		self.isEnabled = False
 
 	def _keyDown(self, vkCode, scanCode, extended, injected):
@@ -139,6 +140,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				return False
 			dot = VKCODES_TO_DOTS_ONE_HAND.get(vkCode)
 		if dot is None and not (self._oneHandMode and vkCode in (71, 72)): # g, h
+			if self._shouldCopySemicolonKeyInfo and api.copyToClip(
+				"Keyboard language: %d; vkCode: %s" %
+					(self._keyboardLanguage,	vkCode)):
+				# Translators: Reported when info about dot 8 is copied.
+				ui.message(_("Info about dot 8 copied to clipboard."))
 			return self._oldKeyDown(vkCode, scanCode, extended, injected)
 		self._trappedKeys.add(vkCode)
 		if not self._gesture:
@@ -178,21 +184,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	# Translators: Describes a command.
 	script_toggleInput.__doc__ = _("Toggles braille input from the PC keyboard.")
 
-	def script_toggleOneHandMode(self, gesture):
-		if not self.isEnabled:
-			return
-		if self.oneHandMode:
-			self._trappedKeys.clear()
-			self._gesture = None
-			self.oneHandMode = False
-			# Translators: Reported when One Hand Mode is disabled.
-			ui.message(_("One Hand Mode disabled"))
-		else:
-			self.oneHandMode = True
-			# Translators: Reported when One Hand Mode is enabled.
-			ui.message(_("One Hand Mode enabled"))
+	def script_activateCopySemicolonKeyInfo(self, gesture):
+		self.enable()
+		self._shouldCopySemicolonKeyInfo = True
+		# Translators: Reported when should copy info for semicolon key.
+		ui.message(_("Press the key at right to l to copy info for supporting dot 8 in your keyboard language."))
 	# Translators: Describes a command.
-	script_toggleOneHandMode.__doc__ = _("Toggles One Hand Mode")
+	script_activateCopySemicolonKeyInfo.__doc__ = _("Allows to copy info about dot 8.")
 
 def onSettings(self, evt):
 		gui.mainFrame._popupSettingsDialog(NVDASettingsDialog, AddonSettingsPanel)
