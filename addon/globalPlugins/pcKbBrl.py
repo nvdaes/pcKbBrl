@@ -7,6 +7,8 @@
 import globalPluginHandler
 import winInputHook
 import winUser
+import api
+import config
 import ui
 import inputCore
 import brailleInput
@@ -71,6 +73,7 @@ VKCODES_TO_DOTS_ONE_HAND = {
 
 VKCODES_SEMICOLON = {
 	3082: 192, # International Spanish
+	2058: 192, # Latin Spanish
 }
 
 confspec = {
@@ -108,7 +111,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self._trappedKeys = set()
 		self._gesture = None
 		self._keyboardLanguage = self.getKeyboardLanguage()
-		self._oneHandMode = config.conf["pcKbBrl"]["oneHandMode"]:
+		self._oneHandMode = config.conf["pcKbBrl"]["oneHandMode"]
+		self._shouldCopySemicolonKeyInfo = False
 		# Monkey patch keyboard handling callbacks.
 		# This is pretty evil, but we need low level keyboard handling.
 		self._oldKeyDown = winInputHook.keyDownCallback
@@ -141,10 +145,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			dot = VKCODES_TO_DOTS_ONE_HAND.get(vkCode)
 		if dot is None and not (self._oneHandMode and vkCode in (71, 72)): # g, h
 			if self._shouldCopySemicolonKeyInfo and api.copyToClip(
-				"Keyboard language: %d; vkCode: %s" %
+				u"Keyboard language: %d; vkCode: %s" %
 					(self._keyboardLanguage,	vkCode)):
 				# Translators: Reported when info about dot 8 is copied.
 				ui.message(_("Info about dot 8 copied to clipboard."))
+				self.disable()
 			return self._oldKeyDown(vkCode, scanCode, extended, injected)
 		self._trappedKeys.add(vkCode)
 		if not self._gesture:
@@ -192,7 +197,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	# Translators: Describes a command.
 	script_activateCopySemicolonKeyInfo.__doc__ = _("Allows to copy info about dot 8.")
 
-def onSettings(self, evt):
+	def onSettings(self, evt):
 		gui.mainFrame._popupSettingsDialog(NVDASettingsDialog, AddonSettingsPanel)
 
 	def script_settings(self, gesture):
@@ -203,6 +208,7 @@ def onSettings(self, evt):
 	
 	__gestures = {
 		"kb:NVDA+z": "toggleInput",
+		"kb:NVDA+X": "activateCopySemicolonKeyInfo",
 	}
 
 class AddonSettingsPanel(SettingsPanel):
