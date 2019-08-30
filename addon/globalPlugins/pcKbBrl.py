@@ -11,9 +11,14 @@ import ui
 import inputCore
 import brailleInput
 import globalCommands
+import wx
+import gui
+from gui import SettingsPanel, NVDASettingsDialog, guiHelper
 import addonHandler
 
 addonHandler.initTranslation()
+
+ADDON_SUMMARY = addonHandler.getCodeAddon().manifest["summary"]
 
 DOT1 = 1 << 0
 DOT2 = 1 << 1
@@ -68,17 +73,21 @@ VKCODES_SEMICOLON = {
 	3082: 192, # International Spanish
 }
 
+confspec = {
+	"oneHandMode": "boolean(default=False)",
+}
+
+config.conf.spec["pcKbBrl"] = confspec
+
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	scriptCategory = globalCommands.SCRCAT_BRAILLE
 
 	def __init__(self):
 		super(GlobalPlugin, self).__init__()
 		self.isEnabled = False
-		self.oneHandMode = False
 
 	def terminate(self):
 		self.disable()
-		self.oneHandMode = False
 
 	def getKeyboardLanguage(self):
 		# Code borrowed from sayCurrentKeyboardLanguage add-on, by Abdel:
@@ -99,6 +108,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self._trappedKeys = set()
 		self._gesture = None
 		self._keyboardLanguage = self.getKeyboardLanguage()
+		self._oneHandMode = config.conf["pcKbBrl"]["oneHandMode"]:
 		# Monkey patch keyboard handling callbacks.
 		# This is pretty evil, but we need low level keyboard handling.
 		self._oldKeyDown = winInputHook.keyDownCallback
@@ -115,19 +125,20 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self._gesture = None
 		self._trappedKeys = None
 		self._keyboardLanguage = None
+		self._oneHandMode = None
 		self.isEnabled = False
 
 	def _keyDown(self, vkCode, scanCode, extended, injected):
 		if vkCode == VKCODES_SEMICOLON.get(self._keyboardLanguage):
 			vkCode = 186 # ;
-		if not self.oneHandMode:
+		if not self._oneHandMode:
 			dot = VKCODES_TO_DOTS.get(vkCode)
 		else:
 			if vkCode in (84, 89): # t, y
 				self._gesture = None
 				return False
 			dot = VKCODES_TO_DOTS_ONE_HAND.get(vkCode)
-		if dot is None and not (self.oneHandMode and vkCode in (71, 72)): # g, h
+		if dot is None and not (self._oneHandMode and vkCode in (71, 72)): # g, h
 			return self._oldKeyDown(vkCode, scanCode, extended, injected)
 		self._trappedKeys.add(vkCode)
 		if not self._gesture:
@@ -143,9 +154,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			vkCode = 186 # ;
 		if vkCode not in self._trappedKeys:
 			return self._oldKeyUp(vkCode, scanCode, extended, injected)
-		if self.oneHandMode and vkCode in (71, 72): # g, h
+		if self._oneHandMode and vkCode in (71, 72): # g, h
 			self._trappedKeys.clear()
-		if not self.oneHandMode or self._gesture.space:
+		if not self._oneHandMode or self._gesture.space:
 			self._trappedKeys.discard(vkCode)
 		if not self._trappedKeys:
 			try:
@@ -183,7 +194,31 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	# Translators: Describes a command.
 	script_toggleOneHandMode.__doc__ = _("Toggles One Hand Mode")
 
+def onSettings(self, evt):
+		gui.mainFrame._popupSettingsDialog(NVDASettingsDialog, AddonSettingsPanel)
+
+	def script_settings(self, gesture):
+		wx.CallAfter(self.onSettings, None)
+	script_settings.category = globalCommands.SCRCAT_CONFIG
+	# Translators: Describes a command.
+	script_settings.__doc__ = _("Shows the %s settings." % ADDON_SUMMARY)
+	
 	__gestures = {
 		"kb:NVDA+z": "toggleInput",
-		"kb:NVDA+x": "toggleOneHandMode",
 	}
+
+class AddonSettingsPanel(SettingsPanel):
+
+	title = ADDON_SUMMARY
+
+	def makeSettings(self, settingsSizer):
+		sHelper = guiHelper.BoxSizerHelper(self, sizer=settingsSizer)
+		# Translators: label of a dialog.
+		self.oneHandModeCheckBox = sHelper.addItem(wx.CheckBox(self, label= _("Type using one hand")))
+		self.oneHandModeCheckBox.SetValue(config.conf["pcKbBrl"]["oneHandMode"])
+
+	def postInit(self):
+		self.oneHandModeCheckBox.SetFocus()
+
+	def onSave(self):
+		config.conf["pcKbBrl"]["oneHandMode"] = self.oneHandModeCheckBox.GetValue()
