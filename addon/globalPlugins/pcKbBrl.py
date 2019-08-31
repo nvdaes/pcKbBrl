@@ -18,10 +18,10 @@ import gui
 from gui import SettingsPanel, NVDASettingsDialog, guiHelper
 import addonHandler
 
-addonHandler.initTranslation()
+#addonHandler.initTranslation()
 
-ADDON_SUMMARY = addonHandler.getCodeAddon().manifest["summary"]
-
+#ADDON_SUMMARY = addonHandler.getCodeAddon().manifest["summary"]
+ADDON_SUMMARY = "pcKbBrl"
 DOT1 = 1 << 0
 DOT2 = 1 << 1
 DOT3 = 1 << 2
@@ -88,9 +88,14 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def __init__(self):
 		super(GlobalPlugin, self).__init__()
 		self.isEnabled = False
+		NVDASettingsDialog.categoryClasses.append(AddonSettingsPanel)
+
+	def handleConfigProfileSwitch(self):
+		self._oneHandMode = config.conf["pcKbBrl"]["oneHandMode"]
 
 	def terminate(self):
 		self.disable()
+		NVDASettingsDialog.categoryClasses.remove(AddonSettingsPanel)
 
 	def getKeyboardLanguage(self):
 		# Code borrowed from sayCurrentKeyboardLanguage add-on, by Abdel:
@@ -119,6 +124,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		winInputHook.keyDownCallback = self._keyDown
 		self._oldKeyUp = winInputHook.keyUpCallback
 		winInputHook.keyUpCallback = self._keyUp
+		config.post_configProfileSwitch.register(self.handleConfigProfileSwitch)
 		self.isEnabled = True
 
 	def disable(self):
@@ -131,6 +137,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self._keyboardLanguage = None
 		self._oneHandMode = None
 		self._shouldCopySemicolonKeyInfo = False
+		config.post_configProfileSwitch.unregister(self.handleConfigProfileSwitch)
 		self.isEnabled = False
 
 	def _keyDown(self, vkCode, scanCode, extended, injected):
@@ -154,10 +161,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self._trappedKeys.add(vkCode)
 		if not self._gesture:
 			self._gesture = brailleInput.BrailleInputGesture()
-		if dot is " ": 
-			self._gesture.space = True
-		else:
-			self._gesture.dots |= dot
+		if dot is not None:
+			if dot is " ": 
+				self._gesture.space = True
+			else:
+				self._gesture.dots |= dot
 		return False
 
 	def _keyUp(self, vkCode, scanCode, extended, injected):
