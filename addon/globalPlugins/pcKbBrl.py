@@ -154,8 +154,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			if self._shouldCopySemicolonKeyInfo and api.copyToClip(
 				u"Keyboard language: %d; vkCode: %s" %
 					(self._keyboardLanguage,	vkCode)):
-				# Translators: Reported when info about dot 8 is copied.
-				ui.message(_("Info about dot 8 copied to clipboard."))
 				self.disable()
 			return self._oldKeyDown(vkCode, scanCode, extended, injected)
 		self._trappedKeys.add(vkCode)
