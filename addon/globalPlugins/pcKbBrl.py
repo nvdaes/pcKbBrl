@@ -1,27 +1,30 @@
+# -*- coding: UTF-8 -*-
+
 """NVDA PC Keyboard Braille plugin
 @author: James Teh <jamie@nvaccess.org>
-@copyright: 2012-2014 NV Access Limited
+@copyright: 2012-2019 NV Access Limited, Noelia Ruiz Martínez
 @license: GNU General Public License version 2.0
 """
 
 import globalPluginHandler
 import winInputHook
 import winUser
-import api
 import config
 import ui
+import speech
 import inputCore
 import brailleInput
 import globalCommands
 import wx
 import gui
 from gui import SettingsPanel, NVDASettingsDialog, guiHelper
+from scriptHandler import script
 import addonHandler
 
-#addonHandler.initTranslation()
+addonHandler.initTranslation()
 
-#ADDON_SUMMARY = addonHandler.getCodeAddon().manifest["summary"]
-ADDON_SUMMARY = "pcKbBrl"
+ADDON_SUMMARY = addonHandler.getCodeAddon().manifest["summary"]
+
 DOT1 = 1 << 0
 DOT2 = 1 << 1
 DOT3 = 1 << 2
@@ -59,21 +62,43 @@ VKCODES_TO_DOTS_ONE_HAND = {
 	75: DOT2, # k
 	76: DOT3, # l
 	65: DOT7, # a
-	186: DOT8, # ;
+	186: DOT7, # ;
 	82: DOT4, # r
 	69: DOT5, # e
 	87: DOT6, # w
 	85: DOT4, # u
 	73: DOT5, # i
 	79: DOT6, # o
-	81: DOT7, # q
+	81: DOT8, # q
 	80: DOT8, # p
 	32: " ", # space,
 }
 
-VKCODES_SEMICOLON = {
-	3082: 192, # International Spanish
-	2058: 192, # Latin Spanish
+VKCODES = {
+	1031: { # de 
+		89: None, # y (original key)
+		90: 89, # y
+		192: 186, # ;
+	},
+	3082: { # es
+		192: 186, # ;
+	},
+	2058: { # es_MX
+		192: 186, # ;
+	},
+	1036: { # fr
+		65: 81, # q
+		77: 186, # ;
+		81: 65, # a
+		87: None, # w (original key)
+		90: 87, # w
+	},
+	1040: { # it
+		192: 186, # ;
+	},
+	2070: { # pt_PT
+		192: 186, # ;
+	},
 }
 
 confspec = {
@@ -117,7 +142,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self._gesture = None
 		self._keyboardLanguage = self.getKeyboardLanguage()
 		self._oneHandMode = config.conf["pcKbBrl"]["oneHandMode"]
-		self._shouldCopySemicolonKeyInfo = False
 		# Monkey patch keyboard handling callbacks.
 		# This is pretty evil, but we need low level keyboard handling.
 		self._oldKeyDown = winInputHook.keyDownCallback
@@ -136,13 +160,14 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self._trappedKeys = None
 		self._keyboardLanguage = None
 		self._oneHandMode = None
-		self._shouldCopySemicolonKeyInfo = False
 		config.post_configProfileSwitch.unregister(self.handleConfigProfileSwitch)
 		self.isEnabled = False
 
 	def _keyDown(self, vkCode, scanCode, extended, injected):
-		if vkCode == VKCODES_SEMICOLON.get(self._keyboardLanguage):
-			vkCode = 186 # ;
+		if self._keyboardLanguage in VKCODES.keys() and vkCode in VKCODES[self._keyboardLanguage].keys():
+			vkCode = VKCODES[self._keyboardLanguage][vkCode]
+		if vkCode is None:
+			return False
 		if not self._oneHandMode:
 			dot = VKCODES_TO_DOTS.get(vkCode)
 		else:
@@ -151,10 +176,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				return False
 			dot = VKCODES_TO_DOTS_ONE_HAND.get(vkCode)
 		if dot is None and not (self._oneHandMode and vkCode in (71, 72)): # g, h
-			if self._shouldCopySemicolonKeyInfo and api.copyToClip(
-				u"Keyboard language: %d; vkCode: %s" %
-					(self._keyboardLanguage,	vkCode)):
-				self.disable()
 			return self._oldKeyDown(vkCode, scanCode, extended, injected)
 		self._trappedKeys.add(vkCode)
 		if not self._gesture:
@@ -167,8 +188,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		return False
 
 	def _keyUp(self, vkCode, scanCode, extended, injected):
-		if vkCode == VKCODES_SEMICOLON.get(self._keyboardLanguage):
-			vkCode = 186 # ;
+		if self._keyboardLanguage in VKCODES.keys() and vkCode in VKCODES[self._keyboardLanguage].keys():
+			vkCode = VKCODES[self._keyboardLanguage][vkCode]
 		if vkCode not in self._trappedKeys:
 			return self._oldKeyUp(vkCode, scanCode, extended, injected)
 		if self._oneHandMode and vkCode in (71, 72): # g, h
@@ -178,44 +199,38 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if not self._trappedKeys:
 			try:
 				inputCore.manager.executeGesture(self._gesture)
-			except inputCore.NoInputGestureAction:
+			except (inputCore.NoInputGestureAction, IndexError):
 				pass
 			self._gesture = None
 		return False
 
+	@script(
+		# Translators: Describes a command.
+		description=_("Toggles braille input from the PC keyboard."),
+		gesture="kb:NVDA+0"
+	)
 	def script_toggleInput(self, gesture):
 		if self.isEnabled:
 			self.disable()
 			# Translators: Reported when braille input from the PC keyboard is disabled.
-			ui.message(_("Braille input from PC keyboard disabled"))
+			message = _("Braille input from PC keyboard disabled")
 		else:
 			self.enable()
 			# Translators: Reported when braille input from the PC keyboard is enabled.
-			ui.message(_("Braille input from PC keyboard enabled"))
-	# Translators: Describes a command.
-	script_toggleInput.__doc__ = _("Toggles braille input from the PC keyboard.")
-
-	def script_activateCopySemicolonKeyInfo(self, gesture):
-		self.enable()
-		self._shouldCopySemicolonKeyInfo = True
-		# Translators: Reported when should copy info for semicolon key.
-		ui.message(_("Press the key at right to l to copy info for supporting dot 8 in your keyboard language."))
-	# Translators: Describes a command.
-	script_activateCopySemicolonKeyInfo.__doc__ = _("Allows to copy info about dot 8.")
+			message = _("Braille input from PC keyboard enabled")
+		ui.message(message, speechPriority=speech.priorities.SPRI_NOW)
 
 	def onSettings(self, evt):
 		gui.mainFrame._popupSettingsDialog(NVDASettingsDialog, AddonSettingsPanel)
 
+	@script(
+		# Translators: Describes a command.
+		description=_("Shows the %s settings." % ADDON_SUMMARY),
+		category=globalCommands.SCRCAT_CONFIG
+	)
 	def script_settings(self, gesture):
 		wx.CallAfter(self.onSettings, None)
-	script_settings.category = globalCommands.SCRCAT_CONFIG
-	# Translators: Describes a command.
-	script_settings.__doc__ = _("Shows the %s settings." % ADDON_SUMMARY)
-	
-	__gestures = {
-		"kb:NVDA+z": "toggleInput",
-		"kb:NVDA+X": "activateCopySemicolonKeyInfo",
-	}
+
 
 class AddonSettingsPanel(SettingsPanel):
 

@@ -19,15 +19,15 @@ addon_info = {
 	# Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 	"addon_description" : _("""Allows braille to be entered via the PC keyboard."""),
 	# version
-	"addon_version" : "2014.1",
+	"addon_version" : "2019.1",
 	# Author(s)
-	"addon_author" : u"NV Access Limited, Noelia Ruiz Martínez",
+	"addon_author" : u"NV Access Limited, Noelia Ruiz Martínez <nrm1977@gmail.com",
 	# URL for the add-on documentation support
 	"addon_url" : "https://addons.nvda-project.org/addons/pcKeyboardBrailleInput",
 	# Documentation file name
 	"addon_docFileName" : "readme.html",
 	# Minimum NVDA version supported (e.g. "2018.3")
-	"addon_minimumNVDAVersion" : "2018.2",
+	"addon_minimumNVDAVersion" : "2019.3",
 	# Last NVDA version supported/tested (e.g. "2018.4", ideally more recent than minimum version)
 	"addon_lastTestedNVDAVersion" : "2019.3",
 	# Add-on update channel (default is stable or None)
@@ -39,7 +39,7 @@ import os.path
 
 # Define the python files that are the sources of your add-on.
 # You can use glob expressions here, they will be expanded.
-pythonSources = [os.path.join("addon", "*.py"), os.path.join("addon", "globalPlugins", "clipContentsDesigner", "*.py")]
+pythonSources = [os.path.join("addon", "globalPlugins", "*.py")]
 
 # Files that contain strings for translation. Usually your python sources
 i18nSources = pythonSources + ["buildVars.py"]
