@@ -21,7 +21,7 @@ addon_info = {
 	# version
 	"addon_version" : "2019.1-dev",
 	# Author(s)
-	"addon_author" : u"NV Access Limited, Noelia Ruiz Martínez <nrm1977@gmail.com",
+	"addon_author" : u"NV Access Limited, Noelia Ruiz Martínez <nrm1977@gmail.com>",
 	# URL for the add-on documentation support
 	"addon_url" : "https://addons.nvda-project.org/addons/pcKeyboardBrailleInput",
 	# Documentation file name
