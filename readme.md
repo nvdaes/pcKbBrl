@@ -3,8 +3,8 @@
 * Author: NV Access Limited, Noelia Ruiz Martínez
 * Copyright: 2012-2019 NV Access Limited, Noelia Ruiz Martínez
 * License: GNU General Public License version 2.0
-* Download: [stable version][1] (compatible with NVDA 2019.3)
-* Download: [development version][2] (compatible with NVDA 2019.3)
+* Download: [stable version][1] (compatible with NVDA 2019.3 or later)
+* Download: [development version][2] (compatible with NVDA 2019.3 or later)
 * [version 2014.1][3] (compatible with NVDA 2017.3 to 2019.2)
 
 This NVDA add-on allows braille to be entered via the PC keyboard.
