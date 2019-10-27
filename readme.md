@@ -34,9 +34,9 @@ Check the corresponding checkbox if you want to type using only one hand, or ens
 		* j, k and l for dots 4, 5 and 6 respectively.
 		* Use the keys a and ; (semi-colon) for dots 7 and 8, respectively.
 		* You can also use the keys on the row above; i.e. q, w, e, r, u, i, o and p.
-	* If you want to type text using one hand, you can compose characters pressing keys simultaneously or in several keystrokes, adding the dots corresponding to the desired character. Press g or h to type the character when you have added all its dots. If you make a mistake building a character, you can clear the dots before typing it by pressing t or y. The keys used in QWERTY English keyboard are the following.
-			* Left hand: f, d, s, r, e, w, a, q for dots 1, 2, 3, 4, 5, 6, 7 and 8.
-			* Right hand: j, k, l, u, i, o, ; (semicolon), p for dots 1, 2, 3, 4, 5, 6, 7 and 8.
+	* If you want to type text using one hand, you can compose characters pressing keys simultaneously or in several keystrokes, adding the dots corresponding to the desired character. Press g or h to type the character when you have added all its dots. If you make a mistake building a character, you can clear the dots before typing it by pressing t or y. The keys used in QWERTY English keyboard are the following:
+		* Left hand: f, d, s, r, e, w, a, q for dots 1, 2, 3, 4, 5, 6, 7 and 8.
+		* Right hand: j, k, l, u, i, o, ; (semicolon), p for dots 1, 2, 3, 4, 5, 6, 7 and 8.
 3. You can press most other keys as normal, including space, backspace, enter and function keys. Take care about not pressing alt+shift, since changing the keyboard layout may affect the entered dots.
 4. Press NVDA+0 to disable braille input.
 
