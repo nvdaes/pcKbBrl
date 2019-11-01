@@ -53,12 +53,13 @@ In some cases, using the upper row of keys with either or both hands might help,
 ## Contributors
 
 * James Teh
-* Noelia Ruiz Martínez
+* Noelia.
 * Mohammadreza Rashad
 * Cagri Dogan
 * Bernd Dorer
 * Ângelo Abrantes
 * Cyrille Bougot
+* Abdel.
 
 
 [1]: https://addons.nvda-project.org/files/get.php?file=pckbbrl
