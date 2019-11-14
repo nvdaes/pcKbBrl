@@ -218,7 +218,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			self.enable()
 			# Translators: Reported when braille input from the PC keyboard is enabled.
 			message = _("Braille input from PC keyboard enabled")
-		ui.message(message, speechPriority=speech.priorities.SPRI_NOW)
+		ui.message(message, speechPriority=speech.priorities.Spri.NOW)
 
 	def onSettings(self, evt):
 		gui.mainFrame._popupSettingsDialog(NVDASettingsDialog, AddonSettingsPanel)
