@@ -2,7 +2,7 @@
 
 """NVDA PC Keyboard Braille plugin
 @author: James Teh <jamie@nvaccess.org>
-@copyright: 2012-2019 NV Access Limited, Noelia Ruiz Martínez
+@copyright: 2012-2020 NV Access Limited, Noelia Ruiz Martínez
 @license: GNU General Public License version 2.0
 """
 
@@ -103,6 +103,7 @@ VKCODES = {
 
 confspec = {
 	"oneHandMode": "boolean(default=False)",
+	"speakDot": "boolean(default=False)",
 }
 
 config.conf.spec["pcKbBrl"] = confspec
@@ -142,6 +143,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self._gesture = None
 		self._keyboardLanguage = self.getKeyboardLanguage()
 		self._oneHandMode = config.conf["pcKbBrl"]["oneHandMode"]
+		self._dot = None
 		# Monkey patch keyboard handling callbacks.
 		# This is pretty evil, but we need low level keyboard handling.
 		self._oldKeyDown = winInputHook.keyDownCallback
@@ -160,6 +162,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self._trappedKeys = None
 		self._keyboardLanguage = None
 		self._oneHandMode = None
+		self._dot = None
 		config.post_configProfileSwitch.unregister(self.handleConfigProfileSwitch)
 		self.isEnabled = False
 
@@ -169,22 +172,22 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if vkCode is None:
 			return False
 		if not self._oneHandMode:
-			dot = VKCODES_TO_DOTS.get(vkCode)
+			self._dot = VKCODES_TO_DOTS.get(vkCode)
 		else:
 			if vkCode in (84, 89): # t, y
 				self._gesture = None
 				return False
-			dot = VKCODES_TO_DOTS_ONE_HAND.get(vkCode)
-		if dot is None and not (self._oneHandMode and vkCode in (71, 72)): # g, h
+			self._dot = VKCODES_TO_DOTS_ONE_HAND.get(vkCode)
+		if self._dot is None and not (self._oneHandMode and vkCode in (71, 72)): # g, h
 			return self._oldKeyDown(vkCode, scanCode, extended, injected)
 		self._trappedKeys.add(vkCode)
 		if not self._gesture:
 			self._gesture = brailleInput.BrailleInputGesture()
-		if dot is not None:
-			if dot is " ": 
+		if self._dot is not None:
+			if self._dot is " ": 
 				self._gesture.space = True
 			else:
-				self._gesture.dots |= dot
+				self._gesture.dots |= self._dot
 		return False
 
 	def _keyUp(self, vkCode, scanCode, extended, injected):
@@ -202,6 +205,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			except (inputCore.NoInputGestureAction, IndexError):
 				pass
 			self._gesture = None
+		else:
+			if self._oneHandMode:
+				brailleInput.speakDots(self._dot)
 		return False
 
 	@script(
@@ -241,9 +247,13 @@ class AddonSettingsPanel(SettingsPanel):
 		# Translators: label of a dialog.
 		self.oneHandModeCheckBox = sHelper.addItem(wx.CheckBox(self, label= _("Type using one hand")))
 		self.oneHandModeCheckBox.SetValue(config.conf["pcKbBrl"]["oneHandMode"])
+		# Translators: label of a dialog.
+		self.speakDotCheckBox = sHelper.addItem(wx.CheckBox(self, label= _("Speak dot when typing with one hand")))
+		self.speakDotCheckBox.SetValue(config.conf["pcKbBrl"]["speakDot"])
 
 	def postInit(self):
 		self.oneHandModeCheckBox.SetFocus()
 
 	def onSave(self):
 		config.conf["pcKbBrl"]["oneHandMode"] = self.oneHandModeCheckBox.GetValue()
+		config.conf["pcKbBrl"]["speakDot"] = self.oneHandModeCheckBox.GetValue()
