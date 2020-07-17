@@ -248,10 +248,10 @@ class AddonSettingsPanel(SettingsPanel):
 	def makeSettings(self, settingsSizer):
 		sHelper = guiHelper.BoxSizerHelper(self, sizer=settingsSizer)
 		# Translators: label of a dialog.
-		self.oneHandModeCheckBox = sHelper.addItem(wx.CheckBox(self, label= _("Type using one hand")))
+		self.oneHandModeCheckBox = sHelper.addItem(wx.CheckBox(self, label= _("&Type using one hand")))
 		self.oneHandModeCheckBox.SetValue(config.conf["pcKbBrl"]["oneHandMode"])
 		# Translators: label of a dialog.
-		self.speakDotCheckBox = sHelper.addItem(wx.CheckBox(self, label= _("Speak dot when typing with one hand")))
+		self.speakDotCheckBox = sHelper.addItem(wx.CheckBox(self, label= _("&Speak dot when typing with one hand")))
 		self.speakDotCheckBox.SetValue(config.conf["pcKbBrl"]["speakDot"])
 
 	def postInit(self):
