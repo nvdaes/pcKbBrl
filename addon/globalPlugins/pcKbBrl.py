@@ -118,6 +118,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 	def handleConfigProfileSwitch(self):
 		self._oneHandMode = config.conf["pcKbBrl"]["oneHandMode"]
+		self._speakDot = config.conf["pcKbBrl"]["speakDot"]
 
 	def terminate(self):
 		self.disable()
@@ -143,6 +144,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self._gesture = None
 		self._keyboardLanguage = self.getKeyboardLanguage()
 		self._oneHandMode = config.conf["pcKbBrl"]["oneHandMode"]
+		self._speakDot = config.conf["pcKbBrl"]["speakDot"]
 		self._dot = None
 		# Monkey patch keyboard handling callbacks.
 		# This is pretty evil, but we need low level keyboard handling.
@@ -162,6 +164,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self._trappedKeys = None
 		self._keyboardLanguage = None
 		self._oneHandMode = None
+		self._speakDot = None
 		self._dot = None
 		config.post_configProfileSwitch.unregister(self.handleConfigProfileSwitch)
 		self.isEnabled = False
@@ -206,7 +209,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				pass
 			self._gesture = None
 		else:
-			if self._oneHandMode:
+			if self._speakDot:
 				brailleInput.speakDots(self._dot)
 		return False
 
@@ -256,4 +259,4 @@ class AddonSettingsPanel(SettingsPanel):
 
 	def onSave(self):
 		config.conf["pcKbBrl"]["oneHandMode"] = self.oneHandModeCheckBox.GetValue()
-		config.conf["pcKbBrl"]["speakDot"] = self.oneHandModeCheckBox.GetValue()
+		config.conf["pcKbBrl"]["speakDot"] = self.speakDotCheckBox.GetValue()
