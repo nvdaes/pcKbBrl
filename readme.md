@@ -38,7 +38,8 @@ Check the corresponding checkbox if you want to type using only one hand, or ens
 		* Left hand: f, d, s, r, e, w, a, q for dots 1, 2, 3, 4, 5, 6, 7 and 8.
 		* Right hand: j, k, l, u, i, o, ; (semicolon), p for dots 1, 2, 3, 4, 5, 6, 7 and 8.
 3. You can press most other keys as normal, including space, backspace, enter and function keys. Take care about not pressing alt+shift, since changing the keyboard layout may affect the entered dots.
-4. Press NVDA+0 to disable braille input.
+4. Press space bar in combination with braille dots to move the system cursor (or report the current line), just if you were using a braille display. For example, space+dot1 to emulate upArrow, space+dot4+dot5+dot6 to emulate control+end, space+dot1+dot4 to report the current line, etc.
+5. Press NVDA+0 to disable braille input.
 
 ## Important Notes
 
@@ -49,6 +50,10 @@ Some keyboards, particularly laptop keyboards, cannot handle certain combination
 When this happens, certain keys are simply ignored.
 Unfortunately, there is nothing that can be done to fix this, as the keys are simply never received by Windows or NVDA.
 In some cases, using the upper row of keys with either or both hands might help, as your keyboard may allow these keys.
+
+## Changes for 2020.1
+
+* You can press space bar in combination with braille dots to emulate gestures, similar to commands available in braille displays.
 
 ## Contributors
 

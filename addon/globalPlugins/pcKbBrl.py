@@ -2,7 +2,7 @@
 
 """NVDA PC Keyboard Braille plugin
 @author: James Teh <jamie@nvaccess.org>
-@copyright: 2012-2019 NV Access Limited, Noelia Ruiz Martínez
+@copyright: 2012-2020 NV Access Limited, Noelia Ruiz Martínez
 @license: GNU General Public License version 2.0
 """
 
@@ -106,6 +106,25 @@ confspec = {
 }
 
 config.conf.spec["pcKbBrl"] = confspec
+
+
+entries = {
+	"globalCommands.GlobalCommands": {
+		"kb:upArrow": "bk:space+dot1",
+		"kb:downArrow": "bk:space+dot4",
+		"kb:leftArrow": "bk:space+dot3",
+		"kb:rightArrow": "bk:space+dot6",
+		"kb:control+leftArrow": "bk:space+dot2",
+		"kb:control+rightArrow": "bk:space+dot5",
+		"kb:home": "bk:space+dot1+dot3",
+		"kb:end": "bk:space+dot4+dot6",
+		"kb:control+home": "bk:space+dot1+dot2+dot3",
+		"kb:control+end": "bk:space+dot4+dot5+dot6",
+		"reportCurrentLine": "bk:space+dot1+dot4"
+	}
+}
+
+inputCore.manager.userGestureMap.update(entries)
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	scriptCategory = globalCommands.SCRCAT_BRAILLE
