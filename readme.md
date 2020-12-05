@@ -1,7 +1,7 @@
 # PC Keyboard Braille Input for NVDA
 
 * Author: NV Access Limited, Noelia Ruiz Martínez
-* Copyright: 2012-2019 NV Access Limited, Noelia Ruiz Martínez
+* Copyright: 2012-2020 NV Access Limited, Noelia Ruiz Martínez
 * License: GNU General Public License version 2.0
 * Download: [stable version][1] (compatible with NVDA 2019.3 or later)
 * Download: [development version][2] (compatible with NVDA 2019.3 or later)
@@ -24,6 +24,8 @@ Currently, the following keyboard layouts are supported:
 The add-on can be configured from its category in the NVDA's settings dialog, under NVDA's menu, Preferences submenu. A gesture for opening the add-on settings panel can be assigned from Input gestures dialog, configuration category.
 
 Check the corresponding checkbox if you want to type using only one hand, or ensure it's not checked if you prefer to type using the standard mode (two hands).
+
+You can also select if NVDA should speak a single typed dot (using )the feature of "one hand mode").
 
 ## How to Use
 
@@ -54,6 +56,7 @@ In some cases, using the upper row of keys with either or both hands might help,
 ## Changes for 2020.1
 
 * You can press space bar in combination with braille dots to emulate gestures, similar to commands available in braille displays.
+* Added an option to speak single dots typed in one hand mode.
 
 ## Contributors
 
