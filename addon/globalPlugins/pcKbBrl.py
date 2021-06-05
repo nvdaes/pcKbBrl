@@ -35,69 +35,69 @@ DOT7 = 1 << 6
 DOT8 = 1 << 7
 
 VKCODES_TO_DOTS = {
-	70: DOT1, # f
-	68: DOT2, # d
-	83: DOT3, # s
-	74: DOT4, # j
-	75: DOT5, # k
-	76: DOT6, # l
-	65: DOT7, # a
-	186: DOT8, # ;
-	82: DOT1, # r
-	69: DOT2, # e
-	87: DOT3, # w
-	85: DOT4, # u
-	73: DOT5, # i
-	79: DOT6, # o
-	81: DOT7, # q
-	80: DOT8, # p
-	32: " ", # space,
+	70: DOT1,  # f
+	68: DOT2,  # d
+	83: DOT3,  # s
+	74: DOT4,  # j
+	75: DOT5,  # k
+	76: DOT6,  # l
+	65: DOT7,  # a
+	186: DOT8,  # ;
+	82: DOT1,  # r
+	69: DOT2,  # e
+	87: DOT3,  # w
+	85: DOT4,  # u
+	73: DOT5,  # i
+	79: DOT6,  # o
+	81: DOT7,  # q
+	80: DOT8,  # p
+	32: " ",  # space,
 }
 
 VKCODES_TO_DOTS_ONE_HAND = {
-	70: DOT1, # f
-	68: DOT2, # d
-	83: DOT3, # s
-	74: DOT1, # j
-	75: DOT2, # k
-	76: DOT3, # l
-	65: DOT7, # a
-	186: DOT7, # ;
-	82: DOT4, # r
-	69: DOT5, # e
-	87: DOT6, # w
-	85: DOT4, # u
-	73: DOT5, # i
-	79: DOT6, # o
-	81: DOT8, # q
-	80: DOT8, # p
-	32: " ", # space,
+	70: DOT1,  # f
+	68: DOT2,  # d
+	83: DOT3,  # s
+	74: DOT1,  # j
+	75: DOT2,  # k
+	76: DOT3,  # l
+	65: DOT7,  # a
+	186: DOT7,  # ;
+	82: DOT4,  # r
+	69: DOT5,  # e
+	87: DOT6,  # w
+	85: DOT4,  # u
+	73: DOT5,  # i
+	79: DOT6,  # o
+	81: DOT8,  # q
+	80: DOT8,  # p
+	32: " ",  # space,
 }
 
 VKCODES = {
-	1031: { # de 
-		89: None, # y (original key)
-		90: 89, # y
-		192: 186, # ;
+	1031: {  # de
+		89: None,  # y (original key)
+		90: 89,  # y
+		192: 186,  # ;
 	},
-	3082: { # es
-		192: 186, # ;
+	3082: {  # es
+		192: 186,  # ;
 	},
-	2058: { # es_MX
-		192: 186, # ;
+	2058: {  # es_MX
+		192: 186,  # ;
 	},
-	1036: { # fr
-		65: 81, # q
-		77: 186, # ;
-		81: 65, # a
-		87: None, # w (original key)
-		90: 87, # w
+	1036: {  # fr
+		65: 81,  # q
+		77: 186,  # ;
+		81: 65,  # a
+		87: None,  # w (original key)
+		90: 87,  # w
 	},
-	1040: { # it
-		192: 186, # ;
+	1040: {  # it
+		192: 186,  # ;
 	},
-	2070: { # pt_PT
-		192: 186, # ;
+	2070: {  # pt_PT
+		192: 186,  # ;
 	},
 }
 
@@ -126,6 +126,7 @@ entries = {
 }
 
 inputCore.manager.userGestureMap.update(entries)
+
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	scriptCategory = globalCommands.SCRCAT_BRAILLE
@@ -196,17 +197,17 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if not self._oneHandMode:
 			self._dot = VKCODES_TO_DOTS.get(vkCode)
 		else:
-			if vkCode in (84, 89): # t, y
+			if vkCode in (84, 89):  # t, y
 				self._gesture = None
 				return False
 			self._dot = VKCODES_TO_DOTS_ONE_HAND.get(vkCode)
-		if self._dot is None and not (self._oneHandMode and vkCode in (71, 72)): # g, h
+		if self._dot is None and not (self._oneHandMode and vkCode in (71, 72)):  # g, h
 			return self._oldKeyDown(vkCode, scanCode, extended, injected)
 		self._trappedKeys.add(vkCode)
 		if not self._gesture:
 			self._gesture = brailleInput.BrailleInputGesture()
 		if self._dot is not None:
-			if self._dot is " ": 
+			if self._dot == " ":
 				self._gesture.space = True
 			else:
 				self._gesture.dots |= self._dot
@@ -217,7 +218,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			vkCode = VKCODES[self._keyboardLanguage][vkCode]
 		if vkCode not in self._trappedKeys:
 			return self._oldKeyUp(vkCode, scanCode, extended, injected)
-		if self._oneHandMode and vkCode in (71, 72): # g, h
+		if self._oneHandMode and vkCode in (71, 72):  # g, h
 			self._trappedKeys.clear()
 		if not self._oneHandMode or self._gesture.space:
 			self._trappedKeys.discard(vkCode)
@@ -267,10 +268,10 @@ class AddonSettingsPanel(SettingsPanel):
 	def makeSettings(self, settingsSizer):
 		sHelper = guiHelper.BoxSizerHelper(self, sizer=settingsSizer)
 		# Translators: label of a dialog.
-		self.oneHandModeCheckBox = sHelper.addItem(wx.CheckBox(self, label= _("&Type using one hand")))
+		self.oneHandModeCheckBox = sHelper.addItem(wx.CheckBox(self, label=_("&Type using one hand")))
 		self.oneHandModeCheckBox.SetValue(config.conf["pcKbBrl"]["oneHandMode"])
 		# Translators: label of a dialog.
-		self.speakDotCheckBox = sHelper.addItem(wx.CheckBox(self, label= _("&Speak dot when typing with one hand")))
+		self.speakDotCheckBox = sHelper.addItem(wx.CheckBox(self, label=_("&Speak dot when typing with one hand")))
 		self.speakDotCheckBox.SetValue(config.conf["pcKbBrl"]["speakDot"])
 
 	def postInit(self):
