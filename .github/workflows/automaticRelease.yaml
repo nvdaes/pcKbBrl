@@ -1,12 +1,16 @@
-name: Upload on new tags
+name: pre-release
 
 on:
   push:
-    tags:
-      '*'
+    branches:
+      - main
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '0 0 * * 6'
 
 jobs:
-  buildAndUpload:
+  pre-release:
+    name: Pre Release
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
@@ -25,22 +29,19 @@ jobs:
         import re
         with open("buildVars.py", 'r+', encoding='utf-8') as f:
           text = f.read()
-          version = "${{ github.ref }}".split("/")[-1]
-          text = re.sub("\"addon_version\" : ,", "\"addon_version\" : \"%s\",", text) % version
+          text = re.sub("\"addon_version\" : ,", "\"addon_version\" : \"${{ github.sha }}\",", text)
           f.seek(0)
           f.write(text)
           f.truncate()
       shell: python 
-    - name: Build add-on
+    - name: Build
       run: scons
-    - name: Calculate sha256
-      run: sha256sum *.nvda-addon >> changelog.md
-    - name: Release
-      uses: softprops/action-gh-release@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Automatic release
+      uses: marvinpinto/action-automatic-releases@latest
       with:
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        automatic_release_tag: latest
+        prerelease: true
+        title: Development Build
         files: |
           *.nvda-addon
-        body_path: changelog.md
-        prerelease: ${{ endsWith(github.ref, '-dev') }}
