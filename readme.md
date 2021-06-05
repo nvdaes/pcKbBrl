@@ -55,7 +55,8 @@ In some cases, using the upper row of keys with either or both hands might help,
 
 ## Changes for 2021.1
 
-* Version compatible with NVDA 2021.1.
+* NVDA won't try to speak dots when One hand mode is not active.
+* Compatible with NVDA 2021.1.
 
 ## Changes for 2020.1
 
