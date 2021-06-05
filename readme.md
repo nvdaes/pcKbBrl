@@ -53,6 +53,10 @@ When this happens, certain keys are simply ignored.
 Unfortunately, there is nothing that can be done to fix this, as the keys are simply never received by Windows or NVDA.
 In some cases, using the upper row of keys with either or both hands might help, as your keyboard may allow these keys.
 
+## Changes for 2021.1
+
+* Version compatible with NVDA 2021.1.
+
 ## Changes for 2020.1
 
 * You can press space bar in combination with braille dots to emulate gestures, similar to commands available in braille displays.
