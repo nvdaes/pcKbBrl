@@ -229,7 +229,10 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				pass
 			self._gesture = None
 		else:
-			if self._oneHandMode and self._speakDot:
+			if (
+				self._oneHandMode and self._speakDot
+				and isinstance(self._dot, int)
+			):
 				brailleInput.speakDots(self._dot)
 		return False
 
