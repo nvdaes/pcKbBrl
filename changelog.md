@@ -1,4 +1,4 @@
-## Changes for 2020.1
+## Changes for 2021.1
 
-* You can press space bar in combination with braille dots to emulate gestures, similar to commands available in braille displays.
-* Added an option to speak single dots typed in one hand mode.
+* NVDA won't try to speak dots when One hand mode is not active or if space has been pressed.
+* Compatible with NVDA 2021.1.
