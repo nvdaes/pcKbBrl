@@ -2,6 +2,7 @@ name: Build and test NVDA add-on
 
 on:
   pull_request:
+  push:
 
 jobs:
 
@@ -41,7 +42,7 @@ jobs:
         name: nvda-addon
         path: "*.nvda-addon"
     - name: Build pot
-      run: scons pot
+      run: scons pot mergePot
     - name: Upload pot
       uses: actions/upload-artifact@v2
       with:
