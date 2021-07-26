@@ -1,3 +1,5 @@
+# -*- coding: UTF-8 -*-
+
 """NVDA PC Keyboard Braille plugin
 @author: James Teh <jamie@nvaccess.org>
 @copyright: 2012-2020 NV Access Limited, Noelia Ruiz Martínez
