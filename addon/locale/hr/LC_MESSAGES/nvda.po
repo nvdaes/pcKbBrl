@@ -1,0 +1,53 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the pcKbBrl package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: pcKbBrl 2021.1\n"
+"Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
+"POT-Creation-Date: 2021-07-21 09:36+0000\n"
+"PO-Revision-Date: 2021-07-28 17:17+0200\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Milo Ivir <mail@milotype.de>\n"
+"Language-Team: \n"
+"X-Generator: Poedit 3.0\n"
+
+#. Translators: Describes a command.
+msgid "Toggles braille input from the PC keyboard."
+msgstr "Uključuje i isključuje brajični unos pomoću PC tipkovnice."
+
+#. Translators: Reported when braille input from the PC keyboard is disabled.
+msgid "Braille input from PC keyboard disabled"
+msgstr "Brajični unos pomoću PC tipkovnice je isključen"
+
+#. Translators: Reported when braille input from the PC keyboard is enabled.
+msgid "Braille input from PC keyboard enabled"
+msgstr "Brajični unos pomoću PC tipkovnice je uključen"
+
+#. Translators: Describes a command.
+#, python-format
+msgid "Shows the %s settings."
+msgstr "Otvara postavke %s."
+
+#. Translators: label of a dialog.
+msgid "&Type using one hand"
+msgstr "Jednoručno &tipkanje"
+
+#. Translators: label of a dialog.
+msgid "&Speak dot when typing with one hand"
+msgstr "&Izgovaraj točkice tijekom jednoručnog tipkanja"
+
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on to be shown on installation and add-on information.
+msgid "PC Keyboard Braille Input"
+msgstr "Brajični unos PC tipkovnicom"
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+msgid "Allows braille to be entered via the PC keyboard."
+msgstr "Omogućuje unos brajičnih znakova putem PC tipkovnice."
