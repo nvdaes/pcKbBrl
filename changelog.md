@@ -1,2 +1,2 @@
-## Changes for 2021.3
+## Changes
 * Updated translations.
