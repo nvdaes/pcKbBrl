@@ -85,6 +85,12 @@ dette, da tasterne simpelthen aldrig modtages af Windows eller NVDA. I nogle
 tilfælde kan det være en hjælp at bruge den øverste række af taster med én
 eller begge hænder, da dit tastatur muligvis tillader disse taster.
 
+## Changes for 2021.1
+
+* NVDA won't try to speak dots when One hand mode is not active or if space
+  has been pressed.
+* Compatible with NVDA 2021.1.
+
 ## Ændringer for 2020.1
 
 * Du kan trykke på mellemrumstasten i kombination med punktskriftspunkter

@@ -94,6 +94,12 @@ vengono mai ricevuti da Windows o NVDA. In alcuni casi, utilizzare i tasti
 della riga superiore con una o entrambe le mani potrebbe aiutare, perché la
 vostra tastiera potrebbe gestirli.
 
+## Changes for 2021.1
+
+* NVDA won't try to speak dots when One hand mode is not active or if space
+  has been pressed.
+* Compatible with NVDA 2021.1.
+
 ## Novità nella versione 2020.1
 
 * Potete premere la barra spaziatrice insieme ai punti Braille per simulare

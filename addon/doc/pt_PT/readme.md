@@ -90,6 +90,12 @@ recebidas pelo Windows ou NVDA. Em alguns casos, usar a linha superior de
 teclas com uma ou ambas as mãos pode ajudar, pois o seu teclado pode
 permitir essas teclas.
 
+## Changes for 2021.1
+
+* NVDA won't try to speak dots when One hand mode is not active or if space
+  has been pressed.
+* Compatible with NVDA 2021.1.
+
 ## Alterações para 2020.1
 
 * Pode pressionar a barra de espaço em combinação com pontos braille para

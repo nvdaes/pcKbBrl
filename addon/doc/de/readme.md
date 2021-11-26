@@ -85,6 +85,12 @@ Braille-Einstellungen.
 Einige Laptop-Tastaturen können nicht mit gedrückten Tastenkombinationen
 umgehen.
 
+## Änderungen in 2021.1
+
+* NVDA liest keine Punkte vor, wenn der Einhandmodus nicht aktiv ist oder
+  wenn die Leertaste gedrückt wurde.
+* Kompatibel mit NVDA 2021.1.
+
 ## Änderungen für 2020.1
 
 * Sie können die Leertaste in Kombination mit Braillepunkten drücken, um

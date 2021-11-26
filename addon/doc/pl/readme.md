@@ -86,6 +86,12 @@ czy NVDA.  W niektórych przypadkach może pomóc użycie górnego rzędu klawis
 jedną lub obiema rękami, ponieważ twoja klawiatura może zezwalać na te
 klawisze.
 
+## Changes for 2021.1
+
+* NVDA won't try to speak dots when One hand mode is not active or if space
+  has been pressed.
+* Compatible with NVDA 2021.1.
+
 ## Zmiany dla wersji NVDA 2020.1
 
 * Można naciskać spację z poszczególnymi punktami brajla, aby emulować

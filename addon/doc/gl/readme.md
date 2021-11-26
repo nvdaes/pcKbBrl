@@ -87,6 +87,12 @@ recibidas por Windows ou NVDA. Nalgúns casos, o uso da fila superior de
 teclas cunha ou ambas mans pode axudar, así como que o teu teclado pode
 permitir estas teclas.
 
+## Cambios para 2021.1
+
+* NVDA non tentará falar os puntos cando o modo dunha soa man non estea
+  activo ou se se premeu espazo.
+* Compatible con NVDA 2021.1.
+
 ## Cambios para 2020.1
 
 * Podes premer a barra espaciadora en combinación cos puntos braille para

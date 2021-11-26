@@ -85,6 +85,12 @@ budući da tastere ne prima ni Windows ni NVDA.  U nekim slučajevima,
 korišćenjem gornjeg reda tastera sa jednom ili obe ruke može pomoći, budući
 da će vaša tastatura možda dozvoliti ove tastere.
 
+## Changes for 2021.1
+
+* NVDA won't try to speak dots when One hand mode is not active or if space
+  has been pressed.
+* Compatible with NVDA 2021.1.
+
 ## Promene u 2020.1
 
 * Možete pritisnuti razmak zajedno sa brajevim tačkicama za emuliranje
