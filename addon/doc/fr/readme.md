@@ -94,6 +94,12 @@ reçus par Windows ou NVDA.  Dans certains cas, utiliser la rangée supérieure
 des touches avec une ou deux mains pourrait aider, car le clavier peut
 permettre ces touches.
 
+## Changes for 2021.1
+
+* NVDA won't try to speak dots when One hand mode is not active or if space
+  has been pressed.
+* Compatible with NVDA 2021.1.
+
 ## Changements de la version 2020.1
 
 * Vous pouvez appuyer sur la barre d'espace en combinaison avec des points

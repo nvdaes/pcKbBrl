@@ -90,6 +90,12 @@ recibidas por Windows o NVDA.  En algunos casos, utilizando la fila superior
 de teclas con una o ambas manos puede ayudar, ya que el teclado puede
 permitir estas teclas.
 
+## Cambios para 2021.1
+
+* NVDA no intentará verbalizar puntos cuando el modo de una sola mano no
+  esté activo o si se ha pulsado la barra espaciadora.
+* Compatible con NVDA 2021.1.
+
 ## Cambios para 2020.1
 
 * Se puede pulsar la barra espaciadora en combinación con los puntos Braille

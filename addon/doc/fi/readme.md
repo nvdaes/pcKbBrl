@@ -91,6 +91,12 @@ näitä näppäinpainalluksia.  Ylärivin näppäinten käyttäminen jommallakum
 tai molemmilla käsillä saattaa joissain tapauksissa auttaa , koska
 näppäimistö saattaa sallia näiden näppäinten painamisen.
 
+## Muutokset versiossa 2021.1
+
+* NVDA ei yritä puhua pisteitä, kun yksikätinen tila ei ole käytössä tai
+  mikäli välilyöntiä on painettu.
+* Yhteensopiva NVDA 2021.1:n kanssa.
+
 ## Muutokset versiossa 2020.1
 
 * Voit jäljitellä syötekomentoja samoin kuin pistenäyttöjen komentoja

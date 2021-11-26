@@ -82,6 +82,12 @@ kombinasyonlarını desteklemez. Basılan tuşlar Windows veya NVDA tarafından
 algılanmadığı için bu sorun çözülemez. Bastığınız tuşların bir üst
 sırasındaki tuşlara basmayı deneyebilirsiniz. 
 
+## 2021.1 için değişiklikler
+
+* NVDA, Tek el modu etkin olmadığında veya boşluğa basıldığında noktaları
+  söylemeye çalışmaz.
+* NVDA 2021.1 ile uyumlu.
+
 ## 2020.1 sürümü için değişiklikler
 
 * Braille ekranlardaki komutlara benzer olarak boşluk tuşuyla birlikte
