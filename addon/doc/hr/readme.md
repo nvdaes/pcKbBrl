@@ -83,11 +83,11 @@ tipke jednostavno ne prepoznaju od strane Windowsa ili NVDA čitača. U nekim
 slučajevima pomaže korištenje tipki gornjeg reda, ovisno o mogućnostima
 tipkovnice.
 
-## Changes for 2021.1
+## Promjene za 2021.1
 
-* NVDA won't try to speak dots when One hand mode is not active or if space
-  has been pressed.
-* Compatible with NVDA 2021.1.
+* NVDA neće pokušati izgovoriti točke kad način rada jednom rukom nije
+  aktivan ili ako je pritisnuta razmaknica.
+* Kompatibilno s NVDA čitačem 2021.1.
 
 ## Promjene za 2020.1
 
