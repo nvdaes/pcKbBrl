@@ -8,7 +8,7 @@
 * [Version 2014.1][3] (kompatibel mit NVDA 2017.3 bis 2019.2)
 
 Diese NVDA-Erweiterung ermöglicht die Eingabe von Braille über die
-PC-Tastatur. Momentan werden folgende Tastaturschemen unterstützt:
+PC-Tastatur. Momentan werden folgende Tastaturschemata unterstützt:
 
 * Englisch QWERTY-Tastatur.
 * Französisch (Frankreich).
@@ -41,8 +41,8 @@ soll, der im Einhandmodus eingegeben wird.
    wie Sie es auf einer Braille-Tastatur machen.
 
 	* Wenn Sie Text mit beiden Händen eingeben, verwenden Sie die folgenden
-	  Tasten auf einer englischen QWERTY-Tastatur oder die Tasten an der
-	  entsprechenden Stelle bei anderen Layouts:
+	  Tasten auf einer deutschen QWERTZ-Tastatur oder die Tasten an der
+	  entsprechenden Stelle bei anderen Schemata:
 
 		* f, d und s jeweils für die Punkte 1, 2 und 3.
 		* j, k und l jeweils für die Punkte 4, 5 und 6 respectively.
