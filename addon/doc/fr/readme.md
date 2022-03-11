@@ -52,7 +52,7 @@ individuellement (lorsque vous utilisez la fonction «mode à une main»).
 		* f, d et s pour les points 1, 2 et 3 respectivement.
 		* j, k et l pour les points 4, 5 et 6 respectivement.
 		* Utilisez les touches q et m pour les points 7 et 8, respectivement.
-		* Vous pouvez également utiliser les touches de la ligne au dessus;
+		* Vous pouvez également utiliser les touches de la ligne au-dessus;
 		  c'est-à-dire a, z, e, r, u, i, o et p.
 
 	* Si vous souhaitez saisir du texte d'une seule main, vous pouvez composer
@@ -94,11 +94,11 @@ reçus par Windows ou NVDA.  Dans certains cas, utiliser la rangée supérieure
 des touches avec une ou deux mains pourrait aider, car le clavier peut
 permettre ces touches.
 
-## Changes for 2021.1
+## Changements de la version 2021.1
 
-* NVDA won't try to speak dots when One hand mode is not active or if space
-  has been pressed.
-* Compatible with NVDA 2021.1.
+* NVDA n'essaiera pas d'énoncer des points lorsque le mode à une main n'est
+  pas actif ou si un espace a été enfoncé.
+* Compatible avec NVDA 2021.1.
 
 ## Changements de la version 2020.1
 
