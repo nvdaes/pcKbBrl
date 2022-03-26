@@ -2,9 +2,11 @@
 
 """NVDA PC Keyboard Braille plugin
 @author: James Teh <jamie@nvaccess.org>
-@copyright: 2012-2020 NV Access Limited, Noelia Ruiz Martínez
+@copyright: 2012-2022 NV Access Limited, Noelia Ruiz Martínez
 @license: GNU General Public License version 2.0
 """
+
+import wx
 
 import globalPluginHandler
 import winInputHook
@@ -15,7 +17,6 @@ import speech
 import inputCore
 import brailleInput
 import globalCommands
-import wx
 import gui
 from gui import SettingsPanel, NVDASettingsDialog, guiHelper
 from scriptHandler import script
