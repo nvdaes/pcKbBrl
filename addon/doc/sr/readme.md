@@ -1,7 +1,7 @@
 # Brajev unos sa tastature računara za NVDA #
 
 * Autori: NV Access Limited, Noelia Ruiz Martínez
-* Autorsko pravo: 2012-2019 NV Access Limited, Noelia Ruiz Martínez
+* Copyright: 2012-2022 NV Access Limited, Noelia Ruiz Martínez
 * Licenca: GNU General Public License verzija 2.0
 * Preuzmi: [stabilnu verziju ][1] (kompatibilnu uz NVDA 2019.3 ili noviji )
 * Preuzmi: [verziju u razvoju ][2] (kompatibilnu uz NVDA 2019.3 ili noviji)

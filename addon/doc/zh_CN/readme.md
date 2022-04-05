@@ -1,7 +1,7 @@
 # NVDAPC键盘盲文输入 #
 
 * 作者: NV Access Limited、 Noelia Ruiz Martínez
-* 版权所有：2012-2019 NV Access Limited、 Noelia Ruiz Martínez
+* Copyright: 2012-2022 NV Access Limited, Noelia Ruiz Martínez
 * 许可证：GNU通用公共许可证版本2.0
 * 下载[稳定版][1]（与 NVDA 2019.3或更高版本兼容）
 * 下载[开发板][2]（与NVDA 2019.3或更高版本兼容）

@@ -1,7 +1,7 @@
 # Inserção de Braille com o Teclado do PC para NVDA (PC Keyboard Braille Input for NVDA) #
 
 * Autor: NV Access Limited, Noelia Ruiz Martínez
-* Copyright: 2012-2019 NV Access Limited, Noelia Ruiz Martínez
+* Copyright: 2012-2022 NV Access Limited, Noelia Ruiz Martínez
 * Licença: Licença Pública Geral GNU — General Public License — versão 2.0
 * Baixar: [versão estável][1] (compatível com NVDA 2019.3 ou posteriores)
 * Baixar: [versão em desenvolvimento][2] (compatível com NVDA 2019.3 ou

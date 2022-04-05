@@ -1,7 +1,7 @@
 # Braille-Eingabe via PC-Tastatur #
 
 * Autor: NV Access Limited, Noelia Ruiz Martínez
-* Copyright: 2012-2019 NV Access Limited, Noelia Ruiz Martínez
+* Copyright: 2012-2022 NV Access Limited, Noelia Ruiz Martínez
 * Lizenz: GNU Allgemeine Öffentliche Lizenz Version 2.0
 * [stabile Version][1] herunterladen (kompatibel mit NVDA 2019.3 oder neuer)
 * [Testversion][2] herunterladen (kompatibel mit NVDA 2019.3 oder neuer)
