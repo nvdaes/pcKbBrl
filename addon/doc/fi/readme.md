@@ -1,7 +1,7 @@
 # Pistekirjoituksen syöttäminen tietokoneen näppäimistöllä #
 
 * Tekijät: NV Access Limited, Noelia Ruiz Martínez
-* Copyright: 2012-2022 NV Access Limited, Noelia Ruiz Martínez
+* Tekijänoikeus: 2012-2022 NV Access Limited, Noelia Ruiz Martínez
 * Lisenssi: GNU General Public License versio 2.0
 * Lataa: [vakaa versio][1] (yhteensopiva NVDA 2019.3:n ja uudempien kanssa)
 * Lataa: [kehitysversio][2] (yhteensopiva NVDA 2019.3:n ja uudempien kanssa)
