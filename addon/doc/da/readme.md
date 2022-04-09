@@ -1,7 +1,7 @@
 # Indtast punkt med PC-tastatur og NVDA #
 
 * Forfatter: NV Access Limited, Noelia Ruiz Martínez
-* Copyright: 2012-2019 NV Access Limited, Noelia Ruiz Martínez
+* Copyright: 2012-2022 NV Access Limited, Noelia Ruiz Martínez
 * Licens: GNU General Public License version 2.0
 * Download: [stabil version][1] (kompatibel med NVDA 2019.3 eller nyere)
 * Download: [udviklingsversion][2] (kompatibel med NVDA 2019.3 eller nyere)

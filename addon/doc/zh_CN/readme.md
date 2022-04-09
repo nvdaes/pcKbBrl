@@ -1,7 +1,7 @@
 # NVDAPC键盘盲文输入 #
 
 * 作者: NV Access Limited、 Noelia Ruiz Martínez
-* 版权所有：2012-2019 NV Access Limited、 Noelia Ruiz Martínez
+* Copyright: 2012-2022 NV Access Limited, Noelia Ruiz Martínez
 * 许可证：GNU通用公共许可证版本2.0
 * 下载[稳定版][1]（与 NVDA 2019.3或更高版本兼容）
 * 下载[开发板][2]（与NVDA 2019.3或更高版本兼容）
@@ -56,11 +56,10 @@
 某些键盘，尤其是笔记本电脑键盘，无法处理按下的某些按键组合。发生这种情况时，会忽略某些按键。不幸的是，没有什么办法可以解决此问题，因为 Windows
 及 NVDA 从未接收到按键指令。在某些情况下，用单手或双手使用上排按键可能会有所帮助，因为键盘可能允许这些按键。
 
-## Changes for 2021.1
+## 2021.1 的更改
 
-* NVDA won't try to speak dots when One hand mode is not active or if space
-  has been pressed.
-* Compatible with NVDA 2021.1.
+* 当单手模式未激活或按下空格时，NVDA 不会尝试说出点。
+* 兼容 NVDA 2021.1。
 
 ## 2020.1 的更改
 

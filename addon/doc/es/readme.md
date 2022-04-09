@@ -1,7 +1,7 @@
 # PC Keyboard Braille Input for NVDA #
 
 * Autor: NV Access Limited, Noelia Ruiz Martínez
-* Copyright: 2012-2019 NV Access Limited, Noelia Ruiz Martínez
+* Copyright: 2012-2022 NV Access Limited, Noelia Ruiz Martínez
 * Licencia: GNU General Public License versión 2.0
 * Descargar: [versión estable][1] (compatible con NVDA 2019.3 o posterior)
 * Descargar: [versión de desarrollo][2] (compatible con NVDA 2019.3 o
