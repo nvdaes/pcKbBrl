@@ -107,7 +107,7 @@ confspec = {
 	"oneHandMode": "boolean(default=False)",
 	"speakDot": "boolean(default=False)",
 	"confirmKeys": "string(default=gh)",
-	"cancelKeys": "string(default=ty)" 
+	"cancelKeys": "string(default=ty)"
 }
 
 config.conf.spec["pcKbBrl"] = confspec
