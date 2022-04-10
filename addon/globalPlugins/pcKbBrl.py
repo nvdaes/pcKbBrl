@@ -170,12 +170,18 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		for key in confirmKeys:
 			gesture = keyboardHandler.KeyboardInputGesture.fromName(key.lower())
 			code = gesture.vkCode
+			if self._keyboardLanguage in VKCODES.keys() and code in VKCODES[self._keyboardLanguage].keys():
+				code = VKCODES[self._keyboardLanguage][code]
 			dot = VKCODES_TO_DOTS_ONE_HAND.get(code)
 			if dot is None:
 				confirmCodes.append(code)
 				keys.append(key.lower())
-		keysSet = set(keys)
-		config.conf["pcKbBrl"]["confirmKeys"] = "".join(keysSet)
+		if not len(keys):
+			config.conf["pcKbBrl"]["confirmKeys"] = "gh"
+			confirmCodes = [71, 72]
+		else:
+			keysSet = set(keys)
+			config.conf["pcKbBrl"]["confirmKeys"] = "".join(keysSet)
 		return set(confirmCodes)
 
 	def getCancelCodes(self):
@@ -188,12 +194,18 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				continue
 			gesture = keyboardHandler.KeyboardInputGesture.fromName(key.lower())
 			code = gesture.vkCode
+			if self._keyboardLanguage in VKCODES.keys() and code in VKCODES[self._keyboardLanguage].keys():
+				code = VKCODES[self._keyboardLanguage][code]
 			dot = VKCODES_TO_DOTS_ONE_HAND.get(code)
 			if dot is None:
 				cancelCodes.append(code)
 				keys.append(key.lower())
-		keysSet = set(keys)
-		config.conf["pcKbBrl"]["cancelKeys"] = "".join(keysSet)
+		if not len(keys):
+			config.conf["pcKbBrl"]["cancelKeys"] = "ty"
+			cancelCodes = [84, 89]
+		else:
+			keysSet = set(keys)
+			config.conf["pcKbBrl"]["cancelKeys"] = "".join(keysSet)
 		return set(cancelCodes)
 
 	def enable(self):
