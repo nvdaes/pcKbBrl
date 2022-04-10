@@ -15,6 +15,7 @@ import config
 import ui
 import speech
 import inputCore
+import keyboardHandler
 import brailleInput
 import globalCommands
 import gui
@@ -105,6 +106,8 @@ VKCODES = {
 confspec = {
 	"oneHandMode": "boolean(default=False)",
 	"speakDot": "boolean(default=False)",
+	"confirmKeys": "string(default=gh)",
+	"cancelKeys": "string(default=ty)" 
 }
 
 config.conf.spec["pcKbBrl"] = confspec
@@ -133,13 +136,14 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	scriptCategory = globalCommands.SCRCAT_BRAILLE
 
 	def __init__(self):
-		super(GlobalPlugin, self).__init__()
+		super().__init__()
 		self.isEnabled = False
 		NVDASettingsDialog.categoryClasses.append(AddonSettingsPanel)
 
 	def handleConfigProfileSwitch(self):
 		self._oneHandMode = config.conf["pcKbBrl"]["oneHandMode"]
 		self._speakDot = config.conf["pcKbBrl"]["speakDot"]
+		self._confirmCodes = self.getConfirmCodes()
 
 	def terminate(self):
 		self.disable()
@@ -158,6 +162,31 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		lID = klID & (2**16 - 1)
 		return lID
 
+	def getConfirmCodes(self):
+		confirmKeys = config.conf["pcKbBrl"]["confirmKeys"]
+		confirmCodes = []
+		for key in confirmKeys:
+			gesture = keyboardHandler.KeyboardInputGesture.fromName(key)
+			code = gesture.vkCode
+			dot = VKCODES_TO_DOTS_ONE_HAND.get(code)
+			if dot is None:
+				confirmCodes.append(code)
+		return set(confirmCodes)
+
+	def getCancelCodes(self):
+		cancelKeys = config.conf["pcKbBrl"]["cancelKeys"]
+		confirmKeys = config.conf["pcKbBrl"]["confirmKeys"]
+		cancelCodes = []
+		for key in cancelKeys:
+			if key in confirmKeys:  # Confirm keys have priority
+				continue
+			gesture = keyboardHandler.KeyboardInputGesture.fromName(key)
+			code = gesture.vkCode
+			dot = VKCODES_TO_DOTS_ONE_HAND.get(code)
+			if dot is None:
+				cancelCodes.append(code)
+		return set(cancelCodes)
+
 	def enable(self):
 		if self.isEnabled:
 			return
@@ -166,6 +195,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self._keyboardLanguage = self.getKeyboardLanguage()
 		self._oneHandMode = config.conf["pcKbBrl"]["oneHandMode"]
 		self._speakDot = config.conf["pcKbBrl"]["speakDot"]
+		self._confirmCodes = self.getConfirmCodes()
+		self._cancelCodes = self.getCancelCodes()
 		self._dot = None
 		# Monkey patch keyboard handling callbacks.
 		# This is pretty evil, but we need low level keyboard handling.
@@ -186,6 +217,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self._keyboardLanguage = None
 		self._oneHandMode = None
 		self._speakDot = None
+		self._confirmCodes = None
+		self._cancelCodes = None
 		self._dot = None
 		config.post_configProfileSwitch.unregister(self.handleConfigProfileSwitch)
 		self.isEnabled = False
@@ -198,11 +231,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if not self._oneHandMode:
 			self._dot = VKCODES_TO_DOTS.get(vkCode)
 		else:
-			if vkCode in (84, 89):  # t, y
+			if vkCode in self._cancelCodes:
 				self._gesture = None
 				return False
 			self._dot = VKCODES_TO_DOTS_ONE_HAND.get(vkCode)
-		if self._dot is None and not (self._oneHandMode and vkCode in (71, 72)):  # g, h
+		if self._dot is None and not (self._oneHandMode and vkCode in self._confirmCodes):
 			return self._oldKeyDown(vkCode, scanCode, extended, injected)
 		self._trappedKeys.add(vkCode)
 		if not self._gesture:
@@ -219,7 +252,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			vkCode = VKCODES[self._keyboardLanguage][vkCode]
 		if vkCode not in self._trappedKeys:
 			return self._oldKeyUp(vkCode, scanCode, extended, injected)
-		if self._oneHandMode and vkCode in (71, 72):  # g, h
+		if self._oneHandMode and vkCode in self._confirmCodes:
 			self._trappedKeys.clear()
 		if not self._oneHandMode or self._gesture.space:
 			self._trappedKeys.discard(vkCode)
@@ -278,9 +311,29 @@ class AddonSettingsPanel(SettingsPanel):
 		self.speakDotCheckBox = sHelper.addItem(wx.CheckBox(self, label=_("&Speak dot when typing with one hand")))
 		self.speakDotCheckBox.SetValue(config.conf["pcKbBrl"]["speakDot"])
 
+		# Translators: label of a dialog.
+		confirmKeysLabel = _("Type the characters to confirm when writing with one hand.")
+		self.confirmKeysEdit = sHelper.addLabeledControl(confirmKeysLabel, wx.TextCtrl)
+		try:
+			self.confirmKeysEdit.SetValue(config.conf["pcKbBrl"]["confirmKeys"])
+		except KeyError:
+			pass
+
+		# Translators: label of a dialog.
+		cancelKeysLabel = _("Type the characters to cancel when writing with one hand.")
+		self.cancelKeysEdit = sHelper.addLabeledControl(cancelKeysLabel, wx.TextCtrl)
+		try:
+			self.cancelKeysEdit.SetValue(config.conf["pcKbBrl"]["cancelKeys"])
+		except KeyError:
+			pass
+
 	def postInit(self):
 		self.oneHandModeCheckBox.SetFocus()
 
 	def onSave(self):
 		config.conf["pcKbBrl"]["oneHandMode"] = self.oneHandModeCheckBox.GetValue()
 		config.conf["pcKbBrl"]["speakDot"] = self.speakDotCheckBox.GetValue()
+		if self.confirmKeysEdit.GetValue():
+			config.conf["pcKbBrl"]["confirmKeys"] = self.confirmKeysEdit.GetValue()
+		if self.cancelKeysEdit.GetValue():
+			config.conf["pcKbBrl"]["cancelKeys"] = self.cancelKeysEdit.GetValue()
