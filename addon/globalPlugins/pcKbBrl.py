@@ -144,6 +144,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self._oneHandMode = config.conf["pcKbBrl"]["oneHandMode"]
 		self._speakDot = config.conf["pcKbBrl"]["speakDot"]
 		self._confirmCodes = self.getConfirmCodes()
+		self._cancelCodes = self.getCancelCodes()
 
 	def terminate(self):
 		self.disable()
@@ -165,26 +166,34 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def getConfirmCodes(self):
 		confirmKeys = config.conf["pcKbBrl"]["confirmKeys"]
 		confirmCodes = []
+		keys = []
 		for key in confirmKeys:
-			gesture = keyboardHandler.KeyboardInputGesture.fromName(key)
+			gesture = keyboardHandler.KeyboardInputGesture.fromName(key.lower())
 			code = gesture.vkCode
 			dot = VKCODES_TO_DOTS_ONE_HAND.get(code)
 			if dot is None:
 				confirmCodes.append(code)
+				keys.append(key.lower())
+		keysSet = set(keys)
+		config.conf["pcKbBrl"]["confirmKeys"] = "".join(keysSet)
 		return set(confirmCodes)
 
 	def getCancelCodes(self):
 		cancelKeys = config.conf["pcKbBrl"]["cancelKeys"]
 		confirmKeys = config.conf["pcKbBrl"]["confirmKeys"]
 		cancelCodes = []
+		keys = []
 		for key in cancelKeys:
 			if key in confirmKeys:  # Confirm keys have priority
 				continue
-			gesture = keyboardHandler.KeyboardInputGesture.fromName(key)
+			gesture = keyboardHandler.KeyboardInputGesture.fromName(key.lower())
 			code = gesture.vkCode
 			dot = VKCODES_TO_DOTS_ONE_HAND.get(code)
 			if dot is None:
 				cancelCodes.append(code)
+				keys.append(key.lower())
+		keysSet = set(keys)
+		config.conf["pcKbBrl"]["cancelKeys"] = "".join(keysSet)
 		return set(cancelCodes)
 
 	def enable(self):
