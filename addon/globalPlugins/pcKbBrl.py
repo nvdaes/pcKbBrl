@@ -147,7 +147,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self._speakDot = config.conf["pcKbBrl"]["speakDot"]
 		self._confirmCodes = self.getConfirmCodes()
 		self._cancelCodes = self.getCancelCodes()
-		self._confirmGesture = keyboardHandler.KeyboardInputGesture.fromName(config.conf["pcKbBrl"]["confirmKeys"][0])
+		self._confirmGesture = keyboardHandler.KeyboardInputGesture.fromName(
+			config.conf["pcKbBrl"]["confirmKeys"][0]
+		)
 
 	def terminate(self):
 		self.disable()
