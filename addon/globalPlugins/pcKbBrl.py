@@ -11,6 +11,7 @@ import wx
 import globalPluginHandler
 import winInputHook
 import winUser
+import core
 import config
 import ui
 import speech
@@ -26,6 +27,7 @@ import addonHandler
 addonHandler.initTranslation()
 
 ADDON_SUMMARY = addonHandler.getCodeAddon().manifest["summary"]
+TIMEOUT = 1000
 
 DOT1 = 1 << 0
 DOT2 = 1 << 1
@@ -106,12 +108,12 @@ VKCODES = {
 confspec = {
 	"oneHandMode": "boolean(default=False)",
 	"speakDot": "boolean(default=False)",
+	"useTimeout": "boolean(default=False)",
 	"confirmKeys": "string(default=gh)",
 	"cancelKeys": "string(default=ty)"
 }
 
 config.conf.spec["pcKbBrl"] = confspec
-
 
 entries = {
 	"globalCommands.GlobalCommands": {
@@ -145,6 +147,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self._speakDot = config.conf["pcKbBrl"]["speakDot"]
 		self._confirmCodes = self.getConfirmCodes()
 		self._cancelCodes = self.getCancelCodes()
+		self._confirmGesture = keyboardHandler.KeyboardInputGesture.fromName(config.conf["pcKbBrl"]["confirmKeys"][0])
 
 	def terminate(self):
 		self.disable()
@@ -218,6 +221,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self._speakDot = config.conf["pcKbBrl"]["speakDot"]
 		self._confirmCodes = self.getConfirmCodes()
 		self._cancelCodes = self.getCancelCodes()
+		self._confirmGesture = keyboardHandler.KeyboardInputGesture.fromName(config.conf["pcKbBrl"]["confirmKeys"][0])
 		self._dot = None
 		# Monkey patch keyboard handling callbacks.
 		# This is pretty evil, but we need low level keyboard handling.
@@ -240,6 +244,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self._speakDot = None
 		self._confirmCodes = None
 		self._cancelCodes = None
+		self._confirmGesture = None
 		self._dot = None
 		config.post_configProfileSwitch.unregister(self.handleConfigProfileSwitch)
 		self.isEnabled = False
@@ -273,8 +278,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			vkCode = VKCODES[self._keyboardLanguage][vkCode]
 		if vkCode not in self._trappedKeys:
 			return self._oldKeyUp(vkCode, scanCode, extended, injected)
-		if self._oneHandMode and vkCode in self._confirmCodes:
-			self._trappedKeys.clear()
+		if self._oneHandMode:
+			if vkCode in self._confirmCodes:
+				self._trappedKeys.clear()
+			elif config.conf["pcKbBrl"]["useTimeout"]:
+				self._typeCallLater = core.callLater(TIMEOUT, self._confirmGesture.send)
 		if not self._oneHandMode or self._gesture.space:
 			self._trappedKeys.discard(vkCode)
 		if not self._trappedKeys:
@@ -331,17 +339,19 @@ class AddonSettingsPanel(SettingsPanel):
 		# Translators: label of a dialog.
 		self.speakDotCheckBox = sHelper.addItem(wx.CheckBox(self, label=_("&Speak dot when typing with one hand")))
 		self.speakDotCheckBox.SetValue(config.conf["pcKbBrl"]["speakDot"])
+		# Translators: label of a dialog.
+		self.useTimeoutCheckBox = sHelper.addItem(wx.CheckBox(self, label=_("Send dots &automatically when typing with one hand")))
+		self.useTimeoutCheckBox.SetValue(config.conf["pcKbBrl"]["useTimeout"])
 
 		# Translators: label of a dialog.
-		confirmKeysLabel = _("Type the characters to confirm when writing with one hand.")
+		confirmKeysLabel = _("Type the characters to con&firm when writing with one hand.")
 		self.confirmKeysEdit = sHelper.addLabeledControl(confirmKeysLabel, wx.TextCtrl)
 		try:
 			self.confirmKeysEdit.SetValue(config.conf["pcKbBrl"]["confirmKeys"])
 		except KeyError:
 			pass
-
 		# Translators: label of a dialog.
-		cancelKeysLabel = _("Type the characters to cancel when writing with one hand.")
+		cancelKeysLabel = _("Type the characters to cance&l when writing with one hand.")
 		self.cancelKeysEdit = sHelper.addLabeledControl(cancelKeysLabel, wx.TextCtrl)
 		try:
 			self.cancelKeysEdit.SetValue(config.conf["pcKbBrl"]["cancelKeys"])
@@ -354,6 +364,7 @@ class AddonSettingsPanel(SettingsPanel):
 	def onSave(self):
 		config.conf["pcKbBrl"]["oneHandMode"] = self.oneHandModeCheckBox.GetValue()
 		config.conf["pcKbBrl"]["speakDot"] = self.speakDotCheckBox.GetValue()
+		config.conf["pcKbBrl"]["useTimeout"] = self.useTimeoutCheckBox.GetValue()
 		if self.confirmKeysEdit.GetValue():
 			config.conf["pcKbBrl"]["confirmKeys"] = self.confirmKeysEdit.GetValue()
 		if self.cancelKeysEdit.GetValue():
