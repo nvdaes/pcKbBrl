@@ -342,7 +342,9 @@ class AddonSettingsPanel(SettingsPanel):
 		self.speakDotCheckBox = sHelper.addItem(wx.CheckBox(self, label=_("&Speak dot when typing with one hand")))
 		self.speakDotCheckBox.SetValue(config.conf["pcKbBrl"]["speakDot"])
 		# Translators: label of a dialog.
-		self.useTimeoutCheckBox = sHelper.addItem(wx.CheckBox(self, label=_("Send dots &automatically when typing with one hand")))
+		self.useTimeoutCheckBox = sHelper.addItem(
+			wx.CheckBox(self, label=_("Send dots &automatically when typing with one hand"))
+		)
 		self.useTimeoutCheckBox.SetValue(config.conf["pcKbBrl"]["useTimeout"])
 
 		# Translators: label of a dialog.
