@@ -20,14 +20,13 @@ import keyboardHandler
 import brailleInput
 import globalCommands
 import gui
-from gui import SettingsPanel, NVDASettingsDialog, guiHelper
+from gui import SettingsPanel, NVDASettingsDialog, guiHelper, nvdaControls
 from scriptHandler import script
 import addonHandler
 
 addonHandler.initTranslation()
 
 ADDON_SUMMARY = addonHandler.getCodeAddon().manifest["summary"]
-TIMEOUT = 1000
 
 DOT1 = 1 << 0
 DOT2 = 1 << 1
@@ -108,12 +107,13 @@ VKCODES = {
 confspec = {
 	"oneHandMode": "boolean(default=False)",
 	"speakDot": "boolean(default=False)",
-	"useTimeout": "boolean(default=False)",
+	"timeout": "integer(default=0)",
 	"confirmKeys": "string(default=gh)",
 	"cancelKeys": "string(default=ty)"
 }
 
 config.conf.spec["pcKbBrl"] = confspec
+
 
 entries = {
 	"globalCommands.GlobalCommands": {
@@ -285,8 +285,9 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		if self._oneHandMode:
 			if vkCode in self._confirmCodes:
 				self._trappedKeys.clear()
-			elif config.conf["pcKbBrl"]["useTimeout"]:
-				self._typeCallLater = core.callLater(TIMEOUT, self._confirmGesture.send)
+			elif config.conf["pcKbBrl"]["timeout"]:
+				timeout = config.conf["pcKbBrl"]["timeout"]
+				self._typeCallLater = core.callLater(timeout, self._confirmGesture.send)
 		if not self._oneHandMode or self._gesture.space:
 			self._trappedKeys.discard(vkCode)
 		if not self._trappedKeys:
@@ -343,12 +344,15 @@ class AddonSettingsPanel(SettingsPanel):
 		# Translators: label of a dialog.
 		self.speakDotCheckBox = sHelper.addItem(wx.CheckBox(self, label=_("&Speak dot when typing with one hand")))
 		self.speakDotCheckBox.SetValue(config.conf["pcKbBrl"]["speakDot"])
-		self.useTimeoutCheckBox = sHelper.addItem(
-			# Translators: label of a dialog.
-			wx.CheckBox(self, label=_("Send dots &automatically when typing with one hand"))
+		# Translators: label of a dialog.
+		label = _("&Timeout to send dots when writing with one hand (in ms)")
+		self.timeoutSpinControl = sHelper.addLabeledControl(
+			label,
+			nvdaControls.SelectOnFocusSpinCtrl,
+			min=0,
+			max=2000,
+			initial=config.conf["pcKbBrl"]["timeout"]
 		)
-		self.useTimeoutCheckBox.SetValue(config.conf["pcKbBrl"]["useTimeout"])
-
 		# Translators: label of a dialog.
 		confirmKeysLabel = _("Type the characters to con&firm when writing with one hand.")
 		self.confirmKeysEdit = sHelper.addLabeledControl(confirmKeysLabel, wx.TextCtrl)
@@ -370,7 +374,7 @@ class AddonSettingsPanel(SettingsPanel):
 	def onSave(self):
 		config.conf["pcKbBrl"]["oneHandMode"] = self.oneHandModeCheckBox.GetValue()
 		config.conf["pcKbBrl"]["speakDot"] = self.speakDotCheckBox.GetValue()
-		config.conf["pcKbBrl"]["useTimeout"] = self.useTimeoutCheckBox.GetValue()
+		config.conf["pcKbBrl"]["timeout"] = self.timeoutSpinControl.GetValue()
 		if self.confirmKeysEdit.GetValue():
 			config.conf["pcKbBrl"]["confirmKeys"] = self.confirmKeysEdit.GetValue()
 		if self.cancelKeysEdit.GetValue():
