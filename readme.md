@@ -57,6 +57,12 @@ When this happens, certain keys are simply ignored.
 Unfortunately, there is nothing that can be done to fix this, as the keys are simply never received by Windows or NVDA.
 In some cases, using the upper row of keys with either or both hands might help, as your keyboard may allow these keys.
 
+
+## Changes for 2022.1
+* Added ability to configure keys to send and clear dots when writing with one hand. Also, it's possible to set a timeout to send dots automatically, without pressing confirmation keys.
+
+
+
 ## Changes for 2021.1
 
 * NVDA won't try to speak dots when One hand mode is not active or if space has been pressed.
