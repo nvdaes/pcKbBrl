@@ -27,6 +27,10 @@ Check the corresponding checkbox if you want to type using only one hand, or ens
 
 You can also select if NVDA should speak a single typed dot (using )the feature of "one hand mode").
 
+If you want dots to be sent automatically when typing with one hand, use the spin control to set a timeout greater than 0.
+
+In addition, you can set the characters to send and clear dots when typing with one hand.
+
 ## How to Use
 
 1. Press NVDA+0 to enable braille input. This gesture can be changed from Input gestures dialog, Braille category.
