@@ -27,6 +27,10 @@ Check the corresponding checkbox if you want to type using only one hand, or ens
 
 You can also select if NVDA should speak a single typed dot (using )the feature of "one hand mode").
 
+If you want dots to be sent automatically when typing with one hand, use the spin control to set a timeout greater than 0.
+
+In addition, you can set the characters to send and clear dots when typing with one hand.
+
 ## How to Use
 
 1. Press NVDA+0 to enable braille input. This gesture can be changed from Input gestures dialog, Braille category.
@@ -52,6 +56,12 @@ Some keyboards, particularly laptop keyboards, cannot handle certain combination
 When this happens, certain keys are simply ignored.
 Unfortunately, there is nothing that can be done to fix this, as the keys are simply never received by Windows or NVDA.
 In some cases, using the upper row of keys with either or both hands might help, as your keyboard may allow these keys.
+
+
+## Changes for 2022.1
+* Added ability to configure keys to send and clear dots when writing with one hand. Also, it's possible to set a timeout to send dots automatically, without pressing confirmation keys.
+
+
 
 ## Changes for 2021.1
 
