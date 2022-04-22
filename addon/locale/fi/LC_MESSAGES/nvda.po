@@ -45,6 +45,21 @@ msgstr "&Kirjoita yhdellä kädellä"
 msgid "&Speak dot when typing with one hand"
 msgstr "&Puhu piste yhdellä kädellä kirjoitettaessa"
 
+#. Translators: label of a dialog.
+#, fuzzy
+msgid "&Timeout to send dots when writing with one hand (in ms)"
+msgstr "&Puhu piste yhdellä kädellä kirjoitettaessa"
+
+#. Translators: label of a dialog.
+#, fuzzy
+msgid "Type the characters to con&firm when writing with one hand."
+msgstr "&Puhu piste yhdellä kädellä kirjoitettaessa"
+
+#. Translators: label of a dialog.
+#, fuzzy
+msgid "Type the characters to cance&l when writing with one hand."
+msgstr "&Puhu piste yhdellä kädellä kirjoitettaessa"
+
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
 msgid "PC Keyboard Braille Input"

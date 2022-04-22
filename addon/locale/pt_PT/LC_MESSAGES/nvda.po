@@ -9,13 +9,13 @@ msgstr ""
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2021-07-21 09:36+0000\n"
 "PO-Revision-Date: 2021-11-18 23:18+0000\n"
+"Last-Translator: Ângelo Abrantes <ampa4374@gmail.com>\n"
+"Language-Team: Equipa portuguesa do NVDA: Ângelo Abrantes e Rui Fontes.\n"
 "Language: pt_PT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Last-Translator: Ângelo Abrantes <ampa4374@gmail.com>\n"
-"Language-Team: Equipa portuguesa do NVDA: Ângelo Abrantes e Rui Fontes.\n"
 "X-Generator: Poedit 3.0\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
@@ -42,6 +42,21 @@ msgstr "&Escrever usando uma mão"
 
 #. Translators: label of a dialog.
 msgid "&Speak dot when typing with one hand"
+msgstr "&Dizer os pontos quando escrever com uma mão"
+
+#. Translators: label of a dialog.
+#, fuzzy
+msgid "&Timeout to send dots when writing with one hand (in ms)"
+msgstr "&Dizer os pontos quando escrever com uma mão"
+
+#. Translators: label of a dialog.
+#, fuzzy
+msgid "Type the characters to con&firm when writing with one hand."
+msgstr "&Dizer os pontos quando escrever com uma mão"
+
+#. Translators: label of a dialog.
+#, fuzzy
+msgid "Type the characters to cance&l when writing with one hand."
 msgstr "&Dizer os pontos quando escrever com uma mão"
 
 #. Add-on summary, usually the user visible name of the addon.

@@ -42,6 +42,21 @@ msgstr "&Unos korišćenjem jedne ruke"
 msgid "&Speak dot when typing with one hand"
 msgstr "&Izgovaraj tačkice kada se koristi unos jednom rukom"
 
+#. Translators: label of a dialog.
+#, fuzzy
+msgid "&Timeout to send dots when writing with one hand (in ms)"
+msgstr "&Izgovaraj tačkice kada se koristi unos jednom rukom"
+
+#. Translators: label of a dialog.
+#, fuzzy
+msgid "Type the characters to con&firm when writing with one hand."
+msgstr "&Izgovaraj tačkice kada se koristi unos jednom rukom"
+
+#. Translators: label of a dialog.
+#, fuzzy
+msgid "Type the characters to cance&l when writing with one hand."
+msgstr "&Izgovaraj tačkice kada se koristi unos jednom rukom"
+
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
 msgid "PC Keyboard Braille Input"
