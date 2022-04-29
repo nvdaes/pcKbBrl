@@ -5,61 +5,61 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: pcKbBrl 2021.1\n"
-"Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
-"POT-Creation-Date: 2021-07-21 09:36+0000\n"
-"PO-Revision-Date: 2022-04-23 13:38+0200\n"
-"Last-Translator: René Linke <rene.linke@hamburg.de>\n"
-"Language-Team: \n"
-"Language: de\n"
+"Project-Id-Version: pcKbBrl 2021.5\n"
+"Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
+"POT-Creation-Date: 2021-10-08 16:05+0000\n"
+"PO-Revision-Date: 2022-04-29 13:06+0330\n"
+"Last-Translator: Mohammadreza Rashad <mohammadreza5712@gmail.com>\n"
+"Language-Team: NVDA Translation Team <nvda-translations@groups.io>\n"
+"Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 1.6.10\n"
 
 #. Translators: Describes a command.
 msgid "Toggles braille input from the PC keyboard."
-msgstr "Schaltet die Braille-Eingabe über die PC-Tastatur um."
+msgstr "ورودیِ بریل را از صفحه‌کلیدِ رایانه فعال یا غیر فعال میکند."
 
 #. Translators: Reported when braille input from the PC keyboard is disabled.
 msgid "Braille input from PC keyboard disabled"
-msgstr "Braille-Eingabe über die PC-Tastatur ausgeschaltet"
+msgstr "ورودیِ بریل از صفحه‌کلیدِ رایانه غیرفعال شد"
 
 #. Translators: Reported when braille input from the PC keyboard is enabled.
 msgid "Braille input from PC keyboard enabled"
-msgstr "Braille-Eingabe über PC-Tastatur eingeschaltet"
+msgstr "ورودیِ بریل از صفحه‌کلیدِ رایانه فعال شد"
 
 #. Translators: Describes a command.
 #, python-format
 msgid "Shows the %s settings."
-msgstr "Zeigt die Einstellungen für %s an."
+msgstr "تنظیماتِ %s را نشان میدهد."
 
 #. Translators: label of a dialog.
 msgid "&Type using one hand"
-msgstr "Mit einer Hand &tippen"
+msgstr "&تایپ کردن با یک دست"
 
 #. Translators: label of a dialog.
 msgid "&Speak dot when typing with one hand"
-msgstr "Beim Tippen mit einer Hand den Punkt an&sagen"
+msgstr "&گُفتنِ نقطه‌ها هنگامِ تایپ با یک دست"
 
 #. Translators: label of a dialog.
 msgid "&Timeout to send dots when writing with one hand (in ms)"
-msgstr "&Zeitüberschreitung für das Senden von Punkten beim Schreiben mit einer Hand (in Millisekunden)"
+msgstr "مدت زمانِ ارسال نقطه‌ها هنگامِ نوشتن با یک دست (به هزارمِ ثانیه)"
 
 #. Translators: label of a dialog.
 msgid "Type the characters to con&firm when writing with one hand."
-msgstr "Geben Sie die Zeichen zur &Bestätigung ein, wenn Sie mit einer Hand schreiben."
+msgstr "نویسه‌ها را برای ت&اییدِ تایپ با یک دست تایپ کنید"
 
 #. Translators: label of a dialog.
 msgid "Type the characters to cance&l when writing with one hand."
-msgstr "Geben Sie die Zeichen ein, die ge&löscht werden sollen, wenn Sie mit einer Hand schreiben."
+msgstr "نویسه‌ها را برای &لغوِ تایپ با یک دست تایپ کنید"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
 msgid "PC Keyboard Braille Input"
-msgstr "PC-Tastatur Braille-Eingabe"
+msgstr "ورودیِ بریل با صفحه‌کلیدِ رایانه"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Allows braille to be entered via the PC keyboard."
-msgstr "Ermöglicht die Eingabe von Braille über die PC-Tastatur."
+msgstr "اجازه میدهد تا با صفحه‌کلیدِ رایانه، بریل وارد کنید."

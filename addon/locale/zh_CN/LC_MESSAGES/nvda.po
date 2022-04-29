@@ -8,58 +8,58 @@ msgstr ""
 "Project-Id-Version: pcKbBrl 2021.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2021-07-21 09:36+0000\n"
-"PO-Revision-Date: 2022-04-23 13:38+0200\n"
-"Last-Translator: René Linke <rene.linke@hamburg.de>\n"
-"Language-Team: \n"
-"Language: de\n"
+"PO-Revision-Date: 2022-04-23 07:38+0800\n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.0.1\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"X-Generator: Poedit 2.4.3\n"
 
 #. Translators: Describes a command.
 msgid "Toggles braille input from the PC keyboard."
-msgstr "Schaltet die Braille-Eingabe über die PC-Tastatur um."
+msgstr "切换PC键盘盲文输入"
 
 #. Translators: Reported when braille input from the PC keyboard is disabled.
 msgid "Braille input from PC keyboard disabled"
-msgstr "Braille-Eingabe über die PC-Tastatur ausgeschaltet"
+msgstr "关闭盲文输入"
 
 #. Translators: Reported when braille input from the PC keyboard is enabled.
 msgid "Braille input from PC keyboard enabled"
-msgstr "Braille-Eingabe über PC-Tastatur eingeschaltet"
+msgstr "开启盲文输入"
 
 #. Translators: Describes a command.
 #, python-format
 msgid "Shows the %s settings."
-msgstr "Zeigt die Einstellungen für %s an."
+msgstr "显示 %s 设置。"
 
 #. Translators: label of a dialog.
 msgid "&Type using one hand"
-msgstr "Mit einer Hand &tippen"
+msgstr "单手输入模式(&A)"
 
 #. Translators: label of a dialog.
 msgid "&Speak dot when typing with one hand"
-msgstr "Beim Tippen mit einer Hand den Punkt an&sagen"
+msgstr "单手输入模式下读出点位(&S)"
 
 #. Translators: label of a dialog.
 msgid "&Timeout to send dots when writing with one hand (in ms)"
-msgstr "&Zeitüberschreitung für das Senden von Punkten beim Schreiben mit einer Hand (in Millisekunden)"
+msgstr "单手输入模式下延迟（以毫秒为单位）(&T)"
 
 #. Translators: label of a dialog.
 msgid "Type the characters to con&firm when writing with one hand."
-msgstr "Geben Sie die Zeichen zur &Bestätigung ein, wenn Sie mit einer Hand schreiben."
+msgstr ""
 
 #. Translators: label of a dialog.
 msgid "Type the characters to cance&l when writing with one hand."
-msgstr "Geben Sie die Zeichen ein, die ge&löscht werden sollen, wenn Sie mit einer Hand schreiben."
+msgstr ""
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
 msgid "PC Keyboard Braille Input"
-msgstr "PC-Tastatur Braille-Eingabe"
+msgstr "PC 键盘盲文输入"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Allows braille to be entered via the PC keyboard."
-msgstr "Ermöglicht die Eingabe von Braille über die PC-Tastatur."
+msgstr "可以通过 PC 键盘输入盲文。"

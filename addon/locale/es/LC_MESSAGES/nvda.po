@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: pcKbBrl 2021.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2021-07-21 09:36+0000\n"
-"PO-Revision-Date: 2021-07-23 19:10+0200\n"
+"PO-Revision-Date: 2022-04-23 08:10+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #. Translators: Describes a command.
 msgid "Toggles braille input from the PC keyboard."
@@ -43,19 +43,16 @@ msgid "&Speak dot when typing with one hand"
 msgstr "&Verbalizar puntos al escribir con una sola mano"
 
 #. Translators: label of a dialog.
-#, fuzzy
 msgid "&Timeout to send dots when writing with one hand (in ms)"
-msgstr "&Verbalizar puntos al escribir con una sola mano"
+msgstr "&Tiempo de espera para enviar los puntos al escribir con una mano (en ms)"
 
 #. Translators: label of a dialog.
-#, fuzzy
 msgid "Type the characters to con&firm when writing with one hand."
-msgstr "&Verbalizar puntos al escribir con una sola mano"
+msgstr "Teclea los caracteres para con&firmar al escribir con una mano."
 
 #. Translators: label of a dialog.
-#, fuzzy
 msgid "Type the characters to cance&l when writing with one hand."
-msgstr "&Verbalizar puntos al escribir con una sola mano"
+msgstr "Teclea los caracteres para cance&lar al escribir con una mano."
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
