@@ -1,7 +1,7 @@
 # Brajični unos PC tipkovnicom za NVDA (PC Keyboard Braille Input for NVDA) #
 
 * Author: NV Access Limited, Noelia Ruiz Martínez
-* Copyright: 2012-2022 NV Access Limited, Noelia Ruiz Martínez
+* Autorska prava: 2012. – 2022. NV Access Limited, Noelia Ruiz Martínez
 * Licenca: GNU opća javna licenca verzija 2.0
 * Preuzmi [stabilnu verziju][1] (kompatibilna s NVDA 2019.3 i novijom)
 * Preuzmi [razvojnu verziju][2] (kompatibilna s NVDA 2019.3 i novijom)

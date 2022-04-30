@@ -9,12 +9,12 @@ msgstr ""
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2021-07-21 09:36+0000\n"
 "PO-Revision-Date: 2021-08-07 13:19+0200\n"
+"Last-Translator: zvonimir stanecic <zvonimirek222@yandex.com>\n"
+"Language-Team: \n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Last-Translator: zvonimir stanecic <zvonimirek222@yandex.com>\n"
-"Language-Team: \n"
 "X-Generator: Poedit 3.0\n"
 
 #. Translators: Describes a command.
@@ -40,6 +40,21 @@ msgstr "&Ввод одной рукой"
 
 #. Translators: label of a dialog.
 msgid "&Speak dot when typing with one hand"
+msgstr "&Произносить точки при наборе одной рукой"
+
+#. Translators: label of a dialog.
+#, fuzzy
+msgid "&Timeout to send dots when writing with one hand (in ms)"
+msgstr "&Произносить точки при наборе одной рукой"
+
+#. Translators: label of a dialog.
+#, fuzzy
+msgid "Type the characters to con&firm when writing with one hand."
+msgstr "&Произносить точки при наборе одной рукой"
+
+#. Translators: label of a dialog.
+#, fuzzy
+msgid "Type the characters to cance&l when writing with one hand."
 msgstr "&Произносить точки при наборе одной рукой"
 
 #. Add-on summary, usually the user visible name of the addon.
