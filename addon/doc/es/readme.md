@@ -34,6 +34,13 @@ estándar (dos manos).
 También puedes seleccionar si NVDA debería verbalizar un único punto
 tecleado (utilizando la función de "modo de una mano").
 
+Si quieres que se envíen los puntos automáticamente al escribir con una
+mano, usa el control giratorio para configurar un tiempo de espera superior
+a 0.
+
+Además, puedes configurar los caracteres para enviar o borrar puntos al
+escribir con una mano.
+
 ## Cómo se Utiliza
 
 1. Pulsa NVDA+0 para activar la entrada Braille. Se puede modificar este
@@ -90,6 +97,13 @@ recibidas por Windows o NVDA.  En algunos casos, utilizando la fila superior
 de teclas con una o ambas manos puede ayudar, ya que el teclado puede
 permitir estas teclas.
 
+
+## Cambios para 2022.1
+* Se ha añadido la posibilidad de configurar teclas para enviar y borrar
+  puntos al escribir con una mano. También es posible configurar un tiempo
+  de espera para enviar los puntos automáticamente, sin pulsar teclas de
+  confirmación.
+
 ## Cambios para 2021.1
 
 * NVDA no intentará verbalizar puntos cuando el modo de una sola mano no
@@ -115,7 +129,6 @@ permitir estas teclas.
 * Cyrille Bougot
 * Abdel.
 
-
 [[!tag dev stable]]
 
 [1]: https://addons.nvda-project.org/files/get.php?file=pckbbrl
@@ -123,4 +136,3 @@ permitir estas teclas.
 [2]: https://addons.nvda-project.org/files/get.php?file=pckbbrl-dev
 
 [3]: https://addons.nvda-project.org/files/get.php?file=pckbbrl-o
-

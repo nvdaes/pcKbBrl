@@ -34,6 +34,12 @@ utilizando o modo estándar (dúas mans).
 Tamén podes seleccionar se NVDA debe falar un só punto escrito (usando a
 característica "modo de unha soa man").
 
+If you want dots to be sent automatically when typing with one hand, use the
+spin control to set a timeout greater than 0.
+
+In addition, you can set the characters to send and clear dots when typing
+with one hand.
+
 ## Como se Usa
 
 1. Preme NVDA+0 para activar a entrada braille. Este xesto pódese cambiar
@@ -87,6 +93,12 @@ recibidas por Windows ou NVDA. Nalgúns casos, o uso da fila superior de
 teclas cunha ou ambas mans pode axudar, así como que o teu teclado pode
 permitir estas teclas.
 
+
+## Changes for 2022.1
+* Added ability to configure keys to send and clear dots when writing with
+  one hand. Also, it's possible to set a timeout to send dots automatically,
+  without pressing confirmation keys.
+
 ## Cambios para 2021.1
 
 * NVDA non tentará falar os puntos cando o modo dunha soa man non estea
@@ -111,7 +123,6 @@ permitir estas teclas.
 * Cyrille Bougot
 * Abdel.
 
-
 [[!tag dev stable]]
 
 [1]: https://addons.nvda-project.org/files/get.php?file=pckbbrl
@@ -119,4 +130,3 @@ permitir estas teclas.
 [2]: https://addons.nvda-project.org/files/get.php?file=pckbbrl-dev
 
 [3]: https://addons.nvda-project.org/files/get.php?file=pckbbrl-o
-

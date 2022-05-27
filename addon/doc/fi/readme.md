@@ -34,6 +34,12 @@ standarditilassa (molemmilla käsillä).
 Voit myös valita, puhuuko NVDA yksittäisen syötetyn pisteen (yksikätistä
 tilaa käyttäen).
 
+Jos haluat, että pisteet lähetetään automaattisesti yhdellä kädellä
+kirjoitettaessa, aseta kiertosäätimellä aikakatkaisuksi suurempi kuin 0.
+
+Lisäksi voit määrittää pisteitä lähettävät ja poistavat merkit yhdellä
+kädellä kirjoitettaessa.
+
 ## Käyttö
 
 1. Ota pistekirjoituksen syöttö käyttöön painamalla NVDA+0. Tätä
@@ -91,6 +97,13 @@ näitä näppäinpainalluksia.  Ylärivin näppäinten käyttäminen jommallakum
 tai molemmilla käsillä saattaa joissain tapauksissa auttaa , koska
 näppäimistö saattaa sallia näiden näppäinten painamisen.
 
+
+## Muutokset versiossa 2022.1
+* Lisätty mahdollisuus pisteitä lähettävien ja poistavien näppäinten
+  määrittämiseen yhdellä kädellä kirjoitettaessa. Lisäksi on mahdollista
+  määrittää aikakatkaisu, jonka kuluttua pisteet lähetetään automaattisesti
+  ilman vahvistusnäppäinten painamista.
+
 ## Muutokset versiossa 2021.1
 
 * NVDA ei yritä puhua pisteitä, kun yksikätinen tila ei ole käytössä tai
@@ -114,7 +127,6 @@ näppäimistö saattaa sallia näiden näppäinten painamisen.
 * Cyrille Bougot
 * Abdel.
 
-
 [[!tag dev stable]]
 
 [1]: https://addons.nvda-project.org/files/get.php?file=pckbbrl
@@ -122,4 +134,3 @@ näppäimistö saattaa sallia näiden näppäinten painamisen.
 [2]: https://addons.nvda-project.org/files/get.php?file=pckbbrl-dev
 
 [3]: https://addons.nvda-project.org/files/get.php?file=pckbbrl-o
-

@@ -33,6 +33,13 @@ mit 2 Händen) schreiben wollen.
 Sie können auch festlegen, ob NVDA einen einzelnen bestimmten Punkt sprechen
 soll, der im Einhandmodus eingegeben wird.
 
+Wenn Sie möchten, dass beim Tippen mit einer Hand automatisch Punkte
+gesendet werden, verwenden Sie den Regler, um eine Zeitüberschreitung größer
+als 0 einzustellen.
+
+Außerdem können Sie die zu sendenden Zeichen festlegen und Punkte löschen,
+wenn Sie mit einer Hand tippen.
+
 ## Verwendung
 
 1. Drücken Sie NVDA+0, um die Braille-Eingabe zu aktivieren. Die Geste
@@ -85,6 +92,13 @@ Braille-Einstellungen.
 Einige Laptop-Tastaturen können nicht mit gedrückten Tastenkombinationen
 umgehen.
 
+
+## Änderungen in 2022.1
+* Es besteht jetzt die Möglichkeit, Tasten zum Senden und Löschen von
+  Punkten beim Schreiben mit einer Hand zu konfigurieren. Es ist auch
+  möglich, eine Zeitüberschreitung einzustellen, um Punkte automatisch zu
+  senden, ohne Bestätigung die Tasten zu drücken.
+
 ## Änderungen in 2021.1
 
 * NVDA liest keine Punkte vor, wenn der Einhandmodus nicht aktiv ist oder
@@ -110,7 +124,6 @@ umgehen.
 * Cyrille Bougot
 * Abdel.
 
-
 [[!tag dev stable]]
 
 [1]: https://addons.nvda-project.org/files/get.php?file=pckbbrl
@@ -118,4 +131,3 @@ umgehen.
 [2]: https://addons.nvda-project.org/files/get.php?file=pckbbrl-dev
 
 [3]: https://addons.nvda-project.org/files/get.php?file=pckbbrl-o
-
