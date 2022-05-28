@@ -32,6 +32,12 @@ standardtilstand (to hænder).
 Du kan også vælge, om NVDA skal oplæse hvert enkelt indtastede punkt (ved
 hjælp af funktionen "enhåndstilstand").
 
+If you want dots to be sent automatically when typing with one hand, use the
+spin control to set a timeout greater than 0.
+
+In addition, you can set the characters to send and clear dots when typing
+with one hand.
+
 ## Sådan bruges tilføjelsen
 
 1. Tryk på NVDA+0 for at aktivere punktskrift. Denne kommando kan ændres fra
@@ -85,6 +91,12 @@ dette, da tasterne simpelthen aldrig modtages af Windows eller NVDA. I nogle
 tilfælde kan det være en hjælp at bruge den øverste række af taster med én
 eller begge hænder, da dit tastatur muligvis tillader disse taster.
 
+
+## Changes for 2022.1
+* Added ability to configure keys to send and clear dots when writing with
+  one hand. Also, it's possible to set a timeout to send dots automatically,
+  without pressing confirmation keys.
+
 ## Changes for 2021.1
 
 * NVDA won't try to speak dots when One hand mode is not active or if space
@@ -110,7 +122,6 @@ eller begge hænder, da dit tastatur muligvis tillader disse taster.
 * Cyrille Bougot
 * Abdel.
 
-
 [[!tag dev stable]]
 
 [1]: https://addons.nvda-project.org/files/get.php?file=pckbbrl
@@ -118,4 +129,3 @@ eller begge hænder, da dit tastatur muligvis tillader disse taster.
 [2]: https://addons.nvda-project.org/files/get.php?file=pckbbrl-dev
 
 [3]: https://addons.nvda-project.org/files/get.php?file=pckbbrl-o
-

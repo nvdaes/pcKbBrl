@@ -32,6 +32,12 @@ trybie standardowym, czyli oburącz, upewnij się, że nie jest ono zaznaczone.
 W trybie jednej ręki można też określić, czy NVDA ma wymawiać każdy
 wpisywany punkt.
 
+If you want dots to be sent automatically when typing with one hand, use the
+spin control to set a timeout greater than 0.
+
+In addition, you can set the characters to send and clear dots when typing
+with one hand.
+
 ## Jak używać
 
 1. Naciśnij NVDA+0 aby włączyć wprowadzanie brajla. To polecenie można
@@ -85,6 +91,12 @@ czy NVDA.  W niektórych przypadkach może pomóc użycie górnego rzędu klawis
 jedną lub obiema rękami, ponieważ twoja klawiatura może zezwalać na te
 klawisze.
 
+
+## Changes for 2022.1
+* Added ability to configure keys to send and clear dots when writing with
+  one hand. Also, it's possible to set a timeout to send dots automatically,
+  without pressing confirmation keys.
+
 ## Changes for 2021.1
 
 * NVDA won't try to speak dots when One hand mode is not active or if space
@@ -109,7 +121,6 @@ klawisze.
 * Cyrille Bougot
 * Abdel.
 
-
 [[!tag dev stable]]
 
 [1]: https://addons.nvda-project.org/files/get.php?file=pckbbrl
@@ -117,4 +128,3 @@ klawisze.
 [2]: https://addons.nvda-project.org/files/get.php?file=pckbbrl-dev
 
 [3]: https://addons.nvda-project.org/files/get.php?file=pckbbrl-o
-

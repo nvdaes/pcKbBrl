@@ -33,6 +33,12 @@ se uverite da nije označeno ako želite da pišete na standardan način
 Možete takođe da označite da li će NVDA izgovarati svaku otkucanu tačkicu
 (ako se koristi opcija "pisanja jednom rukom ").
 
+If you want dots to be sent automatically when typing with one hand, use the
+spin control to set a timeout greater than 0.
+
+In addition, you can set the characters to send and clear dots when typing
+with one hand.
+
 ## Kako koristiti
 
 1. Pritisnite NVDA plus 0 da biste omogućili brajev unos. Ova prečica se
@@ -85,6 +91,12 @@ budući da tastere ne prima ni Windows ni NVDA.  U nekim slučajevima,
 korišćenjem gornjeg reda tastera sa jednom ili obe ruke može pomoći, budući
 da će vaša tastatura možda dozvoliti ove tastere.
 
+
+## Changes for 2022.1
+* Added ability to configure keys to send and clear dots when writing with
+  one hand. Also, it's possible to set a timeout to send dots automatically,
+  without pressing confirmation keys.
+
 ## Changes for 2021.1
 
 * NVDA won't try to speak dots when One hand mode is not active or if space
@@ -109,7 +121,6 @@ da će vaša tastatura možda dozvoliti ove tastere.
 * Cyrille Bougot
 * Abdel.
 
-
 [[!tag dev stable]]
 
 [1]: https://addons.nvda-project.org/files/get.php?file=pckbbrl
@@ -117,4 +128,3 @@ da će vaša tastatura možda dozvoliti ove tastere.
 [2]: https://addons.nvda-project.org/files/get.php?file=pckbbrl-dev
 
 [3]: https://addons.nvda-project.org/files/get.php?file=pckbbrl-o
-

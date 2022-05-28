@@ -33,6 +33,12 @@ yazmak istiyorsanız onay kutusunu işaretsiz bırakın.
 
 Tek elle yazarken NVDA'nın noktaları söylemesini de sağlayabilirsiniz.
 
+If you want dots to be sent automatically when typing with one hand, use the
+spin control to set a timeout greater than 0.
+
+In addition, you can set the characters to send and clear dots when typing
+with one hand.
+
 ## Nasıl kullanılır?
 
 1. Braille girişi etkinleştirmek için NVDA+0 kısayol tuşunu
@@ -82,6 +88,12 @@ kombinasyonlarını desteklemez. Basılan tuşlar Windows veya NVDA tarafından
 algılanmadığı için bu sorun çözülemez. Bastığınız tuşların bir üst
 sırasındaki tuşlara basmayı deneyebilirsiniz. 
 
+
+## Changes for 2022.1
+* Added ability to configure keys to send and clear dots when writing with
+  one hand. Also, it's possible to set a timeout to send dots automatically,
+  without pressing confirmation keys.
+
 ## 2021.1 için değişiklikler
 
 * NVDA, Tek el modu etkin olmadığında veya boşluğa basıldığında noktaları
@@ -105,7 +117,6 @@ sırasındaki tuşlara basmayı deneyebilirsiniz.
 * Cyrille Bougot
 * Abdel.
 
-
 [[!tag dev stable]]
 
 [1]: https://addons.nvda-project.org/files/get.php?file=pckbbrl
@@ -113,4 +124,3 @@ sırasındaki tuşlara basmayı deneyebilirsiniz.
 [2]: https://addons.nvda-project.org/files/get.php?file=pckbbrl-dev
 
 [3]: https://addons.nvda-project.org/files/get.php?file=pckbbrl-o
-
