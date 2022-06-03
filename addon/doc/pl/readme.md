@@ -1,7 +1,7 @@
 # PC Keyboard Braille Input for NVDA #
 
 * Autorzy: NV Access Limited, Noelia Ruiz Martínez
-* Copyright: 2012-2022 NV Access Limited, Noelia Ruiz Martínez
+* Prawa autorskie: 2012-2022 NV Access Limited, Noelia Ruiz Martínez
 * Licencja: GNU General Public License version 2.0
 * Pobierz: [Wersja stabilna][1] (compatible with NVDA 2019.3 or later)
 * Pobierz: [Wersja rozwojowa][2] (compatible with NVDA 2019.3 or later)
@@ -14,7 +14,7 @@ komputera. Obecnie wspierane są następujące układy klawiatury:
 * Francuzki (Francja).
 * Niemiecki (Niemcy).
 * Włoski (Włochy).
-* Perski
+* Perski.
 * Portugalski (Portugalia).
 * Hiszpański (Hiszpania i Meksyk).
 * Turecki.
@@ -32,11 +32,11 @@ trybie standardowym, czyli oburącz, upewnij się, że nie jest ono zaznaczone.
 W trybie jednej ręki można też określić, czy NVDA ma wymawiać każdy
 wpisywany punkt.
 
-If you want dots to be sent automatically when typing with one hand, use the
-spin control to set a timeout greater than 0.
+Jeśli chcesz, aby kropki były wysyłane automatycznie podczas pisania jedną
+ręką, użyj kontrolki obrotu, aby ustawić limit czasu większy niż 0.
 
-In addition, you can set the characters to send and clear dots when typing
-with one hand.
+Ponadto możesz ustawić znaki tak, aby wysyłały i usuwały kropki podczas
+pisania jedną ręką.
 
 ## Jak używać
 
@@ -92,16 +92,16 @@ jedną lub obiema rękami, ponieważ twoja klawiatura może zezwalać na te
 klawisze.
 
 
-## Changes for 2022.1
-* Added ability to configure keys to send and clear dots when writing with
-  one hand. Also, it's possible to set a timeout to send dots automatically,
-  without pressing confirmation keys.
+## Zmiany na rok 2022.1
+* Dodano możliwość konfigurowania kluczy do wysyłania i czyszczenia kropek
+  podczas pisania jedną ręką. Ponadto możliwe jest ustawienie limitu czasu
+  automatycznego wysyłania kropek bez naciskania potwierdzenia.
 
-## Changes for 2021.1
+## Zmiany na rok 2021.1
 
-* NVDA won't try to speak dots when One hand mode is not active or if space
-  has been pressed.
-* Compatible with NVDA 2021.1.
+* NVDA nie będzie próbowała mówić kropek, gdy tryb jednej ręki nie jest
+  aktywny lub jeśli przestrzeń została wciśnięta.
+* Kompatybilny z NVDA 2021.1.
 
 ## Zmiany dla wersji NVDA 2020.1
 

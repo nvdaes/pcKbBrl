@@ -24,8 +24,8 @@ näppäimistöasetteluja:
 
 Lisäosan asetukset voidaan määrittää omasta kategoriastaan NVDA:n
 asetusvalintaikkunassa (NVDA-valikko -> Asetukset-alivalikko). Lisäosan
-asetuspaneelin avaamiseen on mahdollista määrittää syötekomento
-Syötekomennot-valintaikkunan Asetukset-kategoriasta.
+asetuspaneelin avaamiseen on mahdollista määrittää näppäinkomento
+Näppäinkomennot-valintaikkunan Asetukset-kategoriasta.
 
 Mikäli haluat kirjoittaa yksikätisesti, valitse sitä vastaava valintaruutu,
 tai varmista, ettei se ole valittuna, mikäli kirjoitat mieluummin
@@ -43,7 +43,7 @@ kädellä kirjoitettaessa.
 ## Käyttö
 
 1. Ota pistekirjoituksen syöttö käyttöön painamalla NVDA+0. Tätä
-   syötekomentoa on mahdollista muuttaa Syötekomennot-valintaikkunan
+   näppäinkomentoa on mahdollista muuttaa Näppäinkomennot-valintaikkunan
    Pistekirjoitus-kategoriasta.
 2. Kirjoita pistekirjoitusta painamalla samanaikaisesti useita näppäimiä
    tietokoneen näppäimistöltä, ikään kuin se olisi
@@ -112,7 +112,7 @@ näppäimistö saattaa sallia näiden näppäinten painamisen.
 
 ## Muutokset versiossa 2020.1
 
-* Voit jäljitellä syötekomentoja samoin kuin pistenäyttöjen komentoja
+* Voit jäljitellä näppäinkomentoja samoin kuin pistenäyttöjen komentoja
   painamalla Väli-näppäintä yhdessä pistekirjoituspisteiden kanssa.
 * Lisätty asetus yksittäisten pisteiden puhumiselle yksikätisessä tilassa.
 
