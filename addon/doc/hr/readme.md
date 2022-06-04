@@ -32,11 +32,11 @@ ga odznači, ako radije koristiš standardni način (s dvije ruke).
 Moguće je odabrati, hoće li NVDA izgovarati jednu utipkanu točku (koristeći
 funkciju „jednoručni modus”).
 
-If you want dots to be sent automatically when typing with one hand, use the
-spin control to set a timeout greater than 0.
+Ako želiš da se točkice šalju automatski kad tipkaš jednom rukom, koristi
+kontrolu za postavljanje vremenskog ograničenja većeg od 0.
 
-In addition, you can set the characters to send and clear dots when typing
-with one hand.
+Osim toga, možeš postaviti znakove za slanje i brisanje točaka prilikom
+tipkanja jednom rukom.
 
 ## Kako koristiti
 
@@ -90,10 +90,10 @@ slučajevima pomaže korištenje tipki gornjeg reda, ovisno o mogućnostima
 tipkovnice.
 
 
-## Changes for 2022.1
-* Added ability to configure keys to send and clear dots when writing with
-  one hand. Also, it's possible to set a timeout to send dots automatically,
-  without pressing confirmation keys.
+## Promjene za 2022.1
+* Dodana je mogućnost konfiguriranja tipki za slanje i brisanje točaka
+  prilikom pisanja jednom rukom. Također, moguće je postaviti vremensko
+  ograničenje za automatsko slanje točaka, bez pritiskanja tipki za potvrdu.
 
 ## Promjene za 2021.1
 
