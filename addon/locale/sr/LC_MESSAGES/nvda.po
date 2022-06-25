@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pcKbBrl 2021.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2021-07-21 09:36+0000\n"
-"PO-Revision-Date: 2021-07-24 14:52+0100\n"
+"PO-Revision-Date: 2022-06-19 04:06+0100\n"
 "Last-Translator: Nikola Jović <wwenikola123@gmail.com>\n"
 "Language-Team: Serbian <LL@li.org>\n"
 "Language: sr\n"
@@ -43,19 +43,17 @@ msgid "&Speak dot when typing with one hand"
 msgstr "&Izgovaraj tačkice kada se koristi unos jednom rukom"
 
 #. Translators: label of a dialog.
-#, fuzzy
 msgid "&Timeout to send dots when writing with one hand (in ms)"
-msgstr "&Izgovaraj tačkice kada se koristi unos jednom rukom"
+msgstr ""
+"&Vreme isteka za unos tačkica kada se piše jednom rukom (u milisekundama)"
 
 #. Translators: label of a dialog.
-#, fuzzy
 msgid "Type the characters to con&firm when writing with one hand."
-msgstr "&Izgovaraj tačkice kada se koristi unos jednom rukom"
+msgstr "Upišite znakove za &potvrdu kada se piše jednom rukom."
 
 #. Translators: label of a dialog.
-#, fuzzy
 msgid "Type the characters to cance&l when writing with one hand."
-msgstr "&Izgovaraj tačkice kada se koristi unos jednom rukom"
+msgstr "Upišite znakove za &otkazivanje kada se piše jednom rukom."
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
