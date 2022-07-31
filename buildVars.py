@@ -19,7 +19,7 @@ addon_info = {
 	# Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 	"addon_description": _("""Allows braille to be entered via the PC keyboard."""),
 	# version
-	"addon_version": "2022.1.2",
+	"addon_version": "2022.07.31",
 	# Author(s)
 	"addon_author": u"NV Access Limited, Noelia Ruiz Martínez <nrm1977@gmail.com>",
 	# URL for the add-on documentation support
