@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: pcKbBrl 2021.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2021-07-21 09:36+0000\n"
-"PO-Revision-Date: 2021-08-03 18:56+0200\n"
+"PO-Revision-Date: 2022-08-03 18:40+0200\n"
 "Last-Translator: Iván Novegil Cancelas <ivan.novegil.cancelas@gmail.com>\n"
 "Language-Team: \n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 3.1.1\n"
 
 #. Translators: Describes a command.
 msgid "Toggles braille input from the PC keyboard."
@@ -23,11 +23,11 @@ msgstr "Conmuta a entrada braille dende o teclado do ordenador."
 
 #. Translators: Reported when braille input from the PC keyboard is disabled.
 msgid "Braille input from PC keyboard disabled"
-msgstr "entrada braille dende o teclado do ordenador desactivada"
+msgstr "Entrada braille dende o teclado do ordenador desactivada"
 
 #. Translators: Reported when braille input from the PC keyboard is enabled.
 msgid "Braille input from PC keyboard enabled"
-msgstr "entrada braille dende o teclado do ordenador activada"
+msgstr "Entrada braille dende o teclado do ordenador activada"
 
 #. Translators: Describes a command.
 #, python-format
@@ -43,19 +43,16 @@ msgid "&Speak dot when typing with one hand"
 msgstr "&Dicir punto ao escribir cunha man"
 
 #. Translators: label of a dialog.
-#, fuzzy
 msgid "&Timeout to send dots when writing with one hand (in ms)"
-msgstr "&Dicir punto ao escribir cunha man"
+msgstr "&Tempo de espera para enviar os puntos cando se escribe cunha soa man (en ms)"
 
 #. Translators: label of a dialog.
-#, fuzzy
 msgid "Type the characters to con&firm when writing with one hand."
-msgstr "&Dicir punto ao escribir cunha man"
+msgstr "Escribir os caracteres para con&firmar cando se escribe cunha soa man."
 
 #. Translators: label of a dialog.
-#, fuzzy
 msgid "Type the characters to cance&l when writing with one hand."
-msgstr "&Dicir punto ao escribir cunha man"
+msgstr "Escribe os caracteres para cance&lar cando se escribe cunha soa man."
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
