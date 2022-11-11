@@ -32,11 +32,11 @@ standardtilstand (to hænder).
 Du kan også vælge, om NVDA skal oplæse hvert enkelt indtastede punkt (ved
 hjælp af funktionen "enhåndstilstand").
 
-If you want dots to be sent automatically when typing with one hand, use the
-spin control to set a timeout greater than 0.
+Hvis du ønsker, at punkttegn skal sendes automatisk, når du skriver med én
+hånd, skal du bruge drejeknappen til at indstille en timeout på mere end 0.
 
-In addition, you can set the characters to send and clear dots when typing
-with one hand.
+Derudover kan du indstille tegnene til at sende og slette punkttegn, når du
+skriver med én hånd.
 
 ## Sådan bruges tilføjelsen
 
@@ -92,16 +92,17 @@ tilfælde kan det være en hjælp at bruge den øverste række af taster med én
 eller begge hænder, da dit tastatur muligvis tillader disse taster.
 
 
-## Changes for 2022.1
-* Added ability to configure keys to send and clear dots when writing with
-  one hand. Also, it's possible to set a timeout to send dots automatically,
-  without pressing confirmation keys.
+## Ændringer for 2022.1
+* Tilføjet mulighed for at konfigurere taster til at sende og rydde
+  punkttegn, når du skriver med én hånd. Det er også muligt at indstille en
+  timeout, der automatisk sender de indtastede punkttegn uden at trykke på
+  bekræftelsestaster.
 
-## Changes for 2021.1
+## Ændringer for 2021.1
 
-* NVDA won't try to speak dots when One hand mode is not active or if space
-  has been pressed.
-* Compatible with NVDA 2021.1.
+* NVDA vil ikke forsøge at sige de indtastede punkttegn, når enhåndstilstand
+  ikke er aktiv, eller hvis der er blevet trykket på mellemrumstasten.
+* Kompatibel med NVDA 2021.1.
 
 ## Ændringer for 2020.1
 
