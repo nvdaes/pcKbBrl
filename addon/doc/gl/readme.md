@@ -34,11 +34,11 @@ utilizando o modo estándar (dúas mans).
 Tamén podes seleccionar se NVDA debe falar un só punto escrito (usando a
 característica "modo de unha soa man").
 
-If you want dots to be sent automatically when typing with one hand, use the
-spin control to set a timeout greater than 0.
+Se queres que os puntos se envíen automaticamente ó escribir cunha soa man,
+utiliza o control rotatorio para configurar un tempo de espera maior que 0.
 
-In addition, you can set the characters to send and clear dots when typing
-with one hand.
+Ademais, podes configurar os caracteres para enviar e limpar os puntos ó
+escribir cunha soa man.
 
 ## Como se Usa
 
@@ -94,10 +94,11 @@ teclas cunha ou ambas mans pode axudar, así como que o teu teclado pode
 permitir estas teclas.
 
 
-## Changes for 2022.1
-* Added ability to configure keys to send and clear dots when writing with
-  one hand. Also, it's possible to set a timeout to send dots automatically,
-  without pressing confirmation keys.
+## Cambios para 2022.1
+* Engadida a posibilidade de configurar as teclas para enviar e limpar
+  puntos ó escribir cunha soa man. Tamén é posible configurar un tempo de
+  espera para enviar os puntos automaticamente, sen premer teclas de
+  confirmación.
 
 ## Cambios para 2021.1
 
