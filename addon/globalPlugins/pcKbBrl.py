@@ -492,7 +492,7 @@ class AddonSettingsPanel(SettingsPanel):
 		except KeyError:
 			pass
 		# Translators: label of a dialog.
-		nullKeysLabel = _("Type the characters to be ignored when typing in braille.")
+		nullKeysLabel = _("Type the characters to be &ignored when typing in braille.")
 		self.nullKeysEdit = sHelper.addLabeledControl(nullKeysLabel, wx.TextCtrl)
 		try:
 			self.nullKeysEdit.SetValue(config.conf["pcKbBrl"]["nullKeys"])
