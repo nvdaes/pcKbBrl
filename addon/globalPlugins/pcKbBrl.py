@@ -113,11 +113,10 @@ confspec = {
 	"dot1": "string(default="")",
 	"dot2": "string(default="")",
 	"dot3": "string(default="")",
-	"dot7": "string(default="")",
 	"dot4": "string(default="")",
 	"dot5": "string(default="")",
 	"dot6": "string(default="")",
-		"dot7": "string(default="")",
+	"dot7": "string(default="")",
 	"dot8": "string(default="")",
 	"nullKeys": "string(default="")"
 }
@@ -303,7 +302,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		config.post_configProfileSwitch.unregister(self.handleConfigProfileSwitch)
 		self.isEnabled = False
 
-	def _keyDown(self, vkCode, scanCode, extended, injected):
+	def _keyDown(self, vkCode, scanCode, extended, injected):  # NOQA: C901
 		if self._keyboardLanguage in VKCODES.keys() and vkCode in VKCODES[self._keyboardLanguage].keys():
 			vkCode = VKCODES[self._keyboardLanguage][vkCode]
 		if vkCode is None:
@@ -405,7 +404,7 @@ class AddonSettingsPanel(SettingsPanel):
 
 	title = ADDON_SUMMARY
 
-	def makeSettings(self, settingsSizer):
+	def makeSettings(self, settingsSizer):  # NOQA: C901
 		sHelper = guiHelper.BoxSizerHelper(self, sizer=settingsSizer)
 		# Translators: label of a dialog.
 		self.oneHandModeCheckBox = sHelper.addItem(wx.CheckBox(self, label=_("&Type using one hand")))
