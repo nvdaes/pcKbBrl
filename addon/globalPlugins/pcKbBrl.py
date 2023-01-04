@@ -109,7 +109,17 @@ confspec = {
 	"speakDot": "boolean(default=False)",
 	"timeout": "integer(default=0)",
 	"confirmKeys": "string(default=gh)",
-	"cancelKeys": "string(default=ty)"
+	"cancelKeys": "string(default=ty)",
+	"dot1": "string(default="")",
+	"dot2": "string(default="")",
+	"dot3": "string(default="")",
+	"dot7": "string(default="")",
+	"dot4": "string(default="")",
+	"dot5": "string(default="")",
+	"dot6": "string(default="")",
+		"dot7": "string(default="")",
+	"dot8": "string(default="")",
+	"nullKeys": "string(default="")"
 }
 
 config.conf.spec["pcKbBrl"] = confspec
@@ -168,6 +178,17 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		lID = klID & (2**16 - 1)
 		return lID
 
+	def getDotCodes(self, number):
+		dotKeys = config.conf["pcKbBrl"][f"dot{number}"]
+		dotCodes = []
+		for key in dotKeys:
+			gesture = keyboardHandler.KeyboardInputGesture.fromName(key.lower())
+			code = gesture.vkCode
+			if self._keyboardLanguage in VKCODES.keys() and code in VKCODES[self._keyboardLanguage].keys():
+				code = VKCODES[self._keyboardLanguage][code]
+			dotCodes.append(code)
+		return set(dotCodes)
+
 	def getConfirmCodes(self):
 		confirmKeys = config.conf["pcKbBrl"]["confirmKeys"]
 		confirmCodes = []
@@ -213,6 +234,17 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			config.conf["pcKbBrl"]["cancelKeys"] = "".join(keysSet)
 		return set(cancelCodes)
 
+	def getNullKeyCodes(self):
+		nullKeys = config.conf["pcKbBrl"]["nullKeys"]
+		nullKeyCodes = []
+		for key in nullKeys:
+			gesture = keyboardHandler.KeyboardInputGesture.fromName(key.lower())
+			code = gesture.vkCode
+			if self._keyboardLanguage in VKCODES.keys() and code in VKCODES[self._keyboardLanguage].keys():
+				code = VKCODES[self._keyboardLanguage][code]
+			nullKeyCodes.append(code)
+		return set(nullKeyCodes)
+
 	def enable(self):
 		if self.isEnabled:
 			return
@@ -226,6 +258,15 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self._confirmGesture = keyboardHandler.KeyboardInputGesture.fromName(
 			config.conf["pcKbBrl"]["confirmKeys"][0]
 		)
+		self._dot1Codes = self.getDotCodes(1)
+		self._dot2Codes = self.getDotCodes(2)
+		self._dot3Codes = self.getDotCodes(3)
+		self._dot4Codes = self.getDotCodes(4)
+		self._dot5Codes = self.getDotCodes(5)
+		self._dot6Codes = self.getDotCodes(6)
+		self._dot7Codes = self.getDotCodes(7)
+		self._dot8Codes = self.getDotCodes(8)
+		self._nullKeyCodes = self.getNullKeyCodes()
 		self._dot = None
 		# Monkey patch keyboard handling callbacks.
 		# This is pretty evil, but we need low level keyboard handling.
@@ -249,6 +290,15 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self._confirmCodes = None
 		self._cancelCodes = None
 		self._confirmGesture = None
+		self._dot1Codes = None
+		self._dot2Codes = None
+		self._dot3Codes = None
+		self._dot4Codes = None
+		self._dot5Codes = None
+		self._dot6Codes = None
+		self._dot7Codes = None
+		self._dot8Codes = None
+		self._nullKeyCodes = None
 		self._dot = None
 		config.post_configProfileSwitch.unregister(self.handleConfigProfileSwitch)
 		self.isEnabled = False
@@ -264,8 +314,27 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			if vkCode in self._cancelCodes:
 				self._gesture = None
 				return False
-			self._dot = VKCODES_TO_DOTS_ONE_HAND.get(vkCode)
+			if vkCode in self._dot1Codes:
+				self._dot = DOT1
+			elif vkCode in self._dot2Codes:
+				self._dot = DOT2
+			elif vkCode in self._dot3Codes:
+				self._dot = DOT3
+			elif vkCode in self._dot4Codes:
+				self._dot = DOT4
+			elif vkCode in self._dot5Codes:
+				self._dot = DOT5
+			elif vkCode in self._dot6Codes:
+				self._dot = DOT6
+			elif vkCode in self._dot7Codes:
+				self._dot = DOT7
+			elif vkCode in self._dot8Codes:
+				self._dot = DOT8
+			else:
+				self._dot = VKCODES_TO_DOTS_ONE_HAND.get(vkCode)
 		if self._dot is None and not (self._oneHandMode and vkCode in self._confirmCodes):
+			if vkCode in self._nullKeyCodes:
+				return False
 			return self._oldKeyDown(vkCode, scanCode, extended, injected)
 		self._trappedKeys.add(vkCode)
 		if not self._gesture:
@@ -367,6 +436,60 @@ class AddonSettingsPanel(SettingsPanel):
 			self.cancelKeysEdit.SetValue(config.conf["pcKbBrl"]["cancelKeys"])
 		except KeyError:
 			pass
+		dot1KeysLabel = _("Type the characters for dot1 when writing with one hand.")
+		self.dot1KeysEdit = sHelper.addLabeledControl(dot1KeysLabel, wx.TextCtrl)
+		try:
+			self.dot1KeysEdit.SetValue(config.conf["pcKbBrl"]["dot1"])
+		except KeyError:
+			pass
+		dot2KeysLabel = _("Type the characters for dot2 when writing with one hand.")
+		self.dot2KeysEdit = sHelper.addLabeledControl(dot2KeysLabel, wx.TextCtrl)
+		try:
+			self.dot2KeysEdit.SetValue(config.conf["pcKbBrl"]["dot2"])
+		except KeyError:
+			pass
+		dot3KeysLabel = _("Type the characters for dot3 when writing with one hand.")
+		self.dot3KeysEdit = sHelper.addLabeledControl(dot3KeysLabel, wx.TextCtrl)
+		try:
+			self.dot3KeysEdit.SetValue(config.conf["pcKbBrl"]["dot3"])
+		except KeyError:
+			pass
+		dot4KeysLabel = _("Type the characters for dot4 when writing with one hand.")
+		self.dot4KeysEdit = sHelper.addLabeledControl(dot4KeysLabel, wx.TextCtrl)
+		try:
+			self.dot4KeysEdit.SetValue(config.conf["pcKbBrl"]["dot4"])
+		except KeyError:
+			pass
+		dot5KeysLabel = _("Type the characters for dot5 when writing with one hand.")
+		self.dot5KeysEdit = sHelper.addLabeledControl(dot5KeysLabel, wx.TextCtrl)
+		try:
+			self.dot5KeysEdit.SetValue(config.conf["pcKbBrl"]["dot5"])
+		except KeyError:
+			pass
+		dot6KeysLabel = _("Type the characters for dot6 when writing with one hand.")
+		self.dot6KeysEdit = sHelper.addLabeledControl(dot6KeysLabel, wx.TextCtrl)
+		try:
+			self.dot6KeysEdit.SetValue(config.conf["pcKbBrl"]["dot6"])
+		except KeyError:
+			pass
+		dot7KeysLabel = _("Type the characters for dot7 when writing with one hand.")
+		self.dot7KeysEdit = sHelper.addLabeledControl(dot7KeysLabel, wx.TextCtrl)
+		try:
+			self.dot7KeysEdit.SetValue(config.conf["pcKbBrl"]["dot7"])
+		except KeyError:
+			pass
+		dot8KeysLabel = _("Type the characters for dot8 when writing with one hand.")
+		self.dot8KeysEdit = sHelper.addLabeledControl(dot8KeysLabel, wx.TextCtrl)
+		try:
+			self.dot8KeysEdit.SetValue(config.conf["pcKbBrl"]["dot8"])
+		except KeyError:
+			pass
+		nullKeysLabel = _("Type the characters to be ignored when typing in braille.")
+		self.nullKeysEdit = sHelper.addLabeledControl(nullKeysLabel, wx.TextCtrl)
+		try:
+			self.nullKeysEdit.SetValue(config.conf["pcKbBrl"]["nullKeys"])
+		except KeyError:
+			pass
 
 	def postInit(self):
 		self.oneHandModeCheckBox.SetFocus()
@@ -379,3 +502,13 @@ class AddonSettingsPanel(SettingsPanel):
 			config.conf["pcKbBrl"]["confirmKeys"] = self.confirmKeysEdit.GetValue()
 		if self.cancelKeysEdit.GetValue():
 			config.conf["pcKbBrl"]["cancelKeys"] = self.cancelKeysEdit.GetValue()
+		config.conf["pcKbBrl"]["dot1"] = self.dot1KeysEdit.GetValue()
+		config.conf["pcKbBrl"]["dot2"] = self.dot2KeysEdit.GetValue()
+		config.conf["pcKbBrl"]["dot3"] = self.dot3KeysEdit.GetValue()
+		config.conf["pcKbBrl"]["dot4"] = self.dot4KeysEdit.GetValue()
+		config.conf["pcKbBrl"]["dot5"] = self.dot5KeysEdit.GetValue()
+		config.conf["pcKbBrl"]["dot5"] = self.dot5KeysEdit.GetValue()
+		config.conf["pcKbBrl"]["dot6"] = self.dot6KeysEdit.GetValue()
+		config.conf["pcKbBrl"]["dot7"] = self.dot7KeysEdit.GetValue()
+		config.conf["pcKbBrl"]["dot8"] = self.dot8KeysEdit.GetValue()
+		config.conf["pcKbBrl"]["nullKeys"] = self.nullKeysEdit.GetValue()
