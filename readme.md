@@ -29,7 +29,7 @@ You can also select if NVDA should speak a single typed dot (using )the feature 
 
 If you want dots to be sent automatically when typing with one hand, use the spin control to set a timeout greater than 0.
 
-In addition, you can set the characters to send and clear dots when typing with one hand.
+In addition, you can set the characters to send, clear and compose dots when typing with one hand, as well as characters to be ignored in one hand or standard mode.
 
 ## How to Use
 
