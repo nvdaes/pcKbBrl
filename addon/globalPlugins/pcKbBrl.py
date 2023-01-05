@@ -7,6 +7,7 @@
 """
 
 import wx
+from dataclasses import dataclass
 
 import globalPluginHandler
 import winInputHook
@@ -143,6 +144,29 @@ entries = {
 inputCore.manager.userGestureMap.update(entries)
 
 
+@dataclass
+class Dot:
+	number: int = 0
+
+	def getOutput(self):
+		possibleOutputs = (DOT1, DOT2, DOT3, DOT4, DOT5, DOT6, DOT7, DOT8)
+		number = self.number
+		return possibleOutputs[number - 1]
+
+	def getDotCodes(self):
+		number = self.number
+		dotKeys = config.conf["pcKbBrl"][f"dot{number}"]
+		keyboardLanguage = GlobalPlugin.getKeyboardLanguage()
+		dotCodes = []
+		for key in dotKeys:
+			gesture = keyboardHandler.KeyboardInputGesture.fromName(key.lower())
+			code = gesture.vkCode
+			if keyboardLanguage in VKCODES.keys() and code in VKCODES[keyboardLanguage].keys():
+				code = VKCODES[keyboardLanguage][code]
+			dotCodes.append(code)
+		return set(dotCodes)
+
+
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	scriptCategory = globalCommands.SCRCAT_BRAILLE
 
@@ -164,7 +188,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self.disable()
 		NVDASettingsDialog.categoryClasses.remove(AddonSettingsPanel)
 
-	def getKeyboardLanguage(self):
+	@staticmethod
+	def getKeyboardLanguage():
 		# Code borrowed from sayCurrentKeyboardLanguage add-on, by Abdel:
 		# https://github.com/abdel792/sayCurrentKeyboardLanguage
 		# Getting the handle of the foreground window.
@@ -176,17 +201,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		# Extract language ID from klID.
 		lID = klID & (2**16 - 1)
 		return lID
-
-	def getDotCodes(self, number):
-		dotKeys = config.conf["pcKbBrl"][f"dot{number}"]
-		dotCodes = []
-		for key in dotKeys:
-			gesture = keyboardHandler.KeyboardInputGesture.fromName(key.lower())
-			code = gesture.vkCode
-			if self._keyboardLanguage in VKCODES.keys() and code in VKCODES[self._keyboardLanguage].keys():
-				code = VKCODES[self._keyboardLanguage][code]
-			dotCodes.append(code)
-		return set(dotCodes)
 
 	def getConfirmCodes(self):
 		confirmKeys = config.conf["pcKbBrl"]["confirmKeys"]
@@ -257,14 +271,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self._confirmGesture = keyboardHandler.KeyboardInputGesture.fromName(
 			config.conf["pcKbBrl"]["confirmKeys"][0]
 		)
-		self._dot1Codes = self.getDotCodes(1)
-		self._dot2Codes = self.getDotCodes(2)
-		self._dot3Codes = self.getDotCodes(3)
-		self._dot4Codes = self.getDotCodes(4)
-		self._dot5Codes = self.getDotCodes(5)
-		self._dot6Codes = self.getDotCodes(6)
-		self._dot7Codes = self.getDotCodes(7)
-		self._dot8Codes = self.getDotCodes(8)
 		self._nullKeyCodes = self.getNullKeyCodes()
 		self._dot = None
 		# Monkey patch keyboard handling callbacks.
@@ -289,14 +295,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self._confirmCodes = None
 		self._cancelCodes = None
 		self._confirmGesture = None
-		self._dot1Codes = None
-		self._dot2Codes = None
-		self._dot3Codes = None
-		self._dot4Codes = None
-		self._dot5Codes = None
-		self._dot6Codes = None
-		self._dot7Codes = None
-		self._dot8Codes = None
 		self._nullKeyCodes = None
 		self._dot = None
 		config.post_configProfileSwitch.unregister(self.handleConfigProfileSwitch)
@@ -313,22 +311,22 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			if vkCode in self._cancelCodes:
 				self._gesture = None
 				return False
-			if vkCode in self._dot1Codes:
-				self._dot = DOT1
-			elif vkCode in self._dot2Codes:
-				self._dot = DOT2
-			elif vkCode in self._dot3Codes:
-				self._dot = DOT3
-			elif vkCode in self._dot4Codes:
-				self._dot = DOT4
-			elif vkCode in self._dot5Codes:
-				self._dot = DOT5
-			elif vkCode in self._dot6Codes:
-				self._dot = DOT6
-			elif vkCode in self._dot7Codes:
-				self._dot = DOT7
-			elif vkCode in self._dot8Codes:
-				self._dot = DOT8
+			if vkCode in Dot(1).getDotCodes():
+				self._dot = Dot(1).getOutput()
+			elif vkCode in Dot(2).getDotCodes():
+				self._dot = Dot(2).getOutput()
+			elif vkCode in Dot(3).getDotCodes():
+				self._dot = Dot(3).getOutput()
+			elif vkCode in Dot(4).getDotCodes():
+				self._dot = Dot(4).getOutput()
+			elif vkCode in Dot(5).getDotCodes():
+				self._dot = Dot(5).getOutput()
+			elif vkCode in Dot(6).getDotCodes():
+				self._dot = Dot(6).getOutput()
+			elif vkCode in Dot(7).getDotCodes():
+				self._dot = Dot(7).getOutput()
+			elif vkCode in Dot(8).getDotCodes():
+				self._dot = Dot(8).getOutput()
 			else:
 				self._dot = VKCODES_TO_DOTS_ONE_HAND.get(vkCode)
 		if self._dot is None and not (self._oneHandMode and vkCode in self._confirmCodes):
