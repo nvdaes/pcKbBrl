@@ -205,7 +205,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def getConfirmCodes(self):
 		confirmKeys = config.conf["pcKbBrl"]["confirmKeys"]
 		confirmCodes = []
-		keys = []
 		for key in confirmKeys:
 			gesture = keyboardHandler.KeyboardInputGesture.fromName(key.lower())
 			code = gesture.vkCode
@@ -214,20 +213,12 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			dot = VKCODES_TO_DOTS_ONE_HAND.get(code)
 			if dot is None:
 				confirmCodes.append(code)
-				keys.append(key.lower())
-		if not len(keys):
-			config.conf["pcKbBrl"]["confirmKeys"] = "gh"
-			confirmCodes = [71, 72]
-		else:
-			keysSet = set(keys)
-			config.conf["pcKbBrl"]["confirmKeys"] = "".join(keysSet)
 		return set(confirmCodes)
 
 	def getCancelCodes(self):
 		cancelKeys = config.conf["pcKbBrl"]["cancelKeys"]
 		confirmKeys = config.conf["pcKbBrl"]["confirmKeys"]
 		cancelCodes = []
-		keys = []
 		for key in cancelKeys:
 			if key in confirmKeys:  # Confirm keys have priority
 				continue
@@ -238,13 +229,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			dot = VKCODES_TO_DOTS_ONE_HAND.get(code)
 			if dot is None:
 				cancelCodes.append(code)
-				keys.append(key.lower())
-		if not len(keys):
-			config.conf["pcKbBrl"]["cancelKeys"] = "ty"
-			cancelCodes = [84, 89]
-		else:
-			keysSet = set(keys)
-			config.conf["pcKbBrl"]["cancelKeys"] = "".join(keysSet)
 		return set(cancelCodes)
 
 	def getNullKeyCodes(self):
@@ -432,7 +416,7 @@ class AddonSettingsPanel(SettingsPanel):
 		except KeyError:
 			pass
 		# Translators: label of a dialog.
-		dot1KeysLabel = _("Type the characters for dot1 when writing with one hand.")
+		dot1KeysLabel = _("Type the characters for &dot1 when writing with one hand.")
 		self.dot1KeysEdit = sHelper.addLabeledControl(dot1KeysLabel, wx.TextCtrl)
 		try:
 			self.dot1KeysEdit.SetValue(config.conf["pcKbBrl"]["dot1"])
@@ -495,7 +479,7 @@ class AddonSettingsPanel(SettingsPanel):
 		except KeyError:
 			pass
 		# Translators: label of a dialog.
-		self.restoreDefaultsButton = sHelper.addItem(wx.Button(self, label=_("Restore defaults")))
+		self.restoreDefaultsButton = sHelper.addItem(wx.Button(self, label=_("&Restore defaults")))
 		self.restoreDefaultsButton.Bind(wx.EVT_BUTTON, self.onRestoreDefaults)
 
 	def postInit(self):
@@ -523,8 +507,12 @@ class AddonSettingsPanel(SettingsPanel):
 		config.conf["pcKbBrl"]["timeout"] = self.timeoutSpinControl.GetValue()
 		if self.confirmKeysEdit.GetValue():
 			config.conf["pcKbBrl"]["confirmKeys"] = self.confirmKeysEdit.GetValue()
+		else:
+			config.conf["pcKbBrl"]["confirmKeys"] = "gh"
 		if self.cancelKeysEdit.GetValue():
 			config.conf["pcKbBrl"]["cancelKeys"] = self.cancelKeysEdit.GetValue()
+		else:
+			config.conf["pcKbBrl"]["cancelKeys"] = "ty"
 		config.conf["pcKbBrl"]["dot1"] = self.dot1KeysEdit.GetValue()
 		config.conf["pcKbBrl"]["dot2"] = self.dot2KeysEdit.GetValue()
 		config.conf["pcKbBrl"]["dot3"] = self.dot3KeysEdit.GetValue()
