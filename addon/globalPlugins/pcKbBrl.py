@@ -303,7 +303,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def _keyDown(self, vkCode, scanCode, extended, injected):  # NOQA: C901
 		if self._keyboardLanguage in VKCODES.keys() and vkCode in VKCODES[self._keyboardLanguage].keys():
 			vkCode = VKCODES[self._keyboardLanguage][vkCode]
-		if vkCode is None:
+		if vkCode is None or vkCode in self._nullKeyCodes:
 			return False
 		if not self._oneHandMode:
 			self._dot = VKCODES_TO_DOTS.get(vkCode)
@@ -330,8 +330,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			else:
 				self._dot = VKCODES_TO_DOTS_ONE_HAND.get(vkCode)
 		if self._dot is None and not (self._oneHandMode and vkCode in self._confirmCodes):
-			if vkCode in self._nullKeyCodes:
-				return False
 			return self._oldKeyDown(vkCode, scanCode, extended, injected)
 		self._trappedKeys.add(vkCode)
 		if not self._gesture:
@@ -496,9 +494,28 @@ class AddonSettingsPanel(SettingsPanel):
 			self.nullKeysEdit.SetValue(config.conf["pcKbBrl"]["nullKeys"])
 		except KeyError:
 			pass
+		# Translators: label of a dialog.
+		self.restoreDefaultsButton = sHelper.addItem(wx.Button(self, label=_("Restore defaults")))
+		self.restoreDefaultsButton.Bind(wx.EVT_BUTTON, self.onRestoreDefaults)
 
 	def postInit(self):
 		self.oneHandModeCheckBox.SetFocus()
+
+	def onRestoreDefaults(self, evt):
+		self.oneHandModeCheckBox.SetValue(False)
+		self.speakDotCheckBox.SetValue(False)
+		self.timeoutSpinControl.SetValue(0)
+		self.confirmKeysEdit.SetValue("")
+		self.cancelKeysEdit.SetValue("")
+		self.dot1KeysEdit.SetValue("")
+		self.dot2KeysEdit.SetValue("")
+		self.dot3KeysEdit.SetValue("")
+		self.dot4KeysEdit.SetValue("")
+		self.dot5KeysEdit.SetValue("")
+		self.dot6KeysEdit.SetValue("")
+		self.dot7KeysEdit.SetValue("")
+		self.dot8KeysEdit.SetValue("")
+		self.nullKeysEdit.SetValue("")
 
 	def onSave(self):
 		config.conf["pcKbBrl"]["oneHandMode"] = self.oneHandModeCheckBox.GetValue()
