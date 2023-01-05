@@ -210,9 +210,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			code = gesture.vkCode
 			if self._keyboardLanguage in VKCODES.keys() and code in VKCODES[self._keyboardLanguage].keys():
 				code = VKCODES[self._keyboardLanguage][code]
-			dot = VKCODES_TO_DOTS_ONE_HAND.get(code)
-			if dot is None:
-				confirmCodes.append(code)
+			confirmCodes.append(code)
 		return set(confirmCodes)
 
 	def getCancelCodes(self):
@@ -226,9 +224,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			code = gesture.vkCode
 			if self._keyboardLanguage in VKCODES.keys() and code in VKCODES[self._keyboardLanguage].keys():
 				code = VKCODES[self._keyboardLanguage][code]
-			dot = VKCODES_TO_DOTS_ONE_HAND.get(code)
-			if dot is None:
-				cancelCodes.append(code)
+			cancelCodes.append(code)
 		return set(cancelCodes)
 
 	def getNullKeyCodes(self):
