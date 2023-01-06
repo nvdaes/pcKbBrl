@@ -7,6 +7,7 @@
 """
 
 import wx
+import itertools
 from dataclasses import dataclass
 
 import globalPluginHandler
@@ -23,6 +24,7 @@ import globalCommands
 import gui
 from gui import SettingsPanel, NVDASettingsDialog, guiHelper, nvdaControls
 from scriptHandler import script
+from logHandler import log
 import addonHandler
 
 addonHandler.initTranslation()
@@ -493,6 +495,24 @@ class AddonSettingsPanel(SettingsPanel):
 		self.dot7KeysEdit.SetValue(config.conf.getConfigValidation(['pcKbBrl', 'dot7']).default)
 		self.dot8KeysEdit.SetValue(config.conf.getConfigValidation(['pcKbBrl', 'dot8']).default)
 		self.nullKeysEdit.SetValue(config.conf.getConfigValidation(['pcKbBrl', 'nullKeys']).default)
+
+	def isValid(self):
+		dotKeys = list(itertools.chain(
+			self.dot1KeysEdit.GetValue(), self.dot2KeysEdit.GetValue(), self.dot3KeysEdit.GetValue(), self.dot4KeysEdit.GetValue(),
+			self.dot5KeysEdit.GetValue(), self.dot6KeysEdit.GetValue(), self.dot7KeysEdit.GetValue(), self.dot8KeysEdit.GetValue()
+		))
+		for key in dotKeys:
+			if key == "":
+				dotKeys.remove(key)
+		if len(dotKeys) != len(set(dotKeys)):
+			log.debugWarning("pcKbBrl: repeated keys have been set")
+			gui.messageBox(
+				# Translators: Message to report wrong configuration.
+				_("Configured keys for pcKbBrl shouldn't be repeated."),
+				# Translators: Title of message box
+				_("Error"), wx.OK|wx.ICON_ERROR,self)
+			return False
+		return super(AddonSettingsPanel, self).isValid()
 
 	def onSave(self):
 		config.conf["pcKbBrl"]["oneHandMode"] = self.oneHandModeCheckBox.GetValue()
