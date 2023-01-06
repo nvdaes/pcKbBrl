@@ -412,7 +412,7 @@ class AddonSettingsPanel(SettingsPanel):
 		except KeyError:
 			pass
 		# Translators: label of a dialog.
-		dot1KeysLabel = _("Type the characters for &dot1 when writing with one hand.")
+		dot1KeysLabel = _("Characters for dot&1 when writing with one hand:")
 		self.dot1KeysEdit = sHelper.addLabeledControl(dot1KeysLabel, wx.TextCtrl)
 		try:
 			self.dot1KeysEdit.SetValue(config.conf["pcKbBrl"]["dot1"])
