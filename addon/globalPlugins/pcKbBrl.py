@@ -176,19 +176,17 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		super().__init__()
 		self.isEnabled = False
 		NVDASettingsDialog.categoryClasses.append(AddonSettingsPanel)
+		config.post_configProfileSwitch.register(self.handleConfigProfileSwitch)
 
 	def handleConfigProfileSwitch(self):
-		self._oneHandMode = config.conf["pcKbBrl"]["oneHandMode"]
-		self._speakDot = config.conf["pcKbBrl"]["speakDot"]
-		self._confirmCodes = self.getConfirmCodes()
-		self._cancelCodes = self.getCancelCodes()
-		self._confirmGesture = keyboardHandler.KeyboardInputGesture.fromName(
-			config.conf["pcKbBrl"]["confirmKeys"][0]
-		)
+		if self.isEnabled:
+			self.disable()
+			self.enable()
 
 	def terminate(self):
 		self.disable()
 		NVDASettingsDialog.categoryClasses.remove(AddonSettingsPanel)
+		config.post_configProfileSwitch.unregister(self.handleConfigProfileSwitch)
 
 	@staticmethod
 	def getKeyboardLanguage():
@@ -261,7 +259,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		winInputHook.keyDownCallback = self._keyDown
 		self._oldKeyUp = winInputHook.keyUpCallback
 		winInputHook.keyUpCallback = self._keyUp
-		config.post_configProfileSwitch.register(self.handleConfigProfileSwitch)
 		self.isEnabled = True
 
 	def disable(self):
@@ -279,7 +276,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self._confirmGesture = None
 		self._nullKeyCodes = None
 		self._dot = None
-		config.post_configProfileSwitch.unregister(self.handleConfigProfileSwitch)
 		self.isEnabled = False
 
 	def _keyDown(self, vkCode, scanCode, extended, injected):  # NOQA: C901
