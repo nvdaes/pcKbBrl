@@ -497,14 +497,16 @@ class AddonSettingsPanel(SettingsPanel):
 		self.nullKeysEdit.SetValue(config.conf.getConfigValidation(['pcKbBrl', 'nullKeys']).default)
 
 	def isValid(self):
-		dotKeys = list(itertools.chain(
+		configuredKeys = list(itertools.chain(
+			self.confirmKeysEdit.GetValue(), self.cancelKeysEdit.GetValue(),
 			self.dot1KeysEdit.GetValue(), self.dot2KeysEdit.GetValue(), self.dot3KeysEdit.GetValue(), self.dot4KeysEdit.GetValue(),
-			self.dot5KeysEdit.GetValue(), self.dot6KeysEdit.GetValue(), self.dot7KeysEdit.GetValue(), self.dot8KeysEdit.GetValue()
+			self.dot5KeysEdit.GetValue(), self.dot6KeysEdit.GetValue(), self.dot7KeysEdit.GetValue(), self.dot8KeysEdit.GetValue(),
+			self.nullKeysEdit.GetValue()
 		))
-		for key in dotKeys:
+		for key in configuredKeys:
 			if key == "":
-				dotKeys.remove(key)
-		if len(dotKeys) != len(set(dotKeys)):
+				configuredKeys.remove(key)
+		if len(configuredKeys) != len(set(configuredKeys)):
 			log.debugWarning("pcKbBrl: repeated keys have been set")
 			gui.messageBox(
 				# Translators: Message to report wrong configuration.
