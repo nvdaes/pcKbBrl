@@ -119,7 +119,7 @@ confspec = {
 	"dot6": 'string(default="")',
 	"dot7": 'string(default="")',
 	"dot8": 'string(default="")',
-	"nullKeys'string(default="")',
+	"nullKeys": 'string(default="")'
 }
 
 config.conf.spec["pcKbBrl"] = confspec
