@@ -469,9 +469,9 @@ class AddonSettingsPanel(SettingsPanel):
 	def isValid(self):
 		configuredKeys = list(itertools.chain(
 			self.confirmKeysEdit.GetValue(), self.cancelKeysEdit.GetValue(),
-			self.dot1KeysEdit.GetValue(), self.dot2KeysEdit.GetValue(), self.dot3KeysEdit.GetValue(), self.dot4KeysEdit.GetValue(),
-			self.dot5KeysEdit.GetValue(), self.dot6KeysEdit.GetValue(), self.dot7KeysEdit.GetValue(), self.dot8KeysEdit.GetValue(),
-			self.nullKeysEdit.GetValue()
+			self.dot1KeysEdit.GetValue(), self.dot2KeysEdit.GetValue(), self.dot3KeysEdit.GetValue(),
+			self.dot4KeysEdit.GetValue(), self.dot5KeysEdit.GetValue(), self.dot6KeysEdit.GetValue(),
+			self.dot7KeysEdit.GetValue(), self.dot8KeysEdit.GetValue(), self.nullKeysEdit.GetValue()
 		))
 		for key in configuredKeys:
 			if key == "":
@@ -482,7 +482,7 @@ class AddonSettingsPanel(SettingsPanel):
 				# Translators: Message to report wrong configuration.
 				_("Configured keys for pcKbBrl shouldn't be repeated."),
 				# Translators: Title of message box
-				_("Error"), wx.OK|wx.ICON_ERROR,self)
+				_("Error"), wx.OK | wx.ICON_ERROR, self)
 			return False
 		return super(AddonSettingsPanel, self).isValid()
 
