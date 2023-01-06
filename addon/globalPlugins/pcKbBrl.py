@@ -111,15 +111,15 @@ confspec = {
 	"timeout": "integer(default=0)",
 	"confirmKeys": "string(default=gh)",
 	"cancelKeys": "string(default=ty)",
-	"dot1": "string(default="")",
-	"dot2": "string(default="")",
-	"dot3": "string(default="")",
-	"dot4": "string(default="")",
-	"dot5": "string(default="")",
-	"dot6": "string(default="")",
-	"dot7": "string(default="")",
-	"dot8": "string(default="")",
-	"nullKeys": "string(default="")"
+	"dot1": 'string(default="")',
+	"dot2": 'string(default="")',
+	"dot3": 'string(default="")',
+	"dot4": 'string(default="")',
+	"dot5": 'string(default="")',
+	"dot6": 'string(default="")',
+	"dot7": 'string(default="")',
+	"dot8": 'string(default="")',
+	"nullKeys'string(default="")',
 }
 
 config.conf.spec["pcKbBrl"] = confspec
