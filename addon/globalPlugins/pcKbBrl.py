@@ -400,79 +400,49 @@ class AddonSettingsPanel(SettingsPanel):
 			initial=config.conf["pcKbBrl"]["timeout"]
 		)
 		# Translators: label of a dialog.
-		confirmKeysLabel = _("Type the characters to con&firm when writing with one hand.")
+		confirmKeysLabel = _("Characters to con&firm when writing with one hand:")
 		self.confirmKeysEdit = sHelper.addLabeledControl(confirmKeysLabel, wx.TextCtrl)
-		try:
-			self.confirmKeysEdit.SetValue(config.conf["pcKbBrl"]["confirmKeys"])
-		except KeyError:
-			pass
+		self.confirmKeysEdit.SetValue(config.conf["pcKbBrl"]["confirmKeys"])
 		# Translators: label of a dialog.
-		cancelKeysLabel = _("Type the characters to cance&l when writing with one hand.")
+		cancelKeysLabel = _("Characters to cance&l when writing with one hand:")
 		self.cancelKeysEdit = sHelper.addLabeledControl(cancelKeysLabel, wx.TextCtrl)
-		try:
-			self.cancelKeysEdit.SetValue(config.conf["pcKbBrl"]["cancelKeys"])
-		except KeyError:
-			pass
+		self.cancelKeysEdit.SetValue(config.conf["pcKbBrl"]["cancelKeys"])
 		# Translators: label of a dialog.
-		dot1KeysLabel = _("Characters for dot&1 when writing with one hand:")
+		dot1KeysLabel = _("Characters for &dot1 when writing with one hand:")
 		self.dot1KeysEdit = sHelper.addLabeledControl(dot1KeysLabel, wx.TextCtrl)
 		self.dot1KeysEdit.SetValue(config.conf["pcKbBrl"]["dot1"])
 		# Translators: label of a dialog.
-		dot2KeysLabel = _("Type the characters for dot2 when writing with one hand.")
+		dot2KeysLabel = _("Characters for dot2 when writing with one hand:")
 		self.dot2KeysEdit = sHelper.addLabeledControl(dot2KeysLabel, wx.TextCtrl)
-		try:
-			self.dot2KeysEdit.SetValue(config.conf["pcKbBrl"]["dot2"])
-		except KeyError:
-			pass
+		self.dot2KeysEdit.SetValue(config.conf["pcKbBrl"]["dot2"])
 		# Translators: label of a dialog.
-		dot3KeysLabel = _("Type the characters for dot3 when writing with one hand.")
+		dot3KeysLabel = _("Characters for dot3 when writing with one hand:")
 		self.dot3KeysEdit = sHelper.addLabeledControl(dot3KeysLabel, wx.TextCtrl)
-		try:
-			self.dot3KeysEdit.SetValue(config.conf["pcKbBrl"]["dot3"])
-		except KeyError:
-			pass
+		self.dot3KeysEdit.SetValue(config.conf["pcKbBrl"]["dot3"])
 		# Translators: label of a dialog.
-		dot4KeysLabel = _("Type the characters for dot4 when writing with one hand.")
+		dot4KeysLabel = _("Characters for dot4 when writing with one hand:")
 		self.dot4KeysEdit = sHelper.addLabeledControl(dot4KeysLabel, wx.TextCtrl)
-		try:
-			self.dot4KeysEdit.SetValue(config.conf["pcKbBrl"]["dot4"])
-		except KeyError:
-			pass
+		self.dot4KeysEdit.SetValue(config.conf["pcKbBrl"]["dot4"])
 		# Translators: label of a dialog.
-		dot5KeysLabel = _("Type the characters for dot5 when writing with one hand.")
+		dot5KeysLabel = _("Characters for dot5 when writing with one hand:")
 		self.dot5KeysEdit = sHelper.addLabeledControl(dot5KeysLabel, wx.TextCtrl)
-		try:
-			self.dot5KeysEdit.SetValue(config.conf["pcKbBrl"]["dot5"])
-		except KeyError:
-			pass
+		self.dot5KeysEdit.SetValue(config.conf["pcKbBrl"]["dot5"])
 		# Translators: label of a dialog.
-		dot6KeysLabel = _("Type the characters for dot6 when writing with one hand.")
+		dot6KeysLabel = _("Characters for dot6 when writing with one hand:")
 		self.dot6KeysEdit = sHelper.addLabeledControl(dot6KeysLabel, wx.TextCtrl)
-		try:
-			self.dot6KeysEdit.SetValue(config.conf["pcKbBrl"]["dot6"])
-		except KeyError:
-			pass
+		self.dot6KeysEdit.SetValue(config.conf["pcKbBrl"]["dot6"])
 		# Translators: label of a dialog.
-		dot7KeysLabel = _("Type the characters for dot7 when writing with one hand.")
+		dot7KeysLabel = _("Characters for dot7 when writing with one hand:")
 		self.dot7KeysEdit = sHelper.addLabeledControl(dot7KeysLabel, wx.TextCtrl)
-		try:
-			self.dot7KeysEdit.SetValue(config.conf["pcKbBrl"]["dot7"])
-		except KeyError:
-			pass
+		self.dot7KeysEdit.SetValue(config.conf["pcKbBrl"]["dot7"])
 		# Translators: label of a dialog.
-		dot8KeysLabel = _("Type the characters for dot8 when writing with one hand.")
+		dot8KeysLabel = _("Characters for dot8 when writing with one hand:")
 		self.dot8KeysEdit = sHelper.addLabeledControl(dot8KeysLabel, wx.TextCtrl)
-		try:
-			self.dot8KeysEdit.SetValue(config.conf["pcKbBrl"]["dot8"])
-		except KeyError:
-			pass
+		self.dot8KeysEdit.SetValue(config.conf["pcKbBrl"]["dot8"])
 		# Translators: label of a dialog.
-		nullKeysLabel = _("Type the characters to be &ignored when typing in braille.")
+		nullKeysLabel = _("Characters to be &ignored when typing in braille:")
 		self.nullKeysEdit = sHelper.addLabeledControl(nullKeysLabel, wx.TextCtrl)
-		try:
-			self.nullKeysEdit.SetValue(config.conf["pcKbBrl"]["nullKeys"])
-		except KeyError:
-			pass
+		self.nullKeysEdit.SetValue(config.conf["pcKbBrl"]["nullKeys"])
 		# Translators: label of a dialog.
 		self.restoreDefaultsButton = sHelper.addItem(wx.Button(self, label=_("&Restore defaults")))
 		self.restoreDefaultsButton.Bind(wx.EVT_BUTTON, self.onRestoreDefaults)
@@ -523,11 +493,11 @@ class AddonSettingsPanel(SettingsPanel):
 		if self.confirmKeysEdit.GetValue():
 			config.conf["pcKbBrl"]["confirmKeys"] = self.confirmKeysEdit.GetValue()
 		else:
-			config.conf["pcKbBrl"]["confirmKeys"] = "gh"
+			config.conf["pcKbBrl"]["confirmKeys"] = config.conf.getConfigValidation(['pcKbBrl', 'confirmKeys']).default
 		if self.cancelKeysEdit.GetValue():
 			config.conf["pcKbBrl"]["cancelKeys"] = self.cancelKeysEdit.GetValue()
 		else:
-			config.conf["pcKbBrl"]["cancelKeys"] = "ty"
+			config.conf["pcKbBrl"]["cancelKeys"] = config.conf.getConfigValidation(['pcKbBrl', 'cancelKeys']).default
 		config.conf["pcKbBrl"]["dot1"] = self.dot1KeysEdit.GetValue()
 		config.conf["pcKbBrl"]["dot2"] = self.dot2KeysEdit.GetValue()
 		config.conf["pcKbBrl"]["dot3"] = self.dot3KeysEdit.GetValue()
