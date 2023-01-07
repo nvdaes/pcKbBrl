@@ -463,17 +463,32 @@ class AddonSettingsPanel(SettingsPanel):
 		self.nullKeysEdit.SetValue(config.conf.getConfigValidation(['pcKbBrl', 'nullKeys']).default)
 
 	def isValid(self):
-		configuredKeys = list(itertools.chain(
-			self.confirmKeysEdit.GetValue(), self.cancelKeysEdit.GetValue(),
+		dots = (
 			self.dot1KeysEdit.GetValue(), self.dot2KeysEdit.GetValue(), self.dot3KeysEdit.GetValue(),
 			self.dot4KeysEdit.GetValue(), self.dot5KeysEdit.GetValue(), self.dot6KeysEdit.GetValue(),
-			self.dot7KeysEdit.GetValue(), self.dot8KeysEdit.GetValue(), self.nullKeysEdit.GetValue()
+			self.dot7KeysEdit.GetValue(), self.dot8KeysEdit.GetValue()
+		)
+		notEmptyDots= [dot for dot in dots if dot != ""]
+		if 0 < len(notEmptyDots) and len(notEmptyDots) < 8:
+			log.debugWarning(f"pcKbBrl: configured {len(notEmptyDots)}.")
+			gui.messageBox(
+				# Translators: Message to report wrong configuration.
+				_("None or all dots should be configured."),
+				# Translators: Title of message box
+				_("Error"), wx.OK | wx.ICON_ERROR, self)
+			return False
+		confirmKeys = self.confirmKeysEdit.GetValue()
+		if confirmKeys == "":
+			confirmKeys = config.conf.getConfigValidation(['pcKbBrl', 'confirmKeys']).default
+		cancelKeys = self.cancelKeysEdit.GetValue()
+		if cancelKeys == "":
+			cancelKeys = config.conf.getConfigValidation(['pcKbBrl', 'cancelKeys']).default
+		nullKeys = self.nullKeysEdit.GetValue()
+		configuredKeys = list(itertools.chain(
+			confirmKeys, cancelKeys, notEmptyDots, nullKeys
 		))
-		for key in configuredKeys:
-			if key == "":
-				configuredKeys.remove(key)
 		if len(configuredKeys) != len(set(configuredKeys)):
-			log.debugWarning("pcKbBrl: repeated keys have been set")
+			log.debugWarning("pcKbBrl: repeated keys have been set.")
 			gui.messageBox(
 				# Translators: Message to report wrong configuration.
 				_("Configured keys for pcKbBrl shouldn't be repeated."),
