@@ -468,7 +468,7 @@ class AddonSettingsPanel(SettingsPanel):
 			self.dot4KeysEdit.GetValue(), self.dot5KeysEdit.GetValue(), self.dot6KeysEdit.GetValue(),
 			self.dot7KeysEdit.GetValue(), self.dot8KeysEdit.GetValue()
 		)
-		notEmptyDots= [dot for dot in dots if dot != ""]
+		notEmptyDots = [dot for dot in dots if dot != ""]
 		if 0 < len(notEmptyDots) and len(notEmptyDots) < 8:
 			log.debugWarning(f"pcKbBrl: configured {len(notEmptyDots)}.")
 			gui.messageBox(
