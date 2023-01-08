@@ -7,6 +7,8 @@
 """
 
 import wx
+import itertools
+from dataclasses import dataclass
 
 import globalPluginHandler
 import winInputHook
@@ -22,6 +24,7 @@ import globalCommands
 import gui
 from gui import SettingsPanel, NVDASettingsDialog, guiHelper, nvdaControls
 from scriptHandler import script
+from logHandler import log
 import addonHandler
 
 addonHandler.initTranslation()
@@ -109,7 +112,16 @@ confspec = {
 	"speakDot": "boolean(default=False)",
 	"timeout": "integer(default=0)",
 	"confirmKeys": "string(default=gh)",
-	"cancelKeys": "string(default=ty)"
+	"cancelKeys": "string(default=ty)",
+	"dot1": 'string(default="")',
+	"dot2": 'string(default="")',
+	"dot3": 'string(default="")',
+	"dot4": 'string(default="")',
+	"dot5": 'string(default="")',
+	"dot6": 'string(default="")',
+	"dot7": 'string(default="")',
+	"dot8": 'string(default="")',
+	"nullKeys": 'string(default="")'
 }
 
 config.conf.spec["pcKbBrl"] = confspec
@@ -134,6 +146,29 @@ entries = {
 inputCore.manager.userGestureMap.update(entries)
 
 
+@dataclass
+class Dot:
+	number: int = 0
+
+	def getOutput(self):
+		possibleOutputs = (DOT1, DOT2, DOT3, DOT4, DOT5, DOT6, DOT7, DOT8)
+		number = self.number
+		return possibleOutputs[number - 1]
+
+	def getDotCodes(self):
+		number = self.number
+		dotKeys = config.conf["pcKbBrl"][f"dot{number}"]
+		keyboardLanguage = GlobalPlugin.getKeyboardLanguage()
+		dotCodes = []
+		for key in dotKeys:
+			gesture = keyboardHandler.KeyboardInputGesture.fromName(key.lower())
+			code = gesture.vkCode
+			if keyboardLanguage in VKCODES.keys() and code in VKCODES[keyboardLanguage].keys():
+				code = VKCODES[keyboardLanguage][code]
+			dotCodes.append(code)
+		return set(dotCodes)
+
+
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	scriptCategory = globalCommands.SCRCAT_BRAILLE
 
@@ -141,21 +176,20 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		super().__init__()
 		self.isEnabled = False
 		NVDASettingsDialog.categoryClasses.append(AddonSettingsPanel)
+		config.post_configProfileSwitch.register(self.handleConfigProfileSwitch)
 
 	def handleConfigProfileSwitch(self):
-		self._oneHandMode = config.conf["pcKbBrl"]["oneHandMode"]
-		self._speakDot = config.conf["pcKbBrl"]["speakDot"]
-		self._confirmCodes = self.getConfirmCodes()
-		self._cancelCodes = self.getCancelCodes()
-		self._confirmGesture = keyboardHandler.KeyboardInputGesture.fromName(
-			config.conf["pcKbBrl"]["confirmKeys"][0]
-		)
+		if self.isEnabled:
+			self.disable()
+			self.enable()
 
 	def terminate(self):
 		self.disable()
 		NVDASettingsDialog.categoryClasses.remove(AddonSettingsPanel)
+		config.post_configProfileSwitch.unregister(self.handleConfigProfileSwitch)
 
-	def getKeyboardLanguage(self):
+	@staticmethod
+	def getKeyboardLanguage():
 		# Code borrowed from sayCurrentKeyboardLanguage add-on, by Abdel:
 		# https://github.com/abdel792/sayCurrentKeyboardLanguage
 		# Getting the handle of the foreground window.
@@ -171,29 +205,18 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 	def getConfirmCodes(self):
 		confirmKeys = config.conf["pcKbBrl"]["confirmKeys"]
 		confirmCodes = []
-		keys = []
 		for key in confirmKeys:
 			gesture = keyboardHandler.KeyboardInputGesture.fromName(key.lower())
 			code = gesture.vkCode
 			if self._keyboardLanguage in VKCODES.keys() and code in VKCODES[self._keyboardLanguage].keys():
 				code = VKCODES[self._keyboardLanguage][code]
-			dot = VKCODES_TO_DOTS_ONE_HAND.get(code)
-			if dot is None:
-				confirmCodes.append(code)
-				keys.append(key.lower())
-		if not len(keys):
-			config.conf["pcKbBrl"]["confirmKeys"] = "gh"
-			confirmCodes = [71, 72]
-		else:
-			keysSet = set(keys)
-			config.conf["pcKbBrl"]["confirmKeys"] = "".join(keysSet)
+			confirmCodes.append(code)
 		return set(confirmCodes)
 
 	def getCancelCodes(self):
 		cancelKeys = config.conf["pcKbBrl"]["cancelKeys"]
 		confirmKeys = config.conf["pcKbBrl"]["confirmKeys"]
 		cancelCodes = []
-		keys = []
 		for key in cancelKeys:
 			if key in confirmKeys:  # Confirm keys have priority
 				continue
@@ -201,17 +224,19 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			code = gesture.vkCode
 			if self._keyboardLanguage in VKCODES.keys() and code in VKCODES[self._keyboardLanguage].keys():
 				code = VKCODES[self._keyboardLanguage][code]
-			dot = VKCODES_TO_DOTS_ONE_HAND.get(code)
-			if dot is None:
-				cancelCodes.append(code)
-				keys.append(key.lower())
-		if not len(keys):
-			config.conf["pcKbBrl"]["cancelKeys"] = "ty"
-			cancelCodes = [84, 89]
-		else:
-			keysSet = set(keys)
-			config.conf["pcKbBrl"]["cancelKeys"] = "".join(keysSet)
+			cancelCodes.append(code)
 		return set(cancelCodes)
+
+	def getNullKeyCodes(self):
+		nullKeys = config.conf["pcKbBrl"]["nullKeys"]
+		nullKeyCodes = []
+		for key in nullKeys:
+			gesture = keyboardHandler.KeyboardInputGesture.fromName(key.lower())
+			code = gesture.vkCode
+			if self._keyboardLanguage in VKCODES.keys() and code in VKCODES[self._keyboardLanguage].keys():
+				code = VKCODES[self._keyboardLanguage][code]
+			nullKeyCodes.append(code)
+		return set(nullKeyCodes)
 
 	def enable(self):
 		if self.isEnabled:
@@ -226,6 +251,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self._confirmGesture = keyboardHandler.KeyboardInputGesture.fromName(
 			config.conf["pcKbBrl"]["confirmKeys"][0]
 		)
+		self._nullKeyCodes = self.getNullKeyCodes()
 		self._dot = None
 		# Monkey patch keyboard handling callbacks.
 		# This is pretty evil, but we need low level keyboard handling.
@@ -233,7 +259,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		winInputHook.keyDownCallback = self._keyDown
 		self._oldKeyUp = winInputHook.keyUpCallback
 		winInputHook.keyUpCallback = self._keyUp
-		config.post_configProfileSwitch.register(self.handleConfigProfileSwitch)
 		self.isEnabled = True
 
 	def disable(self):
@@ -249,14 +274,14 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self._confirmCodes = None
 		self._cancelCodes = None
 		self._confirmGesture = None
+		self._nullKeyCodes = None
 		self._dot = None
-		config.post_configProfileSwitch.unregister(self.handleConfigProfileSwitch)
 		self.isEnabled = False
 
-	def _keyDown(self, vkCode, scanCode, extended, injected):
+	def _keyDown(self, vkCode, scanCode, extended, injected):  # NOQA: C901
 		if self._keyboardLanguage in VKCODES.keys() and vkCode in VKCODES[self._keyboardLanguage].keys():
 			vkCode = VKCODES[self._keyboardLanguage][vkCode]
-		if vkCode is None:
+		if vkCode is None or vkCode in self._nullKeyCodes:
 			return False
 		if not self._oneHandMode:
 			self._dot = VKCODES_TO_DOTS.get(vkCode)
@@ -264,7 +289,24 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			if vkCode in self._cancelCodes:
 				self._gesture = None
 				return False
-			self._dot = VKCODES_TO_DOTS_ONE_HAND.get(vkCode)
+			if vkCode in Dot(1).getDotCodes():
+				self._dot = Dot(1).getOutput()
+			elif vkCode in Dot(2).getDotCodes():
+				self._dot = Dot(2).getOutput()
+			elif vkCode in Dot(3).getDotCodes():
+				self._dot = Dot(3).getOutput()
+			elif vkCode in Dot(4).getDotCodes():
+				self._dot = Dot(4).getOutput()
+			elif vkCode in Dot(5).getDotCodes():
+				self._dot = Dot(5).getOutput()
+			elif vkCode in Dot(6).getDotCodes():
+				self._dot = Dot(6).getOutput()
+			elif vkCode in Dot(7).getDotCodes():
+				self._dot = Dot(7).getOutput()
+			elif vkCode in Dot(8).getDotCodes():
+				self._dot = Dot(8).getOutput()
+			else:
+				self._dot = VKCODES_TO_DOTS_ONE_HAND.get(vkCode)
 		if self._dot is None and not (self._oneHandMode and vkCode in self._confirmCodes):
 			return self._oldKeyDown(vkCode, scanCode, extended, injected)
 		self._trappedKeys.add(vkCode)
@@ -336,7 +378,7 @@ class AddonSettingsPanel(SettingsPanel):
 
 	title = ADDON_SUMMARY
 
-	def makeSettings(self, settingsSizer):
+	def makeSettings(self, settingsSizer):  # NOQA: C901
 		sHelper = guiHelper.BoxSizerHelper(self, sizer=settingsSizer)
 		# Translators: label of a dialog.
 		self.oneHandModeCheckBox = sHelper.addItem(wx.CheckBox(self, label=_("&Type using one hand")))
@@ -354,22 +396,106 @@ class AddonSettingsPanel(SettingsPanel):
 			initial=config.conf["pcKbBrl"]["timeout"]
 		)
 		# Translators: label of a dialog.
-		confirmKeysLabel = _("Type the characters to con&firm when writing with one hand.")
+		confirmKeysLabel = _("Characters to con&firm when writing with one hand:")
 		self.confirmKeysEdit = sHelper.addLabeledControl(confirmKeysLabel, wx.TextCtrl)
-		try:
-			self.confirmKeysEdit.SetValue(config.conf["pcKbBrl"]["confirmKeys"])
-		except KeyError:
-			pass
+		self.confirmKeysEdit.SetValue(config.conf["pcKbBrl"]["confirmKeys"])
 		# Translators: label of a dialog.
-		cancelKeysLabel = _("Type the characters to cance&l when writing with one hand.")
+		cancelKeysLabel = _("Characters to cance&l when writing with one hand:")
 		self.cancelKeysEdit = sHelper.addLabeledControl(cancelKeysLabel, wx.TextCtrl)
-		try:
-			self.cancelKeysEdit.SetValue(config.conf["pcKbBrl"]["cancelKeys"])
-		except KeyError:
-			pass
+		self.cancelKeysEdit.SetValue(config.conf["pcKbBrl"]["cancelKeys"])
+		# Translators: label of a dialog.
+		dot1KeysLabel = _("Characters for &dot1 when writing with one hand:")
+		self.dot1KeysEdit = sHelper.addLabeledControl(dot1KeysLabel, wx.TextCtrl)
+		self.dot1KeysEdit.SetValue(config.conf["pcKbBrl"]["dot1"])
+		# Translators: label of a dialog.
+		dot2KeysLabel = _("Characters for dot2 when writing with one hand:")
+		self.dot2KeysEdit = sHelper.addLabeledControl(dot2KeysLabel, wx.TextCtrl)
+		self.dot2KeysEdit.SetValue(config.conf["pcKbBrl"]["dot2"])
+		# Translators: label of a dialog.
+		dot3KeysLabel = _("Characters for dot3 when writing with one hand:")
+		self.dot3KeysEdit = sHelper.addLabeledControl(dot3KeysLabel, wx.TextCtrl)
+		self.dot3KeysEdit.SetValue(config.conf["pcKbBrl"]["dot3"])
+		# Translators: label of a dialog.
+		dot4KeysLabel = _("Characters for dot4 when writing with one hand:")
+		self.dot4KeysEdit = sHelper.addLabeledControl(dot4KeysLabel, wx.TextCtrl)
+		self.dot4KeysEdit.SetValue(config.conf["pcKbBrl"]["dot4"])
+		# Translators: label of a dialog.
+		dot5KeysLabel = _("Characters for dot5 when writing with one hand:")
+		self.dot5KeysEdit = sHelper.addLabeledControl(dot5KeysLabel, wx.TextCtrl)
+		self.dot5KeysEdit.SetValue(config.conf["pcKbBrl"]["dot5"])
+		# Translators: label of a dialog.
+		dot6KeysLabel = _("Characters for dot6 when writing with one hand:")
+		self.dot6KeysEdit = sHelper.addLabeledControl(dot6KeysLabel, wx.TextCtrl)
+		self.dot6KeysEdit.SetValue(config.conf["pcKbBrl"]["dot6"])
+		# Translators: label of a dialog.
+		dot7KeysLabel = _("Characters for dot7 when writing with one hand:")
+		self.dot7KeysEdit = sHelper.addLabeledControl(dot7KeysLabel, wx.TextCtrl)
+		self.dot7KeysEdit.SetValue(config.conf["pcKbBrl"]["dot7"])
+		# Translators: label of a dialog.
+		dot8KeysLabel = _("Characters for dot8 when writing with one hand:")
+		self.dot8KeysEdit = sHelper.addLabeledControl(dot8KeysLabel, wx.TextCtrl)
+		self.dot8KeysEdit.SetValue(config.conf["pcKbBrl"]["dot8"])
+		# Translators: label of a dialog.
+		nullKeysLabel = _("Characters to be &ignored when typing in braille:")
+		self.nullKeysEdit = sHelper.addLabeledControl(nullKeysLabel, wx.TextCtrl)
+		self.nullKeysEdit.SetValue(config.conf["pcKbBrl"]["nullKeys"])
+		# Translators: label of a dialog.
+		self.restoreDefaultsButton = sHelper.addItem(wx.Button(self, label=_("&Restore defaults")))
+		self.restoreDefaultsButton.Bind(wx.EVT_BUTTON, self.onRestoreDefaults)
 
 	def postInit(self):
 		self.oneHandModeCheckBox.SetFocus()
+
+	def onRestoreDefaults(self, evt):
+		self.oneHandModeCheckBox.SetValue(config.conf.getConfigValidation(['pcKbBrl', 'oneHandMode']).default)
+		self.speakDotCheckBox.SetValue(config.conf.getConfigValidation(['pcKbBrl', 'speakDot']).default)
+		self.timeoutSpinControl.SetValue(config.conf.getConfigValidation(['pcKbBrl', 'timeout']).default)
+		self.confirmKeysEdit.SetValue(config.conf.getConfigValidation(['pcKbBrl', 'confirmKeys']).default)
+		self.cancelKeysEdit.SetValue(config.conf.getConfigValidation(['pcKbBrl', 'cancelKeys']).default)
+		self.dot1KeysEdit.SetValue(config.conf.getConfigValidation(['pcKbBrl', 'dot1']).default)
+		self.dot2KeysEdit.SetValue(config.conf.getConfigValidation(['pcKbBrl', 'dot2']).default)
+		self.dot3KeysEdit.SetValue(config.conf.getConfigValidation(['pcKbBrl', 'dot3']).default)
+		self.dot4KeysEdit.SetValue(config.conf.getConfigValidation(['pcKbBrl', 'dot4']).default)
+		self.dot5KeysEdit.SetValue(config.conf.getConfigValidation(['pcKbBrl', 'dot5']).default)
+		self.dot6KeysEdit.SetValue(config.conf.getConfigValidation(['pcKbBrl', 'dot6']).default)
+		self.dot7KeysEdit.SetValue(config.conf.getConfigValidation(['pcKbBrl', 'dot7']).default)
+		self.dot8KeysEdit.SetValue(config.conf.getConfigValidation(['pcKbBrl', 'dot8']).default)
+		self.nullKeysEdit.SetValue(config.conf.getConfigValidation(['pcKbBrl', 'nullKeys']).default)
+
+	def isValid(self):
+		dots = (
+			self.dot1KeysEdit.GetValue(), self.dot2KeysEdit.GetValue(), self.dot3KeysEdit.GetValue(),
+			self.dot4KeysEdit.GetValue(), self.dot5KeysEdit.GetValue(), self.dot6KeysEdit.GetValue(),
+			self.dot7KeysEdit.GetValue(), self.dot8KeysEdit.GetValue()
+		)
+		notEmptyDots = [dot for dot in dots if dot != ""]
+		if 0 < len(notEmptyDots) and len(notEmptyDots) < 8:
+			log.debugWarning(f"pcKbBrl: configured {len(notEmptyDots)}.")
+			gui.messageBox(
+				# Translators: Message to report wrong configuration.
+				_("None or all dots should be configured."),
+				# Translators: Title of message box
+				_("Error"), wx.OK | wx.ICON_ERROR, self)
+			return False
+		confirmKeys = self.confirmKeysEdit.GetValue()
+		if confirmKeys == "":
+			confirmKeys = config.conf.getConfigValidation(['pcKbBrl', 'confirmKeys']).default
+		cancelKeys = self.cancelKeysEdit.GetValue()
+		if cancelKeys == "":
+			cancelKeys = config.conf.getConfigValidation(['pcKbBrl', 'cancelKeys']).default
+		nullKeys = self.nullKeysEdit.GetValue()
+		configuredKeys = list(itertools.chain(
+			confirmKeys, cancelKeys, notEmptyDots, nullKeys
+		))
+		if len(configuredKeys) != len(set(configuredKeys)):
+			log.debugWarning("pcKbBrl: repeated keys have been set.")
+			gui.messageBox(
+				# Translators: Message to report wrong configuration.
+				_("Configured keys for pcKbBrl shouldn't be repeated."),
+				# Translators: Title of message box
+				_("Error"), wx.OK | wx.ICON_ERROR, self)
+			return False
+		return super(AddonSettingsPanel, self).isValid()
 
 	def onSave(self):
 		config.conf["pcKbBrl"]["oneHandMode"] = self.oneHandModeCheckBox.GetValue()
@@ -377,5 +503,19 @@ class AddonSettingsPanel(SettingsPanel):
 		config.conf["pcKbBrl"]["timeout"] = self.timeoutSpinControl.GetValue()
 		if self.confirmKeysEdit.GetValue():
 			config.conf["pcKbBrl"]["confirmKeys"] = self.confirmKeysEdit.GetValue()
+		else:
+			config.conf["pcKbBrl"]["confirmKeys"] = config.conf.getConfigValidation(['pcKbBrl', 'confirmKeys']).default
 		if self.cancelKeysEdit.GetValue():
 			config.conf["pcKbBrl"]["cancelKeys"] = self.cancelKeysEdit.GetValue()
+		else:
+			config.conf["pcKbBrl"]["cancelKeys"] = config.conf.getConfigValidation(['pcKbBrl', 'cancelKeys']).default
+		config.conf["pcKbBrl"]["dot1"] = self.dot1KeysEdit.GetValue()
+		config.conf["pcKbBrl"]["dot2"] = self.dot2KeysEdit.GetValue()
+		config.conf["pcKbBrl"]["dot3"] = self.dot3KeysEdit.GetValue()
+		config.conf["pcKbBrl"]["dot4"] = self.dot4KeysEdit.GetValue()
+		config.conf["pcKbBrl"]["dot5"] = self.dot5KeysEdit.GetValue()
+		config.conf["pcKbBrl"]["dot5"] = self.dot5KeysEdit.GetValue()
+		config.conf["pcKbBrl"]["dot6"] = self.dot6KeysEdit.GetValue()
+		config.conf["pcKbBrl"]["dot7"] = self.dot7KeysEdit.GetValue()
+		config.conf["pcKbBrl"]["dot8"] = self.dot8KeysEdit.GetValue()
+		config.conf["pcKbBrl"]["nullKeys"] = self.nullKeysEdit.GetValue()
