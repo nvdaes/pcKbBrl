@@ -2,7 +2,7 @@
 
 """NVDA PC Keyboard Braille plugin
 @author: James Teh <jamie@nvaccess.org>
-@copyright: 2012-2022 NV Access Limited, Noelia Ruiz Martínez
+@copyright: 2012-2023 NV Access Limited, Noelia Ruiz Martínez
 @license: GNU General Public License version 2.0
 """
 
