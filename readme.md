@@ -65,6 +65,7 @@ In some cases, using the upper row of keys with either or both hands might help,
 * Added ability to configure keys used to type dots in one hand mode.
 * Now you can configure keys that should be ignored when typing in braille.
 * A restore to defaults button has been added to the add-on settings panel.
+* Compatible with NVDA 2023.1.
 
 ## Changes for 2022.1
 
