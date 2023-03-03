@@ -1,7 +1,7 @@
 # PC Keyboard Braille Input for NVDA #
 
 * Autorzy: NV Access Limited, Noelia Ruiz Martínez
-* Prawa autorskie: 2012-2022 NV Access Limited, Noelia Ruiz Martínez
+* Copyright: 2012-2023 NV Access Limited, Noelia Ruiz Martínez
 * Licencja: GNU General Public License version 2.0
 * Pobierz: [Wersja stabilna][1] (compatible with NVDA 2019.3 or later)
 * Pobierz: [Wersja rozwojowa][2] (compatible with NVDA 2019.3 or later)
@@ -35,8 +35,11 @@ wpisywany punkt.
 Jeśli chcesz, aby kropki były wysyłane automatycznie podczas pisania jedną
 ręką, użyj kontrolki obrotu, aby ustawić limit czasu większy niż 0.
 
-Ponadto możesz ustawić znaki tak, aby wysyłały i usuwały kropki podczas
-pisania jedną ręką.
+In addition, you can set the characters to send, clear and compose dots when
+typing with one hand, as well as characters to be ignored in one hand or
+standard mode.
+
+It's also possible to restore defaults in the add-on settings panel.
 
 ## Jak używać
 
@@ -92,7 +95,15 @@ jedną lub obiema rękami, ponieważ twoja klawiatura może zezwalać na te
 klawisze.
 
 
+## Changes for 2023.02.23
+
+* Added ability to configure keys used to type dots in one hand mode.
+* Now you can configure keys that should be ignored when typing in braille.
+* A restore to defaults button has been added to the add-on settings panel.
+* Compatible with NVDA 2023.1.
+
 ## Zmiany na rok 2022.1
+
 * Dodano możliwość konfigurowania kluczy do wysyłania i czyszczenia kropek
   podczas pisania jedną ręką. Ponadto możliwe jest ustawienie limitu czasu
   automatycznego wysyłania kropek bez naciskania potwierdzenia.

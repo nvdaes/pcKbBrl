@@ -1,7 +1,7 @@
 # NVDAPC键盘盲文输入 #
 
 * 作者: NV Access Limited、 Noelia Ruiz Martínez
-* 版权所有：2012-2022 NV Access Limited、 Noelia Ruiz Martínez
+* Copyright: 2012-2023 NV Access Limited, Noelia Ruiz Martínez
 * 许可证：GNU通用公共许可证版本2.0
 * 下载[稳定版][1]（与 NVDA 2019.3或更高版本兼容）
 * 下载[开发板][2]（与NVDA 2019.3或更高版本兼容）
@@ -28,7 +28,11 @@
 
 如果您希望在单手键入时自动发送点，请使用旋转控件将超时设置为大于 0。
 
-此外，您可以设置单手键入时发送和清除点的字符。
+In addition, you can set the characters to send, clear and compose dots when
+typing with one hand, as well as characters to be ignored in one hand or
+standard mode.
+
+It's also possible to restore defaults in the add-on settings panel.
 
 ## 如何使用
 
@@ -61,7 +65,15 @@
 及 NVDA 从未接收到按键指令。在某些情况下，用单手或双手使用上排按键可能会有所帮助，因为键盘可能允许这些按键。
 
 
+## Changes for 2023.02.23
+
+* Added ability to configure keys used to type dots in one hand mode.
+* Now you can configure keys that should be ignored when typing in braille.
+* A restore to defaults button has been added to the add-on settings panel.
+* Compatible with NVDA 2023.1.
+
 ## 2022.1 的更改
+
 * 添加了配置键以在用单手键入时发送和清除点的功能。此外，可以设置超时自动发送点，而无需按确认键。
 
 ## 2021.1 的更改

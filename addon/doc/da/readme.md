@@ -1,7 +1,7 @@
 # Indtast punkt med PC-tastatur og NVDA #
 
 * Forfatter: NV Access Limited, Noelia Ruiz Martínez
-* Copyright: 2012-2022 NV Access Limited, Noelia Ruiz Martínez
+* Copyright: 2012-2023 NV Access Limited, Noelia Ruiz Martínez
 * Licens: GNU General Public License version 2.0
 * Download: [stabil version][1] (kompatibel med NVDA 2019.3 eller nyere)
 * Download: [udviklingsversion][2] (kompatibel med NVDA 2019.3 eller nyere)
@@ -35,8 +35,11 @@ hjælp af funktionen "enhåndstilstand").
 Hvis du ønsker, at punkttegn skal sendes automatisk, når du skriver med én
 hånd, skal du bruge drejeknappen til at indstille en timeout på mere end 0.
 
-Derudover kan du indstille tegnene til at sende og slette punkttegn, når du
-skriver med én hånd.
+In addition, you can set the characters to send, clear and compose dots when
+typing with one hand, as well as characters to be ignored in one hand or
+standard mode.
+
+It's also possible to restore defaults in the add-on settings panel.
 
 ## Sådan bruges tilføjelsen
 
@@ -92,7 +95,15 @@ tilfælde kan det være en hjælp at bruge den øverste række af taster med én
 eller begge hænder, da dit tastatur muligvis tillader disse taster.
 
 
+## Changes for 2023.02.23
+
+* Added ability to configure keys used to type dots in one hand mode.
+* Now you can configure keys that should be ignored when typing in braille.
+* A restore to defaults button has been added to the add-on settings panel.
+* Compatible with NVDA 2023.1.
+
 ## Ændringer for 2022.1
+
 * Tilføjet mulighed for at konfigurere taster til at sende og rydde
   punkttegn, når du skriver med én hånd. Det er også muligt at indstille en
   timeout, der automatisk sender de indtastede punkttegn uden at trykke på

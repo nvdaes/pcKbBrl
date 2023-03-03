@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pcKbBrl 2021.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2021-07-21 09:36+0000\n"
-"PO-Revision-Date: 2022-06-10 09:02+0200\n"
+"PO-Revision-Date: 2023-02-27 11:04+0100\n"
 "Last-Translator: Cyrille Bougot <cyrille.bougot2@laposte.net>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -40,19 +40,71 @@ msgstr "&Taper à une seule main"
 
 #. Translators: label of a dialog.
 msgid "&Speak dot when typing with one hand"
-msgstr "&annoncer le point lors de la saisie à une seule main"
+msgstr "&Annoncer le point lors de la saisie à une seule main"
 
 #. Translators: label of a dialog.
 msgid "&Timeout to send dots when writing with one hand (in ms)"
 msgstr "&Délai pour envoyer les points lors de l'écriture à une seule main (en ms)"
 
 #. Translators: label of a dialog.
-msgid "Type the characters to con&firm when writing with one hand."
-msgstr "Tapez les caractères pour con&firmer lors de l'écriture à une seule main."
+msgid "Characters to con&firm when writing with one hand:"
+msgstr "Caractères pour con&firmer lors de l'écriture à une seule main :"
 
 #. Translators: label of a dialog.
-msgid "Type the characters to cance&l when writing with one hand."
-msgstr "Tapez les caractères pour annu&ler lors de l'écriture à une seule main."
+msgid "Characters to cance&l when writing with one hand:"
+msgstr "Caractères pour annu&ler lors de l'écriture à une seule main :"
+
+#. Translators: label of a dialog.
+msgid "Characters for &dot1 when writing with one hand:"
+msgstr "Caractères pour &point1 lors de l'écriture à une seule main :"
+
+#. Translators: label of a dialog.
+msgid "Characters for dot2 when writing with one hand:"
+msgstr "Caractères pour point2 lors de l'écriture à une seule main :"
+
+#. Translators: label of a dialog.
+msgid "Characters for dot3 when writing with one hand:"
+msgstr "Caractères pour point3 lors de l'écriture à une seule main :"
+
+#. Translators: label of a dialog.
+msgid "Characters for dot4 when writing with one hand:"
+msgstr "Caractères pour point4 lors de l'écriture à une seule main :"
+
+#. Translators: label of a dialog.
+msgid "Characters for dot5 when writing with one hand:"
+msgstr "Caractères pour point5 lors de l'écriture à une seule main :"
+
+#. Translators: label of a dialog.
+msgid "Characters for dot6 when writing with one hand:"
+msgstr "Caractères pour point6 lors de l'écriture à une seule main :"
+
+#. Translators: label of a dialog.
+msgid "Characters for dot7 when writing with one hand:"
+msgstr "Caractères pour point7 lors de l'écriture à une seule main :"
+
+#. Translators: label of a dialog.
+msgid "Characters for dot8 when writing with one hand:"
+msgstr "Caractères pour point8 lors de l'écriture à une seule main :"
+
+#. Translators: label of a dialog.
+msgid "Characters to be &ignored when typing in braille:"
+msgstr "Caractères à &ignorer lors de la saisie en braille :"
+
+#. Translators: label of a dialog.
+msgid "&Restore defaults"
+msgstr "&Réinitialiser"
+
+#. Translators: Message to report wrong configuration.
+msgid "None or all dots should be configured."
+msgstr "Aucun ou tous les points doivent être configurés."
+
+#. Translators: Title of message box
+msgid "Error"
+msgstr "Erreur"
+
+#. Translators: Message to report wrong configuration.
+msgid "Configured keys for pcKbBrl shouldn't be repeated."
+msgstr "Les touches configurées pour pcKbBrl ne doivent pas être répétées."
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.

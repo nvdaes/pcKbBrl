@@ -1,7 +1,7 @@
 # PC Keyboard Braille Input for NVDA #
 
 * Autor: NV Access Limited, Noelia Ruiz Martínez
-* Copyright: 2012-2022 NV Access Limited, Noelia Ruiz Martínez
+* Copyright: 2012-2023 NV Access Limited, Noelia Ruiz Martínez
 * License: GNU General Public License version 2.0
 * Descargar: [versión estable][1] (compatible con NVDA 2019.3 ou posterior)
 * Descargar: [versión de desenvolvemento][2] (compatible con NVDA 2019.3 ou
@@ -37,8 +37,11 @@ característica "modo de unha soa man").
 Se queres que os puntos se envíen automaticamente ó escribir cunha soa man,
 utiliza o control rotatorio para configurar un tempo de espera maior que 0.
 
-Ademais, podes configurar os caracteres para enviar e limpar os puntos ó
-escribir cunha soa man.
+In addition, you can set the characters to send, clear and compose dots when
+typing with one hand, as well as characters to be ignored in one hand or
+standard mode.
+
+It's also possible to restore defaults in the add-on settings panel.
 
 ## Como se Usa
 
@@ -94,7 +97,15 @@ teclas cunha ou ambas mans pode axudar, así como que o teu teclado pode
 permitir estas teclas.
 
 
+## Changes for 2023.02.23
+
+* Added ability to configure keys used to type dots in one hand mode.
+* Now you can configure keys that should be ignored when typing in braille.
+* A restore to defaults button has been added to the add-on settings panel.
+* Compatible with NVDA 2023.1.
+
 ## Cambios para 2022.1
+
 * Engadida a posibilidade de configurar as teclas para enviar e limpar
   puntos ó escribir cunha soa man. Tamén é posible configurar un tempo de
   espera para enviar os puntos automaticamente, sen premer teclas de

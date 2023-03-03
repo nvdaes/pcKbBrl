@@ -1,7 +1,7 @@
 # PC Keyboard Braille Input for NVDA #
 
 * Author: NV Access Limited, Noelia Ruiz Martínez
-* Copyright: 2012-2022 NV Access Limited, Noelia Ruiz Martínez
+* Copyright: 2012-2023 NV Access Limited, Noelia Ruiz Martínez
 * Licença: GNU General Public License version 2.0
 * Baixar: [versão estável][1] (compatível com NVDA 2019.3 ou posterior)
 * Baixar: [versão de desenvolvimento][2] (compatível com NVDA 2019.3 ou
@@ -37,8 +37,11 @@ Também pode seleccionar se o NVDA deve falar um único ponto datilografado
 If you want dots to be sent automatically when typing with one hand, use the
 spin control to set a timeout greater than 0.
 
-In addition, you can set the characters to send and clear dots when typing
-with one hand.
+In addition, you can set the characters to send, clear and compose dots when
+typing with one hand, as well as characters to be ignored in one hand or
+standard mode.
+
+It's also possible to restore defaults in the add-on settings panel.
 
 ## Como usar:
 
@@ -97,7 +100,15 @@ teclas com uma ou ambas as mãos pode ajudar, pois o seu teclado pode
 permitir essas teclas.
 
 
+## Changes for 2023.02.23
+
+* Added ability to configure keys used to type dots in one hand mode.
+* Now you can configure keys that should be ignored when typing in braille.
+* A restore to defaults button has been added to the add-on settings panel.
+* Compatible with NVDA 2023.1.
+
 ## Changes for 2022.1
+
 * Added ability to configure keys to send and clear dots when writing with
   one hand. Also, it's possible to set a timeout to send dots automatically,
   without pressing confirmation keys.

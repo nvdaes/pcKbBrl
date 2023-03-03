@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pcKbBrl\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2021-07-21 09:36+0000\n"
-"PO-Revision-Date: 2022-04-26 09:38+0200\n"
+"PO-Revision-Date: 2023-02-24 19:54+0200\n"
 "Last-Translator: Jani Kinnunen <janikinnunen340@gmail.com>\n"
 "Language-Team: fi_FI <janikinnunen340@gmail.com>\n"
 "Language: fi\n"
@@ -21,7 +21,7 @@ msgstr ""
 #. Translators: Describes a command.
 msgid "Toggles braille input from the PC keyboard."
 msgstr ""
-"Ottaa käyttöön tai poistaa käytöstä pistekirjoituksen syöttämisen PC:n "
+"Ottaa käyttöön tai poistaa käytöstä pistekirjoituksen syötön PC:n "
 "näppäimistöltä."
 
 #. Translators: Reported when braille input from the PC keyboard is disabled.
@@ -51,12 +51,64 @@ msgstr ""
 "Pisteiden lähettämisen &aikakatkaisu yhdellä kädellä kirjoitettaessa (ms)"
 
 #. Translators: label of a dialog.
-msgid "Type the characters to con&firm when writing with one hand."
-msgstr "Kirjoita merkit va&hvistaaksesi yhdellä kädellä kirjoitettaessa"
+msgid "Characters to con&firm when writing with one hand:"
+msgstr "Va&hvistusmerkit yhdellä kädellä kirjoitettaessa:"
 
 #. Translators: label of a dialog.
-msgid "Type the characters to cance&l when writing with one hand."
-msgstr "Kirjoita merkit pe&ruuttaaksesi yhdellä kädellä kirjoitettaessa"
+msgid "Characters to cance&l when writing with one hand:"
+msgstr "Pe&ruutusmerkit yhdellä kädellä kirjoitettaessa:"
+
+#. Translators: label of a dialog.
+msgid "Characters for &dot1 when writing with one hand:"
+msgstr "&Pisteen 1 merkit yhdellä kädellä kirjoitettaessa:"
+
+#. Translators: label of a dialog.
+msgid "Characters for dot2 when writing with one hand:"
+msgstr "Pisteen 2 merkit yhdellä kädellä kirjoitettaessa:"
+
+#. Translators: label of a dialog.
+msgid "Characters for dot3 when writing with one hand:"
+msgstr "Pisteen 3 merkit yhdellä kädellä kirjoitettaessa:"
+
+#. Translators: label of a dialog.
+msgid "Characters for dot4 when writing with one hand:"
+msgstr "Pisteen 4 merkit yhdellä kädellä kirjoitettaessa:"
+
+#. Translators: label of a dialog.
+msgid "Characters for dot5 when writing with one hand:"
+msgstr "Pisteen 5 merkit yhdellä kädellä kirjoitettaessa:"
+
+#. Translators: label of a dialog.
+msgid "Characters for dot6 when writing with one hand:"
+msgstr "Pisteen 6 merkit yhdellä kädellä kirjoitettaessa:"
+
+#. Translators: label of a dialog.
+msgid "Characters for dot7 when writing with one hand:"
+msgstr "Pisteen 7 merkit yhdellä kädellä kirjoitettaessa:"
+
+#. Translators: label of a dialog.
+msgid "Characters for dot8 when writing with one hand:"
+msgstr "Pisteen 8 merkit yhdellä kädellä kirjoitettaessa:"
+
+#. Translators: label of a dialog.
+msgid "Characters to be &ignored when typing in braille:"
+msgstr "&Ohitettavat merkit pistekirjoituksella kirjoitettaessa:"
+
+#. Translators: label of a dialog.
+msgid "&Restore defaults"
+msgstr "&Palauta oletukset"
+
+#. Translators: Message to report wrong configuration.
+msgid "None or all dots should be configured."
+msgstr "Ei mitään tai kaikki pisteet pitää olla määritettyinä."
+
+#. Translators: Title of message box
+msgid "Error"
+msgstr "Virhe"
+
+#. Translators: Message to report wrong configuration.
+msgid "Configured keys for pcKbBrl shouldn't be repeated."
+msgstr "Tämän lisäosan määritettyjä näppäimiä ei voi käyttää."
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
@@ -66,4 +118,4 @@ msgstr "Pistekirjoituksen syöttö PC:n näppäimistöllä"
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Allows braille to be entered via the PC keyboard."
-msgstr "Mahdollistaa pistekirjoituksen syöttämisen PC:n näppäimistöltä."
+msgstr "Mahdollistaa pistekirjoituksen syötön PC:n näppäimistöltä."
