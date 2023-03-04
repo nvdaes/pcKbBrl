@@ -1,7 +1,7 @@
 # Braille-Eingabe via PC-Tastatur #
 
 * Autor: NV Access Limited, Noelia Ruiz Martínez
-* Copyright: 2012-2022 NV Access Limited, Noelia Ruiz Martínez
+* Copyright: 2012-2023 NV Access Limited, Noelia Ruiz Martínez
 * Lizenz: GNU Allgemeine Öffentliche Lizenz Version 2.0
 * [stabile Version][1] herunterladen (kompatibel mit NVDA 2019.3 oder neuer)
 * [Testversion][2] herunterladen (kompatibel mit NVDA 2019.3 oder neuer)
@@ -37,8 +37,11 @@ Wenn Sie möchten, dass beim Tippen mit einer Hand automatisch Punkte
 gesendet werden, verwenden Sie den Regler, um eine Zeitüberschreitung größer
 als 0 einzustellen.
 
-Außerdem können Sie die zu sendenden Zeichen festlegen und Punkte löschen,
-wenn Sie mit einer Hand tippen.
+In addition, you can set the characters to send, clear and compose dots when
+typing with one hand, as well as characters to be ignored in one hand or
+standard mode.
+
+It's also possible to restore defaults in the add-on settings panel.
 
 ## Verwendung
 
@@ -93,7 +96,15 @@ Einige Laptop-Tastaturen können nicht mit gedrückten Tastenkombinationen
 umgehen.
 
 
+## Changes for 2023.02.23
+
+* Added ability to configure keys used to type dots in one hand mode.
+* Now you can configure keys that should be ignored when typing in braille.
+* A restore to defaults button has been added to the add-on settings panel.
+* Compatible with NVDA 2023.1.
+
 ## Änderungen in 2022.1
+
 * Es besteht jetzt die Möglichkeit, Tasten zum Senden und Löschen von
   Punkten beim Schreiben mit einer Hand zu konfigurieren. Es ist auch
   möglich, eine Zeitüberschreitung einzustellen, um Punkte automatisch zu

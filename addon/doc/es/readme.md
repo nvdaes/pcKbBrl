@@ -1,7 +1,7 @@
 # PC Keyboard Braille Input for NVDA #
 
 * Autor: NV Access Limited, Noelia Ruiz Martínez
-* Copyright: 2012-2022 NV Access Limited, Noelia Ruiz Martínez
+* Copyright: 2012-2023 NV Access Limited, Noelia Ruiz Martínez
 * Licencia: GNU General Public License versión 2.0
 * Descargar: [versión estable][1] (compatible con NVDA 2019.3 o posterior)
 * Descargar: [versión de desarrollo][2] (compatible con NVDA 2019.3 o
@@ -38,8 +38,12 @@ Si quieres que se envíen los puntos automáticamente al escribir con una
 mano, usa el control giratorio para configurar un tiempo de espera superior
 a 0.
 
-Además, puedes configurar los caracteres para enviar o borrar puntos al
-escribir con una mano.
+Además, puedes configurar los caracteres para enviar, redactar o borrar
+puntos al escribir con una mano, así como los caracteres que se ignorarán en
+los modos de una mano o estándar.
+
+También es posible restaurar los valores por defecto en el panel de opciones
+del complemento.
 
 ## Cómo se Utiliza
 
@@ -98,7 +102,18 @@ de teclas con una o ambas manos puede ayudar, ya que el teclado puede
 permitir estas teclas.
 
 
+## Cambios para 2023.02.23
+
+* Se ha añadido la posibilidad de configurar las teclas usadas para escribir
+  puntos en el modo de una mano.
+* Ahora se pueden configurar las teclas que deberían ignorarse al escribir
+  en braille.
+* Se ha añadido un botón que restaura los valores por defecto al panel de
+  opciones del complemento.
+* Compatible con NVDA 2023.1.
+
 ## Cambios para 2022.1
+
 * Se ha añadido la posibilidad de configurar teclas para enviar y borrar
   puntos al escribir con una mano. También es posible configurar un tiempo
   de espera para enviar los puntos automáticamente, sin pulsar teclas de

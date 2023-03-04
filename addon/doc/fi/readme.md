@@ -1,7 +1,7 @@
 # Pistekirjoituksen syöttäminen tietokoneen näppäimistöllä #
 
 * Tekijät: NV Access Limited, Noelia Ruiz Martínez
-* Tekijänoikeus: 2012-2022 NV Access Limited, Noelia Ruiz Martínez
+* Tekijänoikeus: 2012-2023 NV Access Limited ja Noelia Ruiz Martínez
 * Lisenssi: GNU General Public License versio 2.0
 * Lataa: [vakaa versio][1] (yhteensopiva NVDA 2019.3:n ja uudempien kanssa)
 * Lataa: [kehitysversio][2] (yhteensopiva NVDA 2019.3:n ja uudempien kanssa)
@@ -37,8 +37,11 @@ tilaa käyttäen).
 Jos haluat, että pisteet lähetetään automaattisesti yhdellä kädellä
 kirjoitettaessa, aseta kiertosäätimellä aikakatkaisuksi suurempi kuin 0.
 
-Lisäksi voit määrittää pisteitä lähettävät ja poistavat merkit yhdellä
-kädellä kirjoitettaessa.
+Lisäksi voit määrittää pisteitä lähettävät, poistavat ja muodostavat merkit
+yhdellä kädellä kirjoitettaessa sekä yhden käden tai standarditilassa
+ohitettavat merkit.
+
+Oletusten palauttaminen on myös mahdollista lisäosan asetuspaneelissa.
 
 ## Käyttö
 
@@ -98,7 +101,17 @@ tai molemmilla käsillä saattaa joissain tapauksissa auttaa , koska
 näppäimistö saattaa sallia näiden näppäinten painamisen.
 
 
+## Muutokset versiossa 2023.02.23
+
+* Lisätty mahdollisuus pisteiden kirjoittamiseen käytettävien näppäinten
+  määrittämiseen yksikätisessä tilassa.
+* Voit nyt määrittää näppäimet, jotka ohitetaan pistekirjoitusta
+  kirjoitettaessa.
+* Lisäosan asetuspaneeliin on lisätty Palauta oletukset -painike.
+* Yhteensopiva NVDA 2023.1:n kanssa.
+
 ## Muutokset versiossa 2022.1
+
 * Lisätty mahdollisuus pisteitä lähettävien ja poistavien näppäinten
   määrittämiseen yhdellä kädellä kirjoitettaessa. Lisäksi on mahdollista
   määrittää aikakatkaisu, jonka kuluttua pisteet lähetetään automaattisesti

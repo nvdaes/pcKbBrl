@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pcKbBrl 2021.5\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-10-08 16:05+0000\n"
-"PO-Revision-Date: 2022-04-29 13:06+0330\n"
+"PO-Revision-Date: 2023-02-26 21:24+0330\n"
 "Last-Translator: Mohammadreza Rashad <mohammadreza5712@gmail.com>\n"
 "Language-Team: NVDA Translation Team <nvda-translations@groups.io>\n"
 "Language: fa\n"
@@ -47,12 +47,64 @@ msgid "&Timeout to send dots when writing with one hand (in ms)"
 msgstr "مدت زمانِ ارسال نقطه‌ها هنگامِ نوشتن با یک دست (به هزارمِ ثانیه)"
 
 #. Translators: label of a dialog.
-msgid "Type the characters to con&firm when writing with one hand."
-msgstr "نویسه‌ها را برای ت&اییدِ تایپ با یک دست تایپ کنید"
+msgid "Characters to con&firm when writing with one hand:"
+msgstr "نویسه‌هایی که برای &تایید هنگامِ تایپ با یک دست به کار میروند:"
 
 #. Translators: label of a dialog.
-msgid "Type the characters to cance&l when writing with one hand."
-msgstr "نویسه‌ها را برای &لغوِ تایپ با یک دست تایپ کنید"
+msgid "Characters to cance&l when writing with one hand:"
+msgstr "نویسه‌هایی که برای &لغو هنگامِ تایپ با یک دست به کار میروند:"
+
+#. Translators: label of a dialog.
+msgid "Characters for &dot1 when writing with one hand:"
+msgstr "نویسه‌هایی که برای نقطه‌ی &۱ هنگامِ تایپ با یک دست به کار میروند:"
+
+#. Translators: label of a dialog.
+msgid "Characters for dot2 when writing with one hand:"
+msgstr "نویسه‌هایی که برای نقطه‌ی &۲ هنگامِ تایپ با یک دست به کار میروند:"
+
+#. Translators: label of a dialog.
+msgid "Characters for dot3 when writing with one hand:"
+msgstr "نویسه‌هایی که برای نقطه‌ی &۳ هنگامِ تایپ با یک دست به کار میروند:"
+
+#. Translators: label of a dialog.
+msgid "Characters for dot4 when writing with one hand:"
+msgstr "نویسه‌هایی که برای نقطه‌ی &۴ هنگامِ تایپ با یک دست به کار میروند:"
+
+#. Translators: label of a dialog.
+msgid "Characters for dot5 when writing with one hand:"
+msgstr "نویسه‌هایی که برای نقطه‌ی &۵ هنگامِ تایپ با یک دست به کار میروند:"
+
+#. Translators: label of a dialog.
+msgid "Characters for dot6 when writing with one hand:"
+msgstr "نویسه‌هایی که برای نقطه‌ی &۶ هنگامِ تایپ با یک دست به کار میروند:"
+
+#. Translators: label of a dialog.
+msgid "Characters for dot7 when writing with one hand:"
+msgstr "نویسه‌هایی که برای نقطه‌ی &۷ هنگامِ تایپ با یک دست به کار میروند:"
+
+#. Translators: label of a dialog.
+msgid "Characters for dot8 when writing with one hand:"
+msgstr "نویسه‌هایی که برای نقطه‌ی &۸ هنگامِ تایپ با یک دست به کار میروند:"
+
+#. Translators: label of a dialog.
+msgid "Characters to be &ignored when typing in braille:"
+msgstr "نویسه‌هایی که هنگامِ تایپ در بریل باید &نادیده گرفته شوند:"
+
+#. Translators: label of a dialog.
+msgid "&Restore defaults"
+msgstr "&بازگرداندن به پیشفرض"
+
+#. Translators: Message to report wrong configuration.
+msgid "None or all dots should be configured."
+msgstr "هیچیک یا همه‌ی نقطه‌ها باید پیکربندی شوند."
+
+#. Translators: Title of message box
+msgid "Error"
+msgstr "خطا"
+
+#. Translators: Message to report wrong configuration.
+msgid "Configured keys for pcKbBrl shouldn't be repeated."
+msgstr "کلیدهای پیکربندی‌شده برای افزونه نباید تکراری باشند."
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.

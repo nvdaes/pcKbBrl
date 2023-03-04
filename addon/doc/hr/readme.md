@@ -1,7 +1,7 @@
 # Brajični unos PC tipkovnicom za NVDA (PC Keyboard Braille Input for NVDA) #
 
 * Author: NV Access Limited, Noelia Ruiz Martínez
-* Autorska prava: 2012. – 2022. NV Access Limited, Noelia Ruiz Martínez
+* Autorska prava: 2012. – 2023. NV Access Limited, Noelia Ruiz Martínez
 * Licenca: GNU opća javna licenca verzija 2.0
 * Preuzmi [stabilnu verziju][1] (kompatibilna s NVDA 2019.3 i novijom)
 * Preuzmi [razvojnu verziju][2] (kompatibilna s NVDA 2019.3 i novijom)
@@ -35,8 +35,11 @@ funkciju „jednoručni modus”).
 Ako želiš da se točkice šalju automatski kad tipkaš jednom rukom, koristi
 kontrolu za postavljanje vremenskog ograničenja većeg od 0.
 
-Osim toga, možeš postaviti znakove za slanje i brisanje točaka prilikom
-tipkanja jednom rukom.
+Osim toga, možeš postaviti znakove za slanje, brisanje i sastavljanje
+točkica prilikom jednoručnog tipkanja kao i znakove koji se zanemaruju
+prilikom jednoručnog ili standardnog tipkanja.
+
+Također je moguće obnoviti standardne vrijednosti u ploči postavki dodataka.
 
 ## Kako koristiti
 
@@ -90,7 +93,17 @@ slučajevima pomaže korištenje tipki gornjeg reda, ovisno o mogućnostima
 tipkovnice.
 
 
+## Promjene za 2023.02.23
+
+* Dodana je mogućnost konfiguriranja tipki za jednoručno tipkanje točkica.
+* Sada možeš konfigurirati tipke koje se zanemaruju prilikom tipkanja
+  brajičnih znakova.
+* U ploču postavki dodataka je dodan gumb za obnavljanje standardnih
+  postavki.
+* Kompatibilno s NVDA čitačem 2023.1.
+
 ## Promjene za 2022.1
+
 * Dodana je mogućnost konfiguriranja tipki za slanje i brisanje točaka
   prilikom pisanja jednom rukom. Također, moguće je postaviti vremensko
   ograničenje za automatsko slanje točaka, bez pritiskanja tipki za potvrdu.
