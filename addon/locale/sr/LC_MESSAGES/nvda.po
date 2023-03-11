@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pcKbBrl 2021.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2021-07-21 09:36+0000\n"
-"PO-Revision-Date: 2022-06-19 04:06+0100\n"
+"PO-Revision-Date: 2023-03-03 17:20+0100\n"
 "Last-Translator: Nikola Jović <wwenikola123@gmail.com>\n"
 "Language-Team: Serbian <LL@li.org>\n"
 "Language: sr\n"
@@ -48,12 +48,64 @@ msgstr ""
 "&Vreme isteka za unos tačkica kada se piše jednom rukom (u milisekundama)"
 
 #. Translators: label of a dialog.
-msgid "Type the characters to con&firm when writing with one hand."
-msgstr "Upišite znakove za &potvrdu kada se piše jednom rukom."
+msgid "Characters to con&firm when writing with one hand:"
+msgstr "Znakovi za &potvrdu kada se piše jednom rukom:"
 
 #. Translators: label of a dialog.
-msgid "Type the characters to cance&l when writing with one hand."
-msgstr "Upišite znakove za &otkazivanje kada se piše jednom rukom."
+msgid "Characters to cance&l when writing with one hand:"
+msgstr "Znakovi za &otkazivanje kada se piše jednom rukom:"
+
+#. Translators: label of a dialog.
+msgid "Characters for &dot1 when writing with one hand:"
+msgstr "Znakovi za &tačkicu 1 kada se piše jednom rukom:"
+
+#. Translators: label of a dialog.
+msgid "Characters for dot2 when writing with one hand:"
+msgstr "Znakovi za tačkicu 2 kada se piše jednom rukom:"
+
+#. Translators: label of a dialog.
+msgid "Characters for dot3 when writing with one hand:"
+msgstr "Znakovi za tačkicu 3 kada se piše jednom rukom:"
+
+#. Translators: label of a dialog.
+msgid "Characters for dot4 when writing with one hand:"
+msgstr "Znakovi za tačkicu 4 kada se piše jednom rukom:"
+
+#. Translators: label of a dialog.
+msgid "Characters for dot5 when writing with one hand:"
+msgstr "Znakovi za tačkicu 5 kada se piše jednom rukom:"
+
+#. Translators: label of a dialog.
+msgid "Characters for dot6 when writing with one hand:"
+msgstr "Znakovi za tačkicu 6 kada se piše jednom rukom:"
+
+#. Translators: label of a dialog.
+msgid "Characters for dot7 when writing with one hand:"
+msgstr "Znakovi za tačkicu 7 kada se piše jednom rukom:"
+
+#. Translators: label of a dialog.
+msgid "Characters for dot8 when writing with one hand:"
+msgstr "Znakovi za tačkicu 8 kada se piše jednom rukom:"
+
+#. Translators: label of a dialog.
+msgid "Characters to be &ignored when typing in braille:"
+msgstr "Znakove koje treba &ignorisati u brajevom unosu:"
+
+#. Translators: label of a dialog.
+msgid "&Restore defaults"
+msgstr "&Vrati na podrazumevana"
+
+#. Translators: Message to report wrong configuration.
+msgid "None or all dots should be configured."
+msgstr "Nijedna ili sve tačkice trebaju biti podešene."
+
+#. Translators: Title of message box
+msgid "Error"
+msgstr "Greška"
+
+#. Translators: Message to report wrong configuration.
+msgid "Configured keys for pcKbBrl shouldn't be repeated."
+msgstr "Podešeni tasteri za brajev unos se ne smeju ponavljati."
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
