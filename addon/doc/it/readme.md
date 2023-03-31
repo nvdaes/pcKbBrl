@@ -5,8 +5,6 @@
 * Licenza: GNU General Public License versione 2.0
 * Scarica: [versione stabile][1] (compatibile con NVDA 2019.3 o versioni
   successive)
-* [versione in sviluppo][2] (compatibile con NVDA 2019.3 o versioni
-  successive)
 * [versione 2014.1][3] (compatibile con NVDA da 2017.3 a 2019.2)
 
 Questo componente aggiuntivo per NVDA permette di inserire caratteri braille
@@ -144,8 +142,6 @@ vostra tastiera potrebbe gestirli.
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=pckbbrl
-
-[2]: https://addons.nvda-project.org/files/get.php?file=pckbbrl-dev
+[1]: https://addons.nvda-project.org/files/get.php?file=pcKbBrl
 
 [3]: https://addons.nvda-project.org/files/get.php?file=pckbbrl-o

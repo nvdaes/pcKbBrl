@@ -4,7 +4,6 @@
 * Tekijänoikeus: 2012-2023 NV Access Limited ja Noelia Ruiz Martínez
 * Lisenssi: GNU General Public License versio 2.0
 * Lataa: [vakaa versio][1] (yhteensopiva NVDA 2019.3:n ja uudempien kanssa)
-* Lataa: [kehitysversio][2] (yhteensopiva NVDA 2019.3:n ja uudempien kanssa)
 * [versio 2014.1][3] (yhteensopiva NVDA 2017.3:sta 2019.2:een)
 
 Tämän lisäosan avulla voidaan kirjoittaa pistekirjoitusta tietokoneen
@@ -142,8 +141,6 @@ näppäimistö saattaa sallia näiden näppäinten painamisen.
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=pckbbrl
-
-[2]: https://addons.nvda-project.org/files/get.php?file=pckbbrl-dev
+[1]: https://addons.nvda-project.org/files/get.php?file=pcKbBrl
 
 [3]: https://addons.nvda-project.org/files/get.php?file=pckbbrl-o

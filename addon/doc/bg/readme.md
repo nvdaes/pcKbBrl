@@ -5,8 +5,6 @@
 * Лиценз: GNU General Public License версия 2.0
 * Изтегляне на [стабилна версия][1] (съвместима с NVDA 2019.3 или по-нови
   версии)
-* Изтегляне на [тестова версия][2] (съвместима с NVDA 2019.3 или по-нова
-  версия)
 * [версия 2014.1][3] (съвместима с версии на NVDA от 2017.3 до 2019.2)
 
 Тази добавка за NVDA позволява да се въвежда брайл чрез компютърната
@@ -146,8 +144,6 @@
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=pckbbrl
-
-[2]: https://addons.nvda-project.org/files/get.php?file=pckbbrl-dev
+[1]: https://addons.nvda-project.org/files/get.php?file=pcKbBrl
 
 [3]: https://addons.nvda-project.org/files/get.php?file=pckbbrl-o

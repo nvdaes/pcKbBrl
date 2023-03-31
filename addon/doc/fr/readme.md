@@ -5,8 +5,6 @@
 * License: GNU General Public License version 2.0
 * Téléchargement: [version stable] [1] (compatible avec NVDA 2019.3 ou
   version ultérieure)
-* Téléchargement: [version de développement] [2] (compatible avec NVDA
-  2019.3 ou version ultérieure)
 * [version 2014.1] [3] (compatible avec NVDA 2017.3 à 2019.2)
 
 Cette extension NVDA permet de saisir le braille au moyen du clavier du
@@ -144,8 +142,6 @@ permettre ces touches.
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=pckbbrl
-
-[2]: https://addons.nvda-project.org/files/get.php?file=pckbbrl-dev
+[1]: https://addons.nvda-project.org/files/get.php?file=pcKbBrl
 
 [3]: https://addons.nvda-project.org/files/get.php?file=pckbbrl-o

@@ -4,7 +4,6 @@
 * Copyright: 2012-2023 NV Access Limited, Noelia Ruiz Martínez
 * Lizenz: GNU Allgemeine Öffentliche Lizenz Version 2.0
 * [stabile Version][1] herunterladen (kompatibel mit NVDA 2019.3 oder neuer)
-* [Testversion][2] herunterladen (kompatibel mit NVDA 2019.3 oder neuer)
 * [Version 2014.1][3] (kompatibel mit NVDA 2017.3 bis 2019.2)
 
 Diese NVDA-Erweiterung ermöglicht die Eingabe von Braille über die
@@ -137,8 +136,6 @@ umgehen.
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=pckbbrl
-
-[2]: https://addons.nvda-project.org/files/get.php?file=pckbbrl-dev
+[1]: https://addons.nvda-project.org/files/get.php?file=pcKbBrl
 
 [3]: https://addons.nvda-project.org/files/get.php?file=pckbbrl-o
