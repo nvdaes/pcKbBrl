@@ -4,7 +4,6 @@
 * Copyright: 2012-2023 NV Access Limited, Noelia Ruiz Martínez
 * 许可证：GNU通用公共许可证版本2.0
 * 下载[稳定版][1]（与 NVDA 2019.3或更高版本兼容）
-* 下载[开发板][2]（与NVDA 2019.3或更高版本兼容）
 * [版本 2014.1][3]（与 NVDA 2017.3至2019.2兼容）
 
 此插件允许通过 PC 键盘输入盲文。目前，支持以下键盘布局：
@@ -99,8 +98,6 @@ It's also possible to restore defaults in the add-on settings panel.
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=pckbbrl
-
-[2]: https://addons.nvda-project.org/files/get.php?file=pckbbrl-dev
+[1]: https://addons.nvda-project.org/files/get.php?file=pcKbBrl
 
 [3]: https://addons.nvda-project.org/files/get.php?file=pckbbrl-o

@@ -4,8 +4,6 @@
 * Copyright: 2012-2023 NV Access Limited, Noelia Ruiz Martínez
 * Licença: Licença Pública Geral GNU — General Public License — versão 2.0
 * Baixar: [versão estável][1] (compatível com NVDA 2019.3 ou posteriores)
-* Baixar: [versão em desenvolvimento][2] (compatível com NVDA 2019.3 ou
-  posteriores)
 * [versão 2014.1][3] (compatível com NVDA 2017.3 a 2019.2)
 
 Este complemento para NVDA possibilita que braille seja digitado através do
@@ -140,8 +138,6 @@ teclado pode liberar essas teclas.
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=pckbbrl
-
-[2]: https://addons.nvda-project.org/files/get.php?file=pckbbrl-dev
+[1]: https://addons.nvda-project.org/files/get.php?file=pcKbBrl
 
 [3]: https://addons.nvda-project.org/files/get.php?file=pckbbrl-o
