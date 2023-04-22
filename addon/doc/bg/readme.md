@@ -144,6 +144,6 @@
 
 [[!tag dev stable]]
 
-[1]: https://addons.nvda-project.org/files/get.php?file=pcKbBrl
+[1]: https://www.nvaccess.org/addonStore/legacy?file=pcKbBrl
 
-[3]: https://addons.nvda-project.org/files/get.php?file=pckbbrl-o
+[3]: https://www.nvaccess.org/addonStore/legacy?file=pckbbrl-o
