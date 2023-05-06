@@ -110,9 +110,9 @@ VKCODES = {
 confspec = {
 	"oneHandMode": "boolean(default=False)",
 	"speakDot": "boolean(default=False)",
-	"timeout": "integer(default=0)",
-	"confirmKeys": "string(default=gh)",
-	"cancelKeys": "string(default=ty)",
+	"timeout": "integer(default=100)",
+	"confirmKeys": 'string(default="")',
+	"cancelKeys": 'string(default="")',
 	"dot1": 'string(default="")',
 	"dot2": 'string(default="")',
 	"dot3": 'string(default="")',
@@ -206,11 +206,15 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		confirmKeys = config.conf["pcKbBrl"]["confirmKeys"]
 		confirmCodes = []
 		for key in confirmKeys:
-			gesture = keyboardHandler.KeyboardInputGesture.fromName(key.lower())
-			code = gesture.vkCode
-			if self._keyboardLanguage in VKCODES.keys() and code in VKCODES[self._keyboardLanguage].keys():
-				code = VKCODES[self._keyboardLanguage][code]
-			confirmCodes.append(code)
+			try:
+				gesture = keyboardHandler.KeyboardInputGesture.fromName(key.lower())
+			except LookupError:
+				gesture = None
+			if gesture:
+				code = gesture.vkCode
+				if self._keyboardLanguage in VKCODES.keys() and code in VKCODES[self._keyboardLanguage].keys():
+					code = VKCODES[self._keyboardLanguage][code]
+				confirmCodes.append(code)
 		return set(confirmCodes)
 
 	def getCancelCodes(self):
@@ -220,11 +224,15 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		for key in cancelKeys:
 			if key in confirmKeys:  # Confirm keys have priority
 				continue
-			gesture = keyboardHandler.KeyboardInputGesture.fromName(key.lower())
-			code = gesture.vkCode
-			if self._keyboardLanguage in VKCODES.keys() and code in VKCODES[self._keyboardLanguage].keys():
-				code = VKCODES[self._keyboardLanguage][code]
-			cancelCodes.append(code)
+			try:
+				gesture = keyboardHandler.KeyboardInputGesture.fromName(key.lower())
+			except LookupError:
+				gesture = None
+			if gesture:
+				code = gesture.vkCode
+				if self._keyboardLanguage in VKCODES.keys() and code in VKCODES[self._keyboardLanguage].keys():
+					code = VKCODES[self._keyboardLanguage][code]
+				cancelCodes.append(code)
 		return set(cancelCodes)
 
 	def getNullKeyCodes(self):
@@ -248,9 +256,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self._speakDot = config.conf["pcKbBrl"]["speakDot"]
 		self._confirmCodes = self.getConfirmCodes()
 		self._cancelCodes = self.getCancelCodes()
-		self._confirmGesture = keyboardHandler.KeyboardInputGesture.fromName(
-			config.conf["pcKbBrl"]["confirmKeys"][0]
-		)
 		self._nullKeyCodes = self.getNullKeyCodes()
 		self._dot = None
 		# Monkey patch keyboard handling callbacks.
@@ -273,7 +278,6 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self._speakDot = None
 		self._confirmCodes = None
 		self._cancelCodes = None
-		self._confirmGesture = None
 		self._nullKeyCodes = None
 		self._dot = None
 		self.isEnabled = False
@@ -329,7 +333,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				self._trappedKeys.clear()
 			elif config.conf["pcKbBrl"]["timeout"]:
 				timeout = config.conf["pcKbBrl"]["timeout"]
-				self._typeCallLater = core.callLater(timeout, self._confirmGesture.send)
+				core.callLater(timeout, self.sendDots)
 		if not self._oneHandMode or self._gesture.space:
 			self._trappedKeys.discard(vkCode)
 		if not self._trappedKeys:
@@ -345,6 +349,14 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			):
 				brailleInput.speakDots(self._dot)
 		return False
+
+	def sendDots(self):
+		self._trappedKeys.clear()
+		try:
+			inputCore.manager.executeGesture(self._gesture)
+		except (inputCore.NoInputGestureAction, IndexError):
+			pass
+		self._gesture = None
 
 	@script(
 		# Translators: Describes a command.
@@ -463,6 +475,9 @@ class AddonSettingsPanel(SettingsPanel):
 		self.nullKeysEdit.SetValue(config.conf.getConfigValidation(['pcKbBrl', 'nullKeys']).default)
 
 	def isValid(self):
+		oneHandMode = self.oneHandModeCheckBox.GetValue()
+		if not oneHandMode:
+			return super(AddonSettingsPanel, self).isValid()
 		dots = (
 			self.dot1KeysEdit.GetValue(), self.dot2KeysEdit.GetValue(), self.dot3KeysEdit.GetValue(),
 			self.dot4KeysEdit.GetValue(), self.dot5KeysEdit.GetValue(), self.dot6KeysEdit.GetValue(),
@@ -478,11 +493,7 @@ class AddonSettingsPanel(SettingsPanel):
 				_("Error"), wx.OK | wx.ICON_ERROR, self)
 			return False
 		confirmKeys = self.confirmKeysEdit.GetValue()
-		if confirmKeys == "":
-			confirmKeys = config.conf.getConfigValidation(['pcKbBrl', 'confirmKeys']).default
 		cancelKeys = self.cancelKeysEdit.GetValue()
-		if cancelKeys == "":
-			cancelKeys = config.conf.getConfigValidation(['pcKbBrl', 'cancelKeys']).default
 		nullKeys = self.nullKeysEdit.GetValue()
 		configuredKeys = list(itertools.chain(
 			confirmKeys, cancelKeys, notEmptyDots, nullKeys
@@ -492,6 +503,15 @@ class AddonSettingsPanel(SettingsPanel):
 			gui.messageBox(
 				# Translators: Message to report wrong configuration.
 				_("Configured keys for pcKbBrl shouldn't be repeated."),
+				# Translators: Title of message box
+				_("Error"), wx.OK | wx.ICON_ERROR, self)
+			return False
+		timeout = self.timeoutSpinControl.GetValue()
+		if not timeout and not confirmKeys:
+			log.debugWarning("pcKbBrl: timeout without confirm keys.")
+			gui.messageBox(
+				# Translators: Message to report wrong configuration.
+				_("Set at least a confirm key if timeout for one hand mode is 0."),
 				# Translators: Title of message box
 				_("Error"), wx.OK | wx.ICON_ERROR, self)
 			return False
