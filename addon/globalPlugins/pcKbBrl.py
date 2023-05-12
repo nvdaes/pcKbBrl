@@ -161,11 +161,15 @@ class Dot:
 		keyboardLanguage = GlobalPlugin.getKeyboardLanguage()
 		dotCodes = []
 		for key in dotKeys:
-			gesture = keyboardHandler.KeyboardInputGesture.fromName(key.lower())
-			code = gesture.vkCode
-			if keyboardLanguage in VKCODES.keys() and code in VKCODES[keyboardLanguage].keys():
-				code = VKCODES[keyboardLanguage][code]
-			dotCodes.append(code)
+			try:
+				gesture = keyboardHandler.KeyboardInputGesture.fromName(key.lower())
+			except LookupError:
+				gesture = None
+			if gesture:
+				code = gesture.vkCode
+				if keyboardLanguage in VKCODES.keys() and code in VKCODES[keyboardLanguage].keys():
+					code = VKCODES[keyboardLanguage][code]
+				dotCodes.append(code)
 		return set(dotCodes)
 
 
@@ -239,11 +243,15 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		nullKeys = config.conf["pcKbBrl"]["nullKeys"]
 		nullKeyCodes = []
 		for key in nullKeys:
-			gesture = keyboardHandler.KeyboardInputGesture.fromName(key.lower())
-			code = gesture.vkCode
-			if self._keyboardLanguage in VKCODES.keys() and code in VKCODES[self._keyboardLanguage].keys():
-				code = VKCODES[self._keyboardLanguage][code]
-			nullKeyCodes.append(code)
+			try:
+				gesture = keyboardHandler.KeyboardInputGesture.fromName(key.lower())
+			except LookupError:
+				gesture = None
+			if gesture:
+				code = gesture.vkCode
+				if self._keyboardLanguage in VKCODES.keys() and code in VKCODES[self._keyboardLanguage].keys():
+					code = VKCODES[self._keyboardLanguage][code]
+				nullKeyCodes.append(code)
 		return set(nullKeyCodes)
 
 	def enable(self):
