@@ -4,6 +4,7 @@
 * Copyright: 2012-2023 NV Access Limited, Noelia Ruiz Martínez
 * Licencja: GNU General Public License version 2.0
 * Pobierz: [Wersja stabilna][1] (compatible with NVDA 2019.3 or later)
+* Download: [beta version][2] (compatible with NVDA 2019.3 or later)
 * [Wersja 2014.1][3] (zgodna z NVDA 2017.3 do 2019.2)
 
 Ten dodatek umożliwia wprowadzanie brajla za pomocą klawiatury
@@ -134,5 +135,7 @@ klawisze.
 [[!tag dev stable]]
 
 [1]: https://www.nvaccess.org/addonStore/legacy?file=pcKbBrl
+
+[2]: https://www.nvaccess.org/addonStore/legacy?file=pcKbBrl-beta
 
 [3]: https://www.nvaccess.org/addonStore/legacy?file=pckbbrl-o

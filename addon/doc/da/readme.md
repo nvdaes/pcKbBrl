@@ -4,6 +4,7 @@
 * Copyright: 2012-2023 NV Access Limited, Noelia Ruiz Martínez
 * Licens: GNU General Public License version 2.0
 * Download: [stabil version][1] (kompatibel med NVDA 2019.3 eller nyere)
+* Download: [beta version][2] (compatible with NVDA 2019.3 or later)
 * [version 2014.1] [3] (kompatibel med NVDA 2017.3 til 2019.2)
 
 Denne NVDA-tilføjelse gør det muligt at indtaste punktskrift via
@@ -136,5 +137,7 @@ eller begge hænder, da dit tastatur muligvis tillader disse taster.
 [[!tag dev stable]]
 
 [1]: https://www.nvaccess.org/addonStore/legacy?file=pcKbBrl
+
+[2]: https://www.nvaccess.org/addonStore/legacy?file=pcKbBrl-beta
 
 [3]: https://www.nvaccess.org/addonStore/legacy?file=pckbbrl-o

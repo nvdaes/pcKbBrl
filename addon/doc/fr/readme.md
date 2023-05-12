@@ -1,10 +1,12 @@
 # PC Keyboard Braille Input pour NVDA #
 
-* Auteur: NV Access Limited, Noelia Ruiz Martínez
-* Copyright: 2012-2023 NV Access Limited, Noelia Ruiz Martínez
-* License: GNU General Public License version 2.0
-* Téléchargement: [version stable] [1] (compatible avec NVDA 2019.3 ou
-  version ultérieure)
+* Auteur : NV Access Limited, Noelia Ruiz Martínez
+* Copyright : 2012-2023 NV Access Limited, Noelia Ruiz Martínez
+* License : GNU General Public License version 2.0
+* Télécharger : [version stable] [1] (compatible avec NVDA 2019.3 ou version
+  ultérieure)
+* Télécharger : [version béta][2] (compatible avec NVDA 2019.3 ou version
+  ultérieure)
 * [version 2014.1] [3] (compatible avec NVDA 2017.3 à 2019.2)
 
 Cette extension NVDA permet de saisir le braille au moyen du clavier du
@@ -35,14 +37,16 @@ l'aide du mode standard (deux mains).
 Vous pouvez également choisir si NVDA doit prononcer chaque point tapé
 individuellement (lorsque vous utilisez la fonction «mode à une main»).
 
-If you want dots to be sent automatically when typing with one hand, use the
-spin control to set a timeout greater than 0.
+Si vous voulez que les points soient envoyés automatiquement lorsque vous
+tapez d'une main, utilisez le contrôle giratoire pour définir un délai
+supérieur à 0.
 
-In addition, you can set the characters to send, clear and compose dots when
-typing with one hand, as well as characters to be ignored in one hand or
-standard mode.
+De plus, vous pouvez définir les caractères pour envoyer, effacer et
+composer des points lors de la saisie à une main, ainsi que des caractères à
+ignorer dans le mode à une main  ou standard.
 
-It's also possible to restore defaults in the add-on settings panel.
+Il est également possible de restaurer aux paramètres par défaut dans le
+panneau de paramètres de l'extension.
 
 ## Comment l'utilisé
 
@@ -102,18 +106,22 @@ des touches avec une ou deux mains pourrait aider, car le clavier peut
 permettre ces touches.
 
 
-## Changes for 2023.02.23
+## Changements de la version 2023.02.23
 
-* Added ability to configure keys used to type dots in one hand mode.
-* Now you can configure keys that should be ignored when typing in braille.
-* A restore to defaults button has been added to the add-on settings panel.
-* Compatible with NVDA 2023.1.
+* Ajout de la capacité à configurer les touches utilisées pour taper les
+  points dans le mode à une main.
+* Vous pouvez maintenant configurer les touches qui doivent être ignorées
+  lors de la saisie braille.
+* Un bouton pour restaurer aux paramètres par défaut a été ajouté au panneau
+  de paramètres de l'extension.
+* Compatible avec NVDA 2023.1.
 
-## Changes for 2022.1
+## Changements de la version 2022.1
 
-* Added ability to configure keys to send and clear dots when writing with
-  one hand. Also, it's possible to set a timeout to send dots automatically,
-  without pressing confirmation keys.
+* Ajout de la capacité de configurer les touches pour envoyer et effacer les
+  points lors de l'écriture à une main. Il est également possible de définir
+  un délai d'expiration pour envoyer des points automatiquement, sans
+  appuyer sur les touches  de confirmation.
 
 ## Changements de la version 2021.1
 
@@ -143,5 +151,7 @@ permettre ces touches.
 [[!tag dev stable]]
 
 [1]: https://www.nvaccess.org/addonStore/legacy?file=pcKbBrl
+
+[2]: https://www.nvaccess.org/addonStore/legacy?file=pcKbBrl-beta
 
 [3]: https://www.nvaccess.org/addonStore/legacy?file=pckbbrl-o

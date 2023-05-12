@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pcKbBrl 2021.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2021-07-21 09:36+0000\n"
-"PO-Revision-Date: 2023-03-06 16:12+0300\n"
+"PO-Revision-Date: 2023-05-07 13:47+0300\n"
 "Last-Translator: Umut KORKMAZ <umutkork@gmail.com>\n"
 "Language-Team: \n"
 "Language: tr\n"
@@ -84,7 +84,7 @@ msgstr "Tek elle yazarken nokta7 için karakterler:"
 
 #. Translators: label of a dialog.
 msgid "Characters for dot8 when writing with one hand:"
-msgstr "Tek elle yazarken dot8 için karakterler:"
+msgstr "Tek elle yazarken nokta8 için karakterler:"
 
 #. Translators: label of a dialog.
 msgid "Characters to be &ignored when typing in braille:"

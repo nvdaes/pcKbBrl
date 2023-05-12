@@ -4,6 +4,7 @@
 * Copyright: 2012-2023 NV Access Limited, Noelia Ruiz Martínez
 * Licença: Licença Pública Geral GNU — General Public License — versão 2.0
 * Baixar: [versão estável][1] (compatível com NVDA 2019.3 ou posteriores)
+* Download: [beta version][2] (compatible with NVDA 2019.3 or later)
 * [versão 2014.1][3] (compatível com NVDA 2017.3 a 2019.2)
 
 Este complemento para NVDA possibilita que braille seja digitado através do
@@ -139,5 +140,7 @@ teclado pode liberar essas teclas.
 [[!tag dev stable]]
 
 [1]: https://www.nvaccess.org/addonStore/legacy?file=pcKbBrl
+
+[2]: https://www.nvaccess.org/addonStore/legacy?file=pcKbBrl-beta
 
 [3]: https://www.nvaccess.org/addonStore/legacy?file=pckbbrl-o
