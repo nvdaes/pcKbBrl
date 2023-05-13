@@ -60,6 +60,10 @@ Unfortunately, there is nothing that can be done to fix this, as the keys are si
 In some cases, using the upper row of keys with either or both hands might help, as your keyboard may allow these keys.
 
 
+## Changes for 28.0.0
+
+* Changed default values for One hand mode.
+
 ## Changes for 2023.02.23
 
 * Added ability to configure keys used to type dots in one hand mode.
