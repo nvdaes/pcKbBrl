@@ -4,6 +4,7 @@
 * Copyright: 2012-2023 NV Access Limited, Noelia Ruiz Martínez
 * Lizenz: GNU Allgemeine Öffentliche Lizenz Version 2.0
 * [stabile Version][1] herunterladen (kompatibel mit NVDA 2019.3 oder neuer)
+* Download: [beta version][2] (compatible with NVDA 2019.3 or later)
 * [Version 2014.1][3] (kompatibel mit NVDA 2017.3 bis 2019.2)
 
 Diese NVDA-Erweiterung ermöglicht die Eingabe von Braille über die
@@ -36,11 +37,12 @@ Wenn Sie möchten, dass beim Tippen mit einer Hand automatisch Punkte
 gesendet werden, verwenden Sie den Regler, um eine Zeitüberschreitung größer
 als 0 einzustellen.
 
-In addition, you can set the characters to send, clear and compose dots when
-typing with one hand, as well as characters to be ignored in one hand or
-standard mode.
+Außerdem können Sie einstellen, welche Zeichen beim einhändigen Tippen
+gesendet, gelöscht und mit Punkten versehen werden sollen, und welche
+Zeichen im Einhand- oder Standardmodus ignoriert werden sollen.
 
-It's also possible to restore defaults in the add-on settings panel.
+Es ist auch möglich, die Standard-Einstellungen in den Einstellungen der
+NVDA-Erweiterung wiederherzustellen.
 
 ## Verwendung
 
@@ -95,12 +97,15 @@ Einige Laptop-Tastaturen können nicht mit gedrückten Tastenkombinationen
 umgehen.
 
 
-## Changes for 2023.02.23
+## Änderungen in 2023.02.23
 
-* Added ability to configure keys used to type dots in one hand mode.
-* Now you can configure keys that should be ignored when typing in braille.
-* A restore to defaults button has been added to the add-on settings panel.
-* Compatible with NVDA 2023.1.
+* Es wurde die Möglichkeit hinzugefügt, Tasten zu konfigurieren, die für die
+  Eingabe von Punkten im Einhandmodus verwendet werden.
+* Jetzt können Sie Tasten konfigurieren, die bei der Braille-Eingabe
+  ignoriert werden sollen.
+* Eine Schaltfläche zum Wiederherstellen der Standardeinstellungen wurde zum
+  Einstellungsfenster der NVDA-Erweiterung hinzugefügt.
+* Kompatibel mit NVDA 2023.1.
 
 ## Änderungen in 2022.1
 
@@ -137,5 +142,7 @@ umgehen.
 [[!tag dev stable]]
 
 [1]: https://www.nvaccess.org/addonStore/legacy?file=pcKbBrl
+
+[2]: https://www.nvaccess.org/addonStore/legacy?file=pcKbBrl-beta
 
 [3]: https://www.nvaccess.org/addonStore/legacy?file=pckbbrl-o

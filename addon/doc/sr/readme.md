@@ -4,6 +4,7 @@
 * Copyright: 2012-2023 NV Access Limited, Noelia Ruiz Martínez
 * Licenca: GNU General Public License verzija 2.0
 * Preuzmi: [stabilnu verziju ][1] (kompatibilnu uz NVDA 2019.3 ili noviji )
+* Download: [beta version][2] (compatible with NVDA 2019.3 or later)
 * [Verzija 2014.1][3] (kompatibilna uz NVDA 2017.3 do 2019.2)
 
 Ovaj NVDA dodatak dozvoljava brajev unos korišćenjem tastature
@@ -134,5 +135,7 @@ da će vaša tastatura možda dozvoliti ove tastere.
 [[!tag dev stable]]
 
 [1]: https://www.nvaccess.org/addonStore/legacy?file=pcKbBrl
+
+[2]: https://www.nvaccess.org/addonStore/legacy?file=pcKbBrl-beta
 
 [3]: https://www.nvaccess.org/addonStore/legacy?file=pckbbrl-o
