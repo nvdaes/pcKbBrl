@@ -4,7 +4,7 @@
 * Copyright: 2012-2023 NV Access Limited, Noelia Ruiz Martínez
 * Lizenz: GNU Allgemeine Öffentliche Lizenz Version 2.0
 * [stabile Version][1] herunterladen (kompatibel mit NVDA 2019.3 oder neuer)
-* Download: [beta version][2] (compatible with NVDA 2019.3 or later)
+* [Beta-Version herunterladen][2] (kompatibel mit NVDA 2019.3 oder neuer)
 * [Version 2014.1][3] (kompatibel mit NVDA 2017.3 bis 2019.2)
 
 Diese NVDA-Erweiterung ermöglicht die Eingabe von Braille über die
@@ -96,6 +96,10 @@ Braille-Einstellungen.
 Einige Laptop-Tastaturen können nicht mit gedrückten Tastenkombinationen
 umgehen.
 
+
+## Änderungen in 28.0.0
+
+* Die Standardwerte für den Ein-Hand-Modus wurden geändert.
 
 ## Änderungen in 2023.02.23
 

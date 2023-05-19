@@ -104,7 +104,13 @@ msgstr "Грешка"
 
 #. Translators: Message to report wrong configuration.
 msgid "Configured keys for pcKbBrl shouldn't be repeated."
-msgstr "Конфигурираните клавиши за \"Въвеждане на брайл от компютърна клавиатура\" не трябва да се повтарят."
+msgstr ""
+"Конфигурираните клавиши за \"Въвеждане на брайл от компютърна клавиатура\" "
+"не трябва да се повтарят."
+
+#. Translators: Message to report wrong configuration.
+msgid "Set at least a confirm key if timeout for one hand mode is 0."
+msgstr ""
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.

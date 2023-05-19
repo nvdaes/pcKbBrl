@@ -44,7 +44,8 @@ msgstr "&Verbalizar puntos al escribir con una sola mano"
 
 #. Translators: label of a dialog.
 msgid "&Timeout to send dots when writing with one hand (in ms)"
-msgstr "&Tiempo de espera para enviar los puntos al escribir con una mano (en ms)"
+msgstr ""
+"&Tiempo de espera para enviar los puntos al escribir con una mano (en ms)"
 
 #. Translators: label of a dialog.
 msgid "Characters to con&firm when writing with one hand:"
@@ -105,6 +106,10 @@ msgstr "Error"
 #. Translators: Message to report wrong configuration.
 msgid "Configured keys for pcKbBrl shouldn't be repeated."
 msgstr "No deberían repetirse las teclas configuradas para PCKBBRL."
+
+#. Translators: Message to report wrong configuration.
+msgid "Set at least a confirm key if timeout for one hand mode is 0."
+msgstr ""
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.

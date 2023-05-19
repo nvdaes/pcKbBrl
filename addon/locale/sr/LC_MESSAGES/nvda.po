@@ -107,6 +107,10 @@ msgstr "Greška"
 msgid "Configured keys for pcKbBrl shouldn't be repeated."
 msgstr "Podešeni tasteri za brajev unos se ne smeju ponavljati."
 
+#. Translators: Message to report wrong configuration.
+msgid "Set at least a confirm key if timeout for one hand mode is 0."
+msgstr ""
+
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
 msgid "PC Keyboard Braille Input"
