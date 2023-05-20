@@ -95,6 +95,10 @@ korišćenjem gornjeg reda tastera sa jednom ili obe ruke može pomoći, budući
 da će vaša tastatura možda dozvoliti ove tastere.
 
 
+## Changes for 28.0.0
+
+* Changed default values for One hand mode.
+
 ## Changes for 2023.02.23
 
 * Added ability to configure keys used to type dots in one hand mode.

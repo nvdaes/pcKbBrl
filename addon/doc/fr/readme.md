@@ -106,6 +106,10 @@ des touches avec une ou deux mains pourrait aider, car le clavier peut
 permettre ces touches.
 
 
+## Changements de la version 28.0.0
+
+* Valeurs par défaut modifiées pour le Mode à une main.
+
 ## Changements de la version 2023.02.23
 
 * Ajout de la capacité à configurer les touches utilisées pour taper les

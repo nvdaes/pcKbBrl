@@ -65,6 +65,10 @@ It's also possible to restore defaults in the add-on settings panel.
 及 NVDA 从未接收到按键指令。在某些情况下，用单手或双手使用上排按键可能会有所帮助，因为键盘可能允许这些按键。
 
 
+## Changes for 28.0.0
+
+* Changed default values for One hand mode.
+
 ## Changes for 2023.02.23
 
 * Added ability to configure keys used to type dots in one hand mode.

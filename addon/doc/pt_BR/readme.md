@@ -100,6 +100,10 @@ carreira de teclas de cima com uma ou as duas mãos pode ajudar, pois seu
 teclado pode liberar essas teclas.
 
 
+## Changes for 28.0.0
+
+* Changed default values for One hand mode.
+
 ## Changes for 2023.02.23
 
 * Added ability to configure keys used to type dots in one hand mode.

@@ -4,7 +4,8 @@
 * Tekijänoikeus: 2012-2023 NV Access Limited ja Noelia Ruiz Martínez
 * Lisenssi: GNU General Public License versio 2.0
 * Lataa: [vakaa versio][1] (yhteensopiva NVDA 2019.3:n ja uudempien kanssa)
-* Download: [beta version][2] (compatible with NVDA 2019.3 or later)
+* Lataa: [beetaversio][2] (yhteensopiva NVDA 2019.3:n tai sitä uudempien
+  kanssa)
 * [versio 2014.1][3] (yhteensopiva NVDA 2017.3:sta 2019.2:een)
 
 Tämän lisäosan avulla voidaan kirjoittaa pistekirjoitusta tietokoneen
@@ -100,6 +101,10 @@ näitä näppäinpainalluksia.  Ylärivin näppäinten käyttäminen jommallakum
 tai molemmilla käsillä saattaa joissain tapauksissa auttaa , koska
 näppäimistö saattaa sallia näiden näppäinten painamisen.
 
+
+## Muutokset versiossa 28.0.0
+
+* Vaihdettu yksikätisen tilan oletusarvoja.
 
 ## Muutokset versiossa 2023.02.23
 

@@ -36,11 +36,12 @@ característica "modo de unha soa man").
 Se queres que os puntos se envíen automaticamente ó escribir cunha soa man,
 utiliza o control rotatorio para configurar un tempo de espera maior que 0.
 
-In addition, you can set the characters to send, clear and compose dots when
-typing with one hand, as well as characters to be ignored in one hand or
-standard mode.
+Ademais, podes configurar os caracteres para enviar, limpar e compoñer os
+puntos ó escribir cunha soa man, así como os caracteres a ignorar no modo
+dunha man ou no modo estándar.
 
-It's also possible to restore defaults in the add-on settings panel.
+Tamén é posible restaurar as predeterminadas no panel de opcións do
+complemento.
 
 ## Como se Usa
 
@@ -96,12 +97,18 @@ teclas cunha ou ambas mans pode axudar, así como que o teu teclado pode
 permitir estas teclas.
 
 
+## Cambios para 2022.1
+
+* Changed default values for One hand mode.
+
 ## Changes for 2023.02.23
 
-* Added ability to configure keys used to type dots in one hand mode.
-* Now you can configure keys that should be ignored when typing in braille.
-* A restore to defaults button has been added to the add-on settings panel.
-* Compatible with NVDA 2023.1.
+* Engadida a posibilidade de configurar as teclas utilizadas para escribir
+  puntos no modo dunha soa man.
+* Agora podes configurar teclas que se ignorarán ó escribir en braille.
+* Engadiuse un botón para restaurar ás predeterminadas ó panel de opcións do
+  complemento.
+* Compatible con NVDA 2023.1.
 
 ## Cambios para 2022.1
 

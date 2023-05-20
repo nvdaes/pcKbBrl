@@ -101,6 +101,10 @@ de teclas con una o ambas manos puede ayudar, ya que el teclado puede
 permitir estas teclas.
 
 
+## Cambios para 28.0.0
+
+* Se cambian los valores predeterminados para el modo de una mano.
+
 ## Cambios para 2023.02.23
 
 * Se ha añadido la posibilidad de configurar las teclas usadas para escribir

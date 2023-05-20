@@ -95,6 +95,10 @@ tilfælde kan det være en hjælp at bruge den øverste række af taster med én
 eller begge hænder, da dit tastatur muligvis tillader disse taster.
 
 
+## Changes for 28.0.0
+
+* Changed default values for One hand mode.
+
 ## Changes for 2023.02.23
 
 * Added ability to configure keys used to type dots in one hand mode.
