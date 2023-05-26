@@ -1,10 +1,10 @@
 # NVDA için bilgisayar klavyesiyle braille giriş desteği #
 
 * Yazarlar: NV Access Limited, Noelia Ruiz Martínez
-* Copyright: 2012-2023 NV Access Limited, Noelia Ruiz Martínez
+* Telif hakkı: 2012-2023 NV Access Limited, Noelia Ruiz Martinez
 * Lisans: GNU General Public lisansı sürüm 2.0
 * [kararlı sürümü][1] indir: (NVDA 2019.3 ve üzeri sürümlerle uyumludur)
-* Download: [beta version][2] (compatible with NVDA 2019.3 or later)
+* İndirin: [beta sürümü][2] (NVDA 2019.3 veya üstü ile uyumlu)
 * [Sürüm 2014.1][3] (NVDA 2017.3-2019.2 sürümleriyle uyumludur)
 
 Bu eklenti bilgisayar klavyesiyle braille yazabilmenizi sağlar. Şimdilik
@@ -19,7 +19,7 @@ aşağıdaki klavye düzenleri desteklenmektedir:
 * İspanyolca (İspanya ve Meksika).
 * Türkçe.
 
-## Nasıl ayarlanır?
+## Nasıl yapılandırılır
 
 NVDA menüsü tercihler alt menüsünde bulunan NVDA ayarları iletişim
 kutusundaki NVDA için bilgisayar klavyesinden braille giriş desteği
@@ -32,16 +32,16 @@ yazmak istiyorsanız onay kutusunu işaretsiz bırakın.
 
 Tek elle yazarken NVDA'nın noktaları söylemesini de sağlayabilirsiniz.
 
-If you want dots to be sent automatically when typing with one hand, use the
-spin control to set a timeout greater than 0.
+Tek elle yazarken noktaların otomatik olarak gönderilmesini istiyorsanız,
+0'dan büyük bir zaman aşımı ayarlamak için döndürme kontrolünü kullanın.
 
-In addition, you can set the characters to send, clear and compose dots when
-typing with one hand, as well as characters to be ignored in one hand or
-standard mode.
+Ayrıca, tek elle yazarken nokta göndermek, temizlemek ve oluşturmak için
+karakterlerin yanı sıra tek elde veya standart modda yok sayılacak
+karakterleri de ayarlayabilirsiniz.
 
-It's also possible to restore defaults in the add-on settings panel.
+Eklenti ayarları panelinde varsayılanları geri yüklemek de mümkündür.
 
-## Nasıl kullanılır?
+## Nasıl kullanılır
 
 1. Braille girişi etkinleştirmek için NVDA+0 kısayol tuşunu
    kullanın. Kısayolu girdi hareketleri iletişim kutusunun braille
@@ -65,8 +65,7 @@ It's also possible to restore defaults in the add-on settings panel.
 	  yeniden yazabilirsiniz. Türkçe QWERTY klavyede kullanılan tuşlar
 	  aşağıdadır:
 
-		* 1, 2, 3, 4, 5, 6, 7 ve 8. noktalar için sol el tuşları f, d, s, r, e, w,
-		  a ve q'dur. 
+		* Sol el: 1, 2, 3, 4, 5, 6, 7 ve 8 noktaları için f, d, s, r, e, w, a, q.
 		* Sağ elle yazmak için j, k, l, u, ı, o, ş ve p tuşlarını
 		  kullanabilirsiniz.
 
@@ -85,28 +84,32 @@ It's also possible to restore defaults in the add-on settings panel.
 Eklenti NVDA'nın braille girişi desteğini kullanır. NVDA'nın braille
 ayarları iletişim kutusunda seçilen braille tablosu kullanılır.
 
-Bazı klavyeler, özellikle dizüstü bilgisayar klavyeleri bazı tuş
-kombinasyonlarını desteklemez. Basılan tuşlar Windows veya NVDA tarafından
-algılanmadığı için bu sorun çözülemez. Bastığınız tuşların bir üst
-sırasındaki tuşlara basmayı deneyebilirsiniz. 
+Bazı klavyeler, özellikle de dizüstü bilgisayar klavyeleri, basılan belirli
+tuş kombinasyonlarını kaldıramaz.  Bu durumda, belirli tuşlar basitçe yok
+sayılır.  Ne yazık ki, tuşlar Windows veya NVDA tarafından hiçbir zaman
+alınmadığı için bunu düzeltmek için yapılabilecek bir şey yoktur.  Bazı
+durumlarda, klavyeniz bu tuşlara izin verebileceğinden, üst sıradaki tuşları
+bir veya iki elinizle kullanmak yardımcı olabilir.
 
 
-## Changes for 28.0.0
+## 28.0.0 için değişiklikler
 
-* Changed default values for One hand mode.
+* Tek el modu için varsayılan değerler değiştirildi.
 
-## Changes for 2023.02.23
+## 2023.02.23 için değişiklikler
 
-* Added ability to configure keys used to type dots in one hand mode.
-* Now you can configure keys that should be ignored when typing in braille.
-* A restore to defaults button has been added to the add-on settings panel.
-* Compatible with NVDA 2023.1.
+* Noktaları tek el modunda yazmak için kullanılan tuşları yapılandırma
+  özelliği eklendi.
+* Artık braille ile yazarken göz ardı edilmesi gereken tuşları
+  yapılandırabilirsiniz.
+* Eklenti ayarları paneline varsayılanlara geri yükle düğmesi eklendi.
+* NVDA 2023.1 ile uyumlu.
 
-## Changes for 2022.1
+## 2022.1 için değişiklikler
 
-* Added ability to configure keys to send and clear dots when writing with
-  one hand. Also, it's possible to set a timeout to send dots automatically,
-  without pressing confirmation keys.
+* Tek elle yazarken noktaları göndermek ve silmek için tuşları yapılandırma
+  yeteneği eklendi. Ayrıca, onay tuşlarına basmadan noktaların otomatik
+  olarak gönderilmesi için bir zaman aşımı süresi ayarlamak da mümkündür.
 
 ## 2021.1 için değişiklikler
 

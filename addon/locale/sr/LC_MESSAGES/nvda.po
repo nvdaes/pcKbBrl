@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pcKbBrl 2021.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2021-07-21 09:36+0000\n"
-"PO-Revision-Date: 2023-03-03 17:20+0100\n"
+"PO-Revision-Date: 2023-05-19 18:11+0100\n"
 "Last-Translator: Nikola Jović <wwenikola123@gmail.com>\n"
 "Language-Team: Serbian <LL@li.org>\n"
 "Language: sr\n"
@@ -110,6 +110,8 @@ msgstr "Podešeni tasteri za brajev unos se ne smeju ponavljati."
 #. Translators: Message to report wrong configuration.
 msgid "Set at least a confirm key if timeout for one hand mode is 0."
 msgstr ""
+"Podesite bar taster za potrdu ako je vreme isteka za režim unosa jednom "
+"rukom 0."
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
