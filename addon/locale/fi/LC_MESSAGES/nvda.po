@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pcKbBrl\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2021-07-21 09:36+0000\n"
-"PO-Revision-Date: 2023-02-24 19:54+0200\n"
+"PO-Revision-Date: 2023-05-19 20:25+0200\n"
 "Last-Translator: Jani Kinnunen <janikinnunen340@gmail.com>\n"
 "Language-Team: fi_FI <janikinnunen340@gmail.com>\n"
 "Language: fi\n"
@@ -113,6 +113,7 @@ msgstr "Tämän lisäosan määritettyjä näppäimiä ei voi käyttää."
 #. Translators: Message to report wrong configuration.
 msgid "Set at least a confirm key if timeout for one hand mode is 0."
 msgstr ""
+"Määritä vähintään vahvistusnäppäin, jos yksikätisen tilan aikakatkaisu on 0."
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
