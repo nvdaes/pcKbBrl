@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pcKbBrl 2021.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2021-07-21 09:36+0000\n"
-"PO-Revision-Date: 2023-02-24 23:13+0100\n"
+"PO-Revision-Date: 2023-06-01 01:01+0200\n"
 "Last-Translator: Milo Ivir <mail@milotype.de>\n"
 "Language-Team: \n"
 "Language: hr\n"
@@ -108,7 +108,7 @@ msgstr "Konfigurirane tipke za pcKbBrl se ne smiju ponavljati."
 
 #. Translators: Message to report wrong configuration.
 msgid "Set at least a confirm key if timeout for one hand mode is 0."
-msgstr ""
+msgstr "Postavi barem jednu tipku za potvrdu ako je trajanje za jednoručni modus 0."
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
