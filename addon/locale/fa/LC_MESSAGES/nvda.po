@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pcKbBrl 2021.5\n"
 "Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
 "POT-Creation-Date: 2021-10-08 16:05+0000\n"
-"PO-Revision-Date: 2023-02-26 21:24+0330\n"
+"PO-Revision-Date: 2023-06-09 20:49+0330\n"
 "Last-Translator: Mohammadreza Rashad <mohammadreza5712@gmail.com>\n"
 "Language-Team: NVDA Translation Team <nvda-translations@groups.io>\n"
 "Language: fa\n"
@@ -109,6 +109,8 @@ msgstr "کلیدهای پیکربندی‌شده برای افزونه نبای�
 #. Translators: Message to report wrong configuration.
 msgid "Set at least a confirm key if timeout for one hand mode is 0."
 msgstr ""
+"چنانچه مدت زمان برای حالتِ یکدستی صفر است، دستکم یک کلید تایید برای آن تعیین "
+"کنید."
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
