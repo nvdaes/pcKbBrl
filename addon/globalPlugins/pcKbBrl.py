@@ -383,7 +383,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		ui.message(message, speechPriority=speech.priorities.Spri.NOW)
 
 	def onSettings(self, evt):
-		gui.mainFrame._popupSettingsDialog(NVDASettingsDialog, AddonSettingsPanel)
+		gui.mainFrame.popupSettingsDialog(NVDASettingsDialog, AddonSettingsPanel)
 
 	@script(
 		# Translators: Describes a command.
