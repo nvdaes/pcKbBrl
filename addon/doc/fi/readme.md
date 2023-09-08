@@ -3,9 +3,6 @@
 * Tekijät: NV Access Limited, Noelia Ruiz Martínez
 * Tekijänoikeus: 2012-2023 NV Access Limited ja Noelia Ruiz Martínez
 * Lisenssi: GNU General Public License versio 2.0
-* Lataa: [vakaa versio][1] (yhteensopiva NVDA 2019.3:n ja uudempien kanssa)
-* Lataa: [beetaversio][2] (yhteensopiva NVDA 2019.3:n tai sitä uudempien
-  kanssa)
 * [versio 2014.1][3] (yhteensopiva NVDA 2017.3:sta 2019.2:een)
 
 Tämän lisäosan avulla voidaan kirjoittaa pistekirjoitusta tietokoneen
@@ -146,9 +143,5 @@ näppäimistö saattaa sallia näiden näppäinten painamisen.
 * Abdel.
 
 [[!tag dev stable]]
-
-[1]: https://www.nvaccess.org/addonStore/legacy?file=pcKbBrl
-
-[2]: https://www.nvaccess.org/addonStore/legacy?file=pcKbBrl-beta
 
 [3]: https://www.nvaccess.org/addonStore/legacy?file=pckbbrl-o

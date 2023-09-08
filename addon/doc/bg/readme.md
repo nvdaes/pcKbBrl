@@ -3,9 +3,6 @@
 * Автори: NV Access ООД, Noelia Ruiz Martínez
 * Запазено право: 2012-2023 г. NV Access ООД, Noelia Ruiz Martínez
 * Лиценз: GNU General Public License версия 2.0
-* Изтегляне на [стабилна версия][1] (съвместима с NVDA 2019.3 или по-нови
-  версии)
-* Изтегляне на: [бета версия][2] (съвместима с NVDA 2019.3 и по-нови версии)
 * [версия 2014.1][3] (съвместима с версии на NVDA от 2017.3 до 2019.2)
 
 Тази добавка за NVDA позволява да се въвежда брайл чрез компютърната
@@ -148,9 +145,5 @@
 * Abdel.
 
 [[!tag dev stable]]
-
-[1]: https://www.nvaccess.org/addonStore/legacy?file=pcKbBrl
-
-[2]: https://www.nvaccess.org/addonStore/legacy?file=pcKbBrl-beta
 
 [3]: https://www.nvaccess.org/addonStore/legacy?file=pckbbrl-o
