@@ -1,10 +1,8 @@
-# NVDAPC键盘盲文输入 #
+# PC 盲文键盘输入 #
 
-* 作者: NV Access Limited、 Noelia Ruiz Martínez
-* Copyright: 2012-2023 NV Access Limited, Noelia Ruiz Martínez
+* 作者：NV Access Limited，Noelia Ruiz Martínez
+* 版权所有：2012-2023 NV Access Limited，Noelia Ruiz Martinez
 * 许可证：GNU通用公共许可证版本2.0
-* 下载[稳定版][1]（与 NVDA 2019.3或更高版本兼容）
-* Download: [beta version][2] (compatible with NVDA 2019.3 or later)
 * [版本 2014.1][3]（与 NVDA 2017.3至2019.2兼容）
 
 此插件允许通过 PC 键盘输入盲文。目前，支持以下键盘布局：
@@ -28,11 +26,9 @@
 
 如果您希望在单手键入时自动发送点，请使用旋转控件将超时设置为大于 0。
 
-In addition, you can set the characters to send, clear and compose dots when
-typing with one hand, as well as characters to be ignored in one hand or
-standard mode.
+此外，您还可以设置在单手输入时发送、清除和组合点的字符，以及在单手或标准模式下要忽略的字符。
 
-It's also possible to restore defaults in the add-on settings panel.
+还可以在插件设置面板中恢复默认设置。
 
 ## 如何使用
 
@@ -65,16 +61,16 @@ It's also possible to restore defaults in the add-on settings panel.
 及 NVDA 从未接收到按键指令。在某些情况下，用单手或双手使用上排按键可能会有所帮助，因为键盘可能允许这些按键。
 
 
-## Changes for 28.0.0
+## 28.0.0 的更改
 
-* Changed default values for One hand mode.
+* 更改了单手模式的默认值。
 
-## Changes for 2023.02.23
+## 2023年2月23日的更改
 
-* Added ability to configure keys used to type dots in one hand mode.
-* Now you can configure keys that should be ignored when typing in braille.
-* A restore to defaults button has been added to the add-on settings panel.
-* Compatible with NVDA 2023.1.
+* 新增了配置在单手模式下用于输入点的按键的功能。
+* 现在您可以设置在输入盲文时要忽略的按键。
+* 插件设置面板中添加了恢复默认值按钮。
+* 兼容 NVDA 2023.1。
 
 ## 2022.1 的更改
 
@@ -102,9 +98,5 @@ It's also possible to restore defaults in the add-on settings panel.
 * Abdel.
 
 [[!tag dev stable]]
-
-[1]: https://www.nvaccess.org/addonStore/legacy?file=pcKbBrl
-
-[2]: https://www.nvaccess.org/addonStore/legacy?file=pcKbBrl-beta
 
 [3]: https://www.nvaccess.org/addonStore/legacy?file=pckbbrl-o
