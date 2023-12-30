@@ -22,7 +22,8 @@ import keyboardHandler
 import brailleInput
 import globalCommands
 import gui
-from gui import SettingsPanel, NVDASettingsDialog, guiHelper, nvdaControls
+from gui import NVDASettingsDialog, guiHelper, nvdaControls
+from gui.settingsDialogs import SettingsPanel
 from scriptHandler import script
 from logHandler import log
 import addonHandler
