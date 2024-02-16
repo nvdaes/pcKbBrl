@@ -1,7 +1,7 @@
 # PC 盲文键盘输入 #
 
-* 作者：NV Access Limited，Noelia Ruiz Martínez
-* 版权所有：2012-2023 NV Access Limited，Noelia Ruiz Martinez
+* Author: NV Access Limited, Noelia Ruiz Martínez
+* Copyright: 2012-2023 NV Access Limited, Noelia Ruiz Martínez
 * 许可证：GNU通用公共许可证版本2.0
 * [版本 2014.1][3]（与 NVDA 2017.3至2019.2兼容）
 

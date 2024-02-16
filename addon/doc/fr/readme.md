@@ -10,7 +10,7 @@ PC. Actuellement, les dispositions de clavier suivantes sont prises en
 charge:
 
 * Clavier QWERTY anglais.
-* français (France).
+* Français (France).
 * Allemand (Allemagne).
 * Italien (Italie).
 * Persan.
@@ -140,13 +140,13 @@ permettre ces touches.
 ## Contributeurs
 
 * James Teh
-* Noelia
+* Noelia.
 * Mohammadreza Rashad
 * Cagri Dogan
 * Bernd Dorer
 * Ângelo Abrantes
 * Cyrille Bougot
-* Abdel
+* Abdel.
 
 [[!tag dev stable]]
 
