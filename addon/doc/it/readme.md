@@ -1,11 +1,8 @@
 # PC Keyboard Braille Input for NVDA #
 
-* Autori: NV Access Limited, Noelia Ruiz Martínez
+* Author: NV Access Limited, Noelia Ruiz Martínez
 * Copyright: 2012-2023 NV Access Limited, Noelia Ruiz Martínez
 * Licenza: GNU General Public License versione 2.0
-* Scarica: [versione stabile][1] (compatibile con NVDA 2019.3 o versioni
-  successive)
-* Download: [beta version][2] (compatible with NVDA 2019.3 or later)
 * [versione 2014.1][3] (compatibile con NVDA da 2017.3 a 2019.2)
 
 Questo componente aggiuntivo per NVDA permette di inserire caratteri braille
@@ -146,9 +143,5 @@ vostra tastiera potrebbe gestirli.
 * Abdel.
 
 [[!tag dev stable]]
-
-[1]: https://www.nvaccess.org/addonStore/legacy?file=pcKbBrl
-
-[2]: https://www.nvaccess.org/addonStore/legacy?file=pcKbBrl-beta
 
 [3]: https://www.nvaccess.org/addonStore/legacy?file=pckbbrl-o

@@ -3,10 +3,6 @@
 * Auteur : NV Access Limited, Noelia Ruiz Martínez
 * Copyright : 2012-2023 NV Access Limited, Noelia Ruiz Martínez
 * License : GNU General Public License version 2.0
-* Télécharger : [version stable] [1] (compatible avec NVDA 2019.3 ou version
-  ultérieure)
-* Télécharger : [version béta][2] (compatible avec NVDA 2019.3 ou version
-  ultérieure)
 * [version 2014.1] [3] (compatible avec NVDA 2017.3 à 2019.2)
 
 Cette extension NVDA permet de saisir le braille au moyen du clavier du
@@ -14,7 +10,7 @@ PC. Actuellement, les dispositions de clavier suivantes sont prises en
 charge:
 
 * Clavier QWERTY anglais.
-* français (France).
+* Français (France).
 * Allemand (Allemagne).
 * Italien (Italie).
 * Persan.
@@ -144,18 +140,14 @@ permettre ces touches.
 ## Contributeurs
 
 * James Teh
-* Noelia
+* Noelia.
 * Mohammadreza Rashad
 * Cagri Dogan
 * Bernd Dorer
 * Ângelo Abrantes
 * Cyrille Bougot
-* Abdel
+* Abdel.
 
 [[!tag dev stable]]
-
-[1]: https://www.nvaccess.org/addonStore/legacy?file=pcKbBrl
-
-[2]: https://www.nvaccess.org/addonStore/legacy?file=pcKbBrl-beta
 
 [3]: https://www.nvaccess.org/addonStore/legacy?file=pckbbrl-o

@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: pcKbBrl 2021.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2021-07-21 09:36+0000\n"
-"PO-Revision-Date: 2022-04-23 07:38+0800\n"
+"PO-Revision-Date: 2023-09-08 08:01+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"X-Generator: Poedit 2.4.3\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #. Translators: Describes a command.
 msgid "Toggles braille input from the PC keyboard."
@@ -47,12 +47,68 @@ msgid "&Timeout to send dots when writing with one hand (in ms)"
 msgstr "单手输入模式下延迟（以毫秒为单位）(&T)"
 
 #. Translators: label of a dialog.
-msgid "Type the characters to con&firm when writing with one hand."
-msgstr ""
+msgid "Characters to con&firm when writing with one hand:"
+msgstr "单手输入确认字符(&S)"
 
 #. Translators: label of a dialog.
-msgid "Type the characters to cance&l when writing with one hand."
-msgstr ""
+msgid "Characters to cance&l when writing with one hand:"
+msgstr "单手输入取消字符(&L)"
+
+#. Translators: label of a dialog.
+msgid "Characters for &dot1 when writing with one hand:"
+msgstr "单手输入1点的字符："
+
+#. Translators: label of a dialog.
+msgid "Characters for dot2 when writing with one hand:"
+msgstr "单手输入2点的字符："
+
+#. Translators: label of a dialog.
+msgid "Characters for dot3 when writing with one hand:"
+msgstr "单手输入3点的字符："
+
+#. Translators: label of a dialog.
+msgid "Characters for dot4 when writing with one hand:"
+msgstr "单手输入4点的字符："
+
+#. Translators: label of a dialog.
+msgid "Characters for dot5 when writing with one hand:"
+msgstr "单手输入5点的字符："
+
+#. Translators: label of a dialog.
+msgid "Characters for dot6 when writing with one hand:"
+msgstr "单手输入6点的字符："
+
+#. Translators: label of a dialog.
+msgid "Characters for dot7 when writing with one hand:"
+msgstr "单手输入7点的字符："
+
+#. Translators: label of a dialog.
+msgid "Characters for dot8 when writing with one hand:"
+msgstr "单手输入8点的字符："
+
+#. Translators: label of a dialog.
+msgid "Characters to be &ignored when typing in braille:"
+msgstr "输入盲文时要忽略的字符(&I)："
+
+#. Translators: label of a dialog.
+msgid "&Restore defaults"
+msgstr "恢复默认(&R)"
+
+#. Translators: Message to report wrong configuration.
+msgid "None or all dots should be configured."
+msgstr "应配置所有点位或不配置任何点位。"
+
+#. Translators: Title of message box
+msgid "Error"
+msgstr "错误"
+
+#. Translators: Message to report wrong configuration.
+msgid "Configured keys for pcKbBrl shouldn't be repeated."
+msgstr "pcKbBrl 的按键配置不能重复。"
+
+#. Translators: Message to report wrong configuration.
+msgid "Set at least a confirm key if timeout for one hand mode is 0."
+msgstr "如果单手模式的超时时间为0，则至少设置一个确认键。▋"
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.

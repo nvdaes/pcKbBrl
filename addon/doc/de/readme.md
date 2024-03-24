@@ -1,10 +1,8 @@
 # Braille-Eingabe via PC-Tastatur #
 
-* Autor: NV Access Limited, Noelia Ruiz Martínez
+* Author: NV Access Limited, Noelia Ruiz Martínez
 * Copyright: 2012-2023 NV Access Limited, Noelia Ruiz Martínez
 * Lizenz: GNU Allgemeine Öffentliche Lizenz Version 2.0
-* [stabile Version][1] herunterladen (kompatibel mit NVDA 2019.3 oder neuer)
-* [Beta-Version herunterladen][2] (kompatibel mit NVDA 2019.3 oder neuer)
 * [Version 2014.1][3] (kompatibel mit NVDA 2017.3 bis 2019.2)
 
 Diese NVDA-Erweiterung ermöglicht die Eingabe von Braille über die
@@ -144,9 +142,5 @@ umgehen.
 * Abdel.
 
 [[!tag dev stable]]
-
-[1]: https://www.nvaccess.org/addonStore/legacy?file=pcKbBrl
-
-[2]: https://www.nvaccess.org/addonStore/legacy?file=pcKbBrl-beta
 
 [3]: https://www.nvaccess.org/addonStore/legacy?file=pckbbrl-o

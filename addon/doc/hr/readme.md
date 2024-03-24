@@ -1,10 +1,8 @@
 # Brajični unos PC tipkovnicom za NVDA (PC Keyboard Braille Input for NVDA) #
 
 * Author: NV Access Limited, Noelia Ruiz Martínez
-* Autorska prava: 2012. – 2023. NV Access Limited, Noelia Ruiz Martínez
+* Copyright: 2012-2023 NV Access Limited, Noelia Ruiz Martínez
 * Licenca: GNU opća javna licenca verzija 2.0
-* Preuzmi [stabilnu verziju][1] (kompatibilna s NVDA 2019.3 i novijom)
-* Preuzmi [beta verziju][2] (kompatibilna s NVDA 2019.3 i novijom)
 * [verzija 2014.1][3] (kompatibilna s NVDA 2017.3 do 2019.2)
 
 Ovaj dodatak dozvoljava brajični unos pomoću PC tipkovnice. Trenutačno se
@@ -137,9 +135,5 @@ tipkovnice.
 * Abdel.
 
 [[!tag dev stable]]
-
-[1]: https://www.nvaccess.org/addonStore/legacy?file=pcKbBrl
-
-[2]: https://www.nvaccess.org/addonStore/legacy?file=pcKbBrl-beta
 
 [3]: https://www.nvaccess.org/addonStore/legacy?file=pckbbrl-o

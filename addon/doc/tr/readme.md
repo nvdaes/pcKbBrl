@@ -1,10 +1,8 @@
 # NVDA için bilgisayar klavyesiyle braille giriş desteği #
 
-* Yazarlar: NV Access Limited, Noelia Ruiz Martínez
-* Telif hakkı: 2012-2023 NV Access Limited, Noelia Ruiz Martinez
+* Yazar: NV Access Limited, Noelia Ruiz Martínez
+* Telif Hakkı: 2012-2023 NV Access Limited, Noelia Ruiz Martínez
 * Lisans: GNU General Public lisansı sürüm 2.0
-* [kararlı sürümü][1] indir: (NVDA 2019.3 ve üzeri sürümlerle uyumludur)
-* İndirin: [beta sürümü][2] (NVDA 2019.3 veya üstü ile uyumlu)
 * [Sürüm 2014.1][3] (NVDA 2017.3-2019.2 sürümleriyle uyumludur)
 
 Bu eklenti bilgisayar klavyesiyle braille yazabilmenizi sağlar. Şimdilik
@@ -135,9 +133,5 @@ bir veya iki elinizle kullanmak yardımcı olabilir.
 * Abdel.
 
 [[!tag dev stable]]
-
-[1]: https://www.nvaccess.org/addonStore/legacy?file=pcKbBrl
-
-[2]: https://www.nvaccess.org/addonStore/legacy?file=pcKbBrl-beta
 
 [3]: https://www.nvaccess.org/addonStore/legacy?file=pckbbrl-o

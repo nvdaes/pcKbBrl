@@ -1,10 +1,8 @@
 # Введення шрифтом Брайля з клавіатури ПК для NVDA #
 
-* Автор: NV Access Limited, Noelia Ruiz Martínez
-* Авторське право: 2012-2023 NV Access Limited, Noelia Ruiz Martínez
+* Author: NV Access Limited, Noelia Ruiz Martínez
+* Copyright: 2012-2023 NV Access Limited, Noelia Ruiz Martínez
 * Ліцензія: GNU General Public License версія 2.0
-* Завантажити: [стабільну версію][1] (сумісна з NVDA 2019.3 або пізніше)
-* Завантажити: [бета-версію][2] (сумісна з NVDA 2019.3 або пізніше)
 * [Версія 2014.1][3] (сумісна із NVDA 2017.3 до 2019.2)
 
 Цей додаток NVDA дозволяє вводити шрифт Брайля за допомогою клавіатури ПК.
@@ -138,9 +136,5 @@ Windows або NVDA просто ніколи не отримують ці кл�
 * Abdel.
 
 [[!tag dev stable]]
-
-[1]: https://www.nvaccess.org/addonStore/legacy?file=pcKbBrl
-
-[2]: https://www.nvaccess.org/addonStore/legacy?file=pcKbBrl-beta
 
 [3]: https://www.nvaccess.org/addonStore/legacy?file=pckbbrl-o
