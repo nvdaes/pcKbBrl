@@ -1,6 +1,6 @@
 # Indtast punkt med PC-tastatur og NVDA #
 
-* Forfatter: NV Access Limited, Noelia Ruiz Martínez
+* Author: NV Access Limited, Noelia Ruiz Martínez
 * Copyright: 2012-2023 NV Access Limited, Noelia Ruiz Martínez
 * Licens: GNU General Public License version 2.0
 * [version 2014.1] [3] (kompatibel med NVDA 2017.3 til 2019.2)

@@ -1,7 +1,7 @@
 # NVDA için bilgisayar klavyesiyle braille giriş desteği #
 
-* Yazarlar: NV Access Limited, Noelia Ruiz Martínez
-* Telif hakkı: 2012-2023 NV Access Limited, Noelia Ruiz Martinez
+* Yazar: NV Access Limited, Noelia Ruiz Martínez
+* Telif Hakkı: 2012-2023 NV Access Limited, Noelia Ruiz Martínez
 * Lisans: GNU General Public lisansı sürüm 2.0
 * [Sürüm 2014.1][3] (NVDA 2017.3-2019.2 sürümleriyle uyumludur)
 

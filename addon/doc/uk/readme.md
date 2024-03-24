@@ -1,7 +1,7 @@
 # Введення шрифтом Брайля з клавіатури ПК для NVDA #
 
-* Автор: NV Access Limited, Noelia Ruiz Martínez
-* Авторське право: 2012-2023 NV Access Limited, Noelia Ruiz Martínez
+* Author: NV Access Limited, Noelia Ruiz Martínez
+* Copyright: 2012-2023 NV Access Limited, Noelia Ruiz Martínez
 * Ліцензія: GNU General Public License версія 2.0
 * [Версія 2014.1][3] (сумісна із NVDA 2017.3 до 2019.2)
 
