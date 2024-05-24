@@ -1,7 +1,7 @@
 # Въвеждане на брайл за NVDA от компютърна клавиатура (PC Keyboard Braille Input for NVDA) #
 
-* Author: NV Access Limited, Noelia Ruiz Martínez
-* Copyright: 2012-2023 NV Access Limited, Noelia Ruiz Martínez
+* Автор: NV Access ООД, Noelia Ruiz Martínez
+* Запазено право: 2012-2023 г. NV Access ООД, Noelia Ruiz Martínez
 * Лиценз: GNU General Public License версия 2.0
 * [версия 2014.1][3] (съвместима с версии на NVDA от 2017.3 до 2019.2)
 

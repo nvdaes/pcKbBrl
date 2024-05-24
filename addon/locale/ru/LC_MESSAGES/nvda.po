@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: pcKbBrl 2021.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2021-07-21 09:36+0000\n"
-"PO-Revision-Date: 2024-05-08 11:00+0300\n"
+"PO-Revision-Date: 2024-05-21 12:25+0300\n"
 "Last-Translator: zvonimir stanecic <zvonimirek222@yandex.com>\n"
 "Language-Team: \n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.4.4\n"
 
 #. Translators: Describes a command.
 msgid "Toggles braille input from the PC keyboard."
@@ -23,11 +23,11 @@ msgstr "Переключает ввод Брайля с клавиатуры П�
 
 #. Translators: Reported when braille input from the PC keyboard is disabled.
 msgid "Braille input from PC keyboard disabled"
-msgstr "Отключен ввод брайля с клавиатуры ПК"
+msgstr "Ввод брайля с клавиатуры ПК выключен"
 
 #. Translators: Reported when braille input from the PC keyboard is enabled.
 msgid "Braille input from PC keyboard enabled"
-msgstr "Включен ввод брайля с клавиатуры ПК"
+msgstr "Ввод брайля с клавиатуры ПК включён"
 
 #. Translators: Describes a command.
 #, python-format
@@ -48,7 +48,7 @@ msgstr "&Время ожидания для отправки точек при �
 
 #. Translators: label of a dialog.
 msgid "Characters to con&firm when writing with one hand:"
-msgstr "Символы, которые нужно &подчеркивать при наборе одной рукой:"
+msgstr "Символы, которые нужно &подчёркивать при наборе одной рукой:"
 
 #. Translators: label of a dialog.
 msgid "Characters to cance&l when writing with one hand:"
@@ -108,7 +108,7 @@ msgstr "Настроенные клавиши для pcKbBrl не должны �
 
 #. Translators: Message to report wrong configuration.
 msgid "Set at least a confirm key if timeout for one hand mode is 0."
-msgstr ""
+msgstr "Установите хотя бы клавишу подтверждения, если время ожидания при наборе одной рукой равно 0."
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
