@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pcKbBrl 2021.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2021-07-21 09:36+0000\n"
-"PO-Revision-Date: 2024-05-21 12:25+0300\n"
+"PO-Revision-Date: 2024-06-14 17:35+0300\n"
 "Last-Translator: zvonimir stanecic <zvonimirek222@yandex.com>\n"
 "Language-Team: \n"
 "Language: ru\n"
@@ -113,9 +113,9 @@ msgstr "Установите хотя бы клавишу подтвержден
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
 msgid "PC Keyboard Braille Input"
-msgstr "PC Keyboard Braille Input"
+msgstr "Ввод брайля с клавиатуры ПК"
 
 #. Add-on description
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Allows braille to be entered via the PC keyboard."
-msgstr "Позволяет вводить шрифт Брайля с помощью клавиатуры ПК."
+msgstr "Позволяет вводить шрифт Брайля с помощью клавиатуры компьютера."
