@@ -3,7 +3,6 @@
 * Author: NV Access Limited, Noelia Ruiz Martínez
 * Copyright: 2012-2023 NV Access Limited, Noelia Ruiz Martínez
 * License: GNU General Public License version 2.0
-* [version 2014.1][3] (compatible with NVDA 2017.3 to 2019.2)
 
 This NVDA add-on allows braille to be entered via the PC keyboard.
 Currently, the following keyboard layouts are supported:
@@ -95,4 +94,3 @@ In some cases, using the upper row of keys with either or both hands might help,
 * Abdel.
 
 
-[3]: https://www.nvaccess.org/addonStore/legacy?file=pckbbrl-o
