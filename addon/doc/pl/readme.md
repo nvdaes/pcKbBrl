@@ -3,7 +3,6 @@
 * Author: NV Access Limited, Noelia Ruiz Martínez
 * Copyright: 2012-2023 NV Access Limited, Noelia Ruiz Martínez
 * Licencja: GNU General Public License version 2.0
-* [Wersja 2014.1][3] (zgodna z NVDA 2017.3 do 2019.2)
 
 Ten dodatek umożliwia wprowadzanie brajla za pomocą klawiatury
 komputera. Obecnie wspierane są następujące układy klawiatury:
@@ -136,4 +135,3 @@ klawisze.
 
 [[!tag dev stable]]
 
-[3]: https://www.nvaccess.org/addonStore/legacy?file=pckbbrl-o

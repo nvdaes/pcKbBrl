@@ -3,7 +3,6 @@
 * Author: NV Access Limited, Noelia Ruiz Martínez
 * Copyright: 2012-2023 NV Access Limited, Noelia Ruiz Martínez
 * Licenza: GNU General Public License versione 2.0
-* [versione 2014.1][3] (compatibile con NVDA da 2017.3 a 2019.2)
 
 Questo componente aggiuntivo per NVDA permette di inserire caratteri braille
 utilizzando la tastiera del pc. Al momento, sono supportati i seguenti
@@ -144,4 +143,3 @@ vostra tastiera potrebbe gestirli.
 
 [[!tag dev stable]]
 
-[3]: https://www.nvaccess.org/addonStore/legacy?file=pckbbrl-o

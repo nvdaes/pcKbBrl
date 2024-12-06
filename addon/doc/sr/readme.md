@@ -3,7 +3,6 @@
 * Author: NV Access Limited, Noelia Ruiz Martínez
 * Copyright: 2012-2023 NV Access Limited, Noelia Ruiz Martínez
 * Licenca: GNU General Public License verzija 2.0
-* [Verzija 2014.1][3] (kompatibilna uz NVDA 2017.3 do 2019.2)
 
 Ovaj NVDA dodatak dozvoljava brajev unos korišćenjem tastature
 računara. Trenutno, sledeći rasporedi tastature su podržani:
@@ -136,4 +135,3 @@ da će vaša tastatura možda dozvoliti ove tastere.
 
 [[!tag dev stable]]
 
-[3]: https://www.nvaccess.org/addonStore/legacy?file=pckbbrl-o
