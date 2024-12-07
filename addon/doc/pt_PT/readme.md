@@ -3,7 +3,6 @@
 * Author: NV Access Limited, Noelia Ruiz Martínez
 * Copyright: 2012-2023 NV Access Limited, Noelia Ruiz Martínez
 * Licença: GNU General Public License version 2.0
-* [versão 2014.1][3] (compatível com o NVDA 2017.3 a 2019.2)
 
 Este extra para o NVDA permite a entrada de braille através do teclado do
 PC.  Actualmente, são suportados os seguintes layouts de teclado:
@@ -140,4 +139,3 @@ permitir essas teclas.
 
 [[!tag dev stable]]
 
-[3]: https://www.nvaccess.org/addonStore/legacy?file=pckbbrl-o

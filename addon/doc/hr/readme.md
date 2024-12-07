@@ -3,7 +3,6 @@
 * Autor: NV Access Limited, Noelia Ruiz Martínez
 * Copyright: 2012-2023 NV Access Limited, Noelia Ruiz Martínez
 * Licenca: GNU opća javna licenca verzija 2.0
-* [verzija 2014.1][3] (kompatibilna s NVDA 2017.3 do 2019.2)
 
 Ovaj dodatak dozvoljava brajični unos pomoću PC tipkovnice. Trenutačno se
 podržavaju sljedeće tipkovnice:
@@ -136,4 +135,3 @@ tipkovnice.
 
 [[!tag dev stable]]
 
-[3]: https://www.nvaccess.org/addonStore/legacy?file=pckbbrl-o

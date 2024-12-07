@@ -3,7 +3,6 @@
 * Tekijät: NV Access Limited ja Noelia Ruiz Martínez
 * Tekijänoikeus: 2012-2023 NV Access Limited ja Noelia Ruiz Martínez
 * Lisenssi: GNU General Public License versio 2.0
-* [versio 2014.1][3] (yhteensopiva NVDA 2017.3:sta 2019.2:een)
 
 Tämän lisäosan avulla voidaan kirjoittaa pistekirjoitusta tietokoneen
 näppäimistöä käyttäen.  Tällä hetkellä tuetaan seuraavia
@@ -144,4 +143,3 @@ näppäimistö saattaa sallia näiden näppäinten painamisen.
 
 [[!tag dev stable]]
 
-[3]: https://www.nvaccess.org/addonStore/legacy?file=pckbbrl-o

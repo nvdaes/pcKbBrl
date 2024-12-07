@@ -3,7 +3,6 @@
 * Author: NV Access Limited, Noelia Ruiz Martínez
 * Copyright: 2012-2023 NV Access Limited, Noelia Ruiz Martínez
 * 许可证：GNU通用公共许可证版本2.0
-* [版本 2014.1][3]（与 NVDA 2017.3至2019.2兼容）
 
 此插件允许通过 PC 键盘输入盲文。目前，支持以下键盘布局：
 
@@ -99,4 +98,3 @@
 
 [[!tag dev stable]]
 
-[3]: https://www.nvaccess.org/addonStore/legacy?file=pckbbrl-o

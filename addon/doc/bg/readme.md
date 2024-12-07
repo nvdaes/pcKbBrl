@@ -3,7 +3,6 @@
 * Автор: NV Access ООД, Noelia Ruiz Martínez
 * Запазено право: 2012-2023 г. NV Access ООД, Noelia Ruiz Martínez
 * Лиценз: GNU General Public License версия 2.0
-* [версия 2014.1][3] (съвместима с версии на NVDA от 2017.3 до 2019.2)
 
 Тази добавка за NVDA позволява да се въвежда брайл чрез компютърната
 клавиатура. В момента се поддържат следните клавиатурни подредби:
@@ -146,4 +145,3 @@
 
 [[!tag dev stable]]
 
-[3]: https://www.nvaccess.org/addonStore/legacy?file=pckbbrl-o
