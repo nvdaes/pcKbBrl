@@ -286,7 +286,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		inputCore.decide_handleRawKey.unregister(self._keyUp)
 		self.isEnabled = False
 
-	def _keyDown(self, vkCode=None, pressed=None):
+	def _keyDown(self, vkCode=None, pressed=None):  # Noqa: C901
 		if not pressed:
 			return True
 		if self._keyboardLanguage in VKCODES.keys() and vkCode in VKCODES[self._keyboardLanguage].keys():
