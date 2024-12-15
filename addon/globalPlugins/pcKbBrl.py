@@ -11,7 +11,6 @@ import itertools
 from dataclasses import dataclass
 
 import globalPluginHandler
-import winInputHook
 import winUser
 import core
 import config
@@ -267,19 +266,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self._cancelCodes = self.getCancelCodes()
 		self._nullKeyCodes = self.getNullKeyCodes()
 		self._dot = None
-		# Monkey patch keyboard handling callbacks.
-		# This is pretty evil, but we need low level keyboard handling.
-		self._oldKeyDown = winInputHook.keyDownCallback
-		winInputHook.keyDownCallback = self._keyDown
-		self._oldKeyUp = winInputHook.keyUpCallback
-		winInputHook.keyUpCallback = self._keyUp
+		inputCore.decide_handleRawKey.register(self._keyDown)
+		inputCore.decide_handleRawKey.register(self._keyUp)
 		self.isEnabled = True
 
 	def disable(self):
 		if not self.isEnabled:
 			return False
-		winInputHook.keyDownCallback = self._oldKeyDown
-		winInputHook.keyUpCallback = self._oldKeyUp
 		self._gesture = None
 		self._trappedKeys = None
 		self._keyboardLanguage = None
@@ -289,9 +282,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self._cancelCodes = None
 		self._nullKeyCodes = None
 		self._dot = None
+		inputCore.decide_handleRawKey.unregister(self._keyDown)
+		inputCore.decide_handleRawKey.unregister(self._keyUp)
 		self.isEnabled = False
 
-	def _keyDown(self, vkCode, scanCode, extended, injected):  # NOQA: C901
+	def _keyDown(self, vkCode=None, pressed=None):
+		if not pressed:
+			return True
 		if self._keyboardLanguage in VKCODES.keys() and vkCode in VKCODES[self._keyboardLanguage].keys():
 			vkCode = VKCODES[self._keyboardLanguage][vkCode]
 		if vkCode is None or vkCode in self._nullKeyCodes:
@@ -321,7 +318,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			else:
 				self._dot = VKCODES_TO_DOTS_ONE_HAND.get(vkCode)
 		if self._dot is None and not (self._oneHandMode and vkCode in self._confirmCodes):
-			return self._oldKeyDown(vkCode, scanCode, extended, injected)
+			return True
 		self._trappedKeys.add(vkCode)
 		if not self._gesture:
 			self._gesture = brailleInput.BrailleInputGesture()
@@ -332,11 +329,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				self._gesture.dots |= self._dot
 		return False
 
-	def _keyUp(self, vkCode, scanCode, extended, injected):
+	def _keyUp(self, vkCode=None, pressed=None):
+		if pressed:
+			return True
 		if self._keyboardLanguage in VKCODES.keys() and vkCode in VKCODES[self._keyboardLanguage].keys():
 			vkCode = VKCODES[self._keyboardLanguage][vkCode]
 		if vkCode not in self._trappedKeys:
-			return self._oldKeyUp(vkCode, scanCode, extended, injected)
+			return True
 		if self._oneHandMode:
 			if vkCode in self._confirmCodes:
 				self._trappedKeys.clear()
@@ -363,7 +362,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 		self._trappedKeys.clear()
 		try:
 			inputCore.manager.executeGesture(self._gesture)
-		except (inputCore.NoInputGestureAction, IndexError):
+		except (inputCore.NoInputGestureAction, IndexError, AttributeError):
 			pass
 		self._gesture = None
 
