@@ -3,7 +3,6 @@
 * Yazar: NV Access Limited, Noelia Ruiz Martínez
 * Telif Hakkı: 2012-2023 NV Access Limited, Noelia Ruiz Martínez
 * Lisans: GNU General Public lisansı sürüm 2.0
-* [Sürüm 2014.1][3] (NVDA 2017.3-2019.2 sürümleriyle uyumludur)
 
 Bu eklenti bilgisayar klavyesiyle braille yazabilmenizi sağlar. Şimdilik
 aşağıdaki klavye düzenleri desteklenmektedir:
@@ -134,4 +133,3 @@ bir veya iki elinizle kullanmak yardımcı olabilir.
 
 [[!tag dev stable]]
 
-[3]: https://www.nvaccess.org/addonStore/legacy?file=pckbbrl-o

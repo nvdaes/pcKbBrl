@@ -3,7 +3,6 @@
 * Author: NV Access Limited, Noelia Ruiz Martínez
 * Copyright: 2012-2023 NV Access Limited, Noelia Ruiz Martínez
 * Licens: GNU General Public License version 2.0
-* [version 2014.1] [3] (kompatibel med NVDA 2017.3 til 2019.2)
 
 Denne NVDA-tilføjelse gør det muligt at indtaste punktskrift via
 pc-tastaturet. I øjeblikket understøttes følgende tastaturlayouter:
@@ -138,4 +137,3 @@ eller begge hænder, da dit tastatur muligvis tillader disse taster.
 
 [[!tag dev stable]]
 
-[3]: https://www.nvaccess.org/addonStore/legacy?file=pckbbrl-o

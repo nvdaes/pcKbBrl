@@ -3,7 +3,6 @@
 * Auteur : NV Access Limited, Noelia Ruiz Martínez
 * Copyright : 2012-2023 NV Access Limited, Noelia Ruiz Martínez
 * License : GNU General Public License version 2.0
-* [version 2014.1] [3] (compatible avec NVDA 2017.3 à 2019.2)
 
 Cette extension NVDA permet de saisir le braille au moyen du clavier du
 PC. Actuellement, les dispositions de clavier suivantes sont prises en
@@ -150,4 +149,3 @@ permettre ces touches.
 
 [[!tag dev stable]]
 
-[3]: https://www.nvaccess.org/addonStore/legacy?file=pckbbrl-o
