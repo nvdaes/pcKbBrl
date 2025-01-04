@@ -1,6 +1,6 @@
-# Inserção de Braille com o Teclado do PC para NVDA (PC Keyboard Braille Input for NVDA) #
+# Inserção de Braille com o Teclado do PC para NVDA — PC Keyboard Braille Input for NVDA #
 
-* Author: NV Access Limited, Noelia Ruiz Martínez
+* Autor: NV Access Limited, Noelia Ruiz Martínez
 * Copyright: 2012-2023 NV Access Limited, Noelia Ruiz Martínez
 * Licença: Licença Pública Geral GNU — General Public License — versão 2.0
 
@@ -21,8 +21,8 @@ suportados:
 
 O complemento pode ser configurado a partir de sua categoria na caixa de
 diálogo de configurações do NVDA, no menu do NVDA, submenu Preferências. Um
-comando (gesto) para abrir o painel de configurações do complemento pode ser
-atribuído no diálogo Definir comandos, categoria de configuração.
+comando — gesto — para abrir o painel de configurações do complemento pode
+ser atribuído no diálogo Definir comandos, categoria de configuração.
 
 Marque a caixa de seleção correspondente se desejar digitar usando apenas
 uma mão, ou certifique-se que não está marcada se preferir digitar no modo
@@ -31,19 +31,21 @@ padrão (duas mãos).
 Também pode selecionar se o NVDA deve falar um único ponto digitado (usando
 o recurso de "modo de uma mão").
 
-If you want dots to be sent automatically when typing with one hand, use the
-spin control to set a timeout greater than 0.
+Se você quiser que os pontos sejam enviados automaticamente ao digitar com
+uma mão, use o controle de seletor numérico para definir um tempo limite
+maior que 0.
 
-In addition, you can set the characters to send, clear and compose dots when
-typing with one hand, as well as characters to be ignored in one hand or
-standard mode.
+Além disso, você pode definir os caracteres para enviar, limpar e compor
+pontos ao digitar com uma mão, bem como caracteres a serem ignorados em uma
+mão ou no modo padrão.
 
-It's also possible to restore defaults in the add-on settings panel.
+Também é possível restaurar os padrões no painel de configurações do
+complemento.
 
 ## Como Usar
 
-1. Pressione NVDA+0 para habilitar a inserção de braille. Esse comando pode
-   ser alterado no diálogo Definir comandos, categoria Braille.
+1. Pressione NVDA+0 para habilitar a inserção de braille. Esse comando —
+   gesto — pode ser alterado no diálogo Definir comandos, categoria Braille.
 2. Digite braille pressionando as teclas juntas no teclado do PC como se
    fosse um teclado braille.
 
@@ -53,7 +55,7 @@ It's also possible to restore defaults in the add-on settings panel.
 
 		* f, d e s para os pontos 1, 2 e 3 respectivamente.
 		* j, k e l para os pontos 4, 5 e 6 respectivamente.
-		* Use as teclas a e ; (ponto e vírgula no leiaute inglês internacional, ç
+		* Use as teclas a e ; (ponto e vírgula no leiaute inglês internacional — ç
 		  num teclado ABNT2) para os pontos 7 e 8, respectivamente.
 		* Também pode usar as teclas na linha acima; ou seja, q, w, e, r, u, i, o
 		  e p.
@@ -97,35 +99,40 @@ carreira de teclas de cima com uma ou as duas mãos pode ajudar, pois seu
 teclado pode liberar essas teclas.
 
 
-## Changes for 28.0.0
+## Mudanças na 28.0.0
 
-* Changed default values for One hand mode.
+* Valores padrão mudados para o Modo de uma mão.
 
-## Changes for 2023.02.23
+## Mudanças na 2023.02.23
 
-* Added ability to configure keys used to type dots in one hand mode.
-* Now you can configure keys that should be ignored when typing in braille.
-* A restore to defaults button has been added to the add-on settings panel.
-* Compatible with NVDA 2023.1.
+* Adicionada a capacidade de configurar as teclas usadas para digitar pontos
+  no modo de uma mão.
+* Agora você pode configurar teclas que devem ser ignoradas ao digitar em
+  braille.
+* Um botão de restauração para padrões foi adicionado ao painel de
+  configurações do complemento.
+* Compatível com NVDA 2023.1.
 
-## Changes for 2022.1
+## Mudanças na 2022.1
 
-* Added ability to configure keys to send and clear dots when writing with
-  one hand. Also, it's possible to set a timeout to send dots automatically,
-  without pressing confirmation keys.
+* Adicionada a capacidade de configurar teclas para enviar e limpar pontos
+  ao escrever com uma mão. Além disso, é possível definir um tempo limite
+  para enviar pontos automaticamente, sem pressionar as teclas de
+  confirmação.
 
-## Changes for 2021.1
+## Mudanças na 2021.1
 
-* NVDA won't try to speak dots when One hand mode is not active or if space
-  has been pressed.
-* Compatible with NVDA 2021.1.
+* O NVDA não tentará falar pontos quando o modo de uma mão não estiver ativo
+  ou se o espaço tiver sido pressionado.
+* Compatível com NVDA 2021.1.
 
 ## Mudanças na 2020.1
 
 * Você pode pressionar a barra de espaço em combinação com pontos braille
   para emular comandos — gestos —, semelhante aos comandos disponíveis em
   linhas braille.
-* Adicionada a opção de falar pontos simples digitados no modo de uma mão.
+* Adicionada uma opção para falar pontos avulsos digitados no modo de uma
+  mão.
 
 ## Colaboradores
 
