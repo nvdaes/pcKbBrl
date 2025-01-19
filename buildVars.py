@@ -71,7 +71,7 @@ brailleTables = {
 	"kannada.cti": {
 		# Translators: The display name of a braille table.
 		"displayName": _("Kannada cti"),
-		"input": True
-	}
+		"input": True,
+	},
 
 }

@@ -92,5 +92,3 @@ In some cases, using the upper row of keys with either or both hands might help,
 * Ângelo Abrantes
 * Cyrille Bougot
 * Abdel.
-
-
