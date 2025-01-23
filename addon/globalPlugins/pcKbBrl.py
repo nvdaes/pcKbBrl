@@ -410,7 +410,7 @@ class AddonSettingsPanel(SettingsPanel):
 		self.oneHandModeCheckBox.SetValue(config.conf["pcKbBrl"]["oneHandMode"])
 		self.speakDotCheckBox = sHelper.addItem(
 			# Translators: label of a dialog.
-			wx.CheckBox(self, label=_("&Speak dot when typing with one hand"))
+			wx.CheckBox(self, label=_("&Speak dot when typing with one hand")),
 		)
 		self.speakDotCheckBox.SetValue(config.conf["pcKbBrl"]["speakDot"])
 		# Translators: label of a dialog.
@@ -559,13 +559,13 @@ class AddonSettingsPanel(SettingsPanel):
 			config.conf["pcKbBrl"]["confirmKeys"] = self.confirmKeysEdit.GetValue()
 		else:
 			config.conf["pcKbBrl"]["confirmKeys"] = config.conf.getConfigValidation(
-				["pcKbBrl", "confirmKeys"]
+				["pcKbBrl", "confirmKeys"],
 			).default
 		if self.cancelKeysEdit.GetValue():
 			config.conf["pcKbBrl"]["cancelKeys"] = self.cancelKeysEdit.GetValue()
 		else:
 			config.conf["pcKbBrl"]["cancelKeys"] = config.conf.getConfigValidation(
-				["pcKbBrl", "cancelKeys"]
+				["pcKbBrl", "cancelKeys"],
 			).default
 		config.conf["pcKbBrl"]["dot1"] = self.dot1KeysEdit.GetValue()
 		config.conf["pcKbBrl"]["dot2"] = self.dot2KeysEdit.GetValue()
