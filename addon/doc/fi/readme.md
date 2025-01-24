@@ -142,4 +142,3 @@ näppäimistö saattaa sallia näiden näppäinten painamisen.
 * Abdel.
 
 [[!tag dev stable]]
-

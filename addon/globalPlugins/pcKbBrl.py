@@ -23,6 +23,7 @@ import globalCommands
 import gui
 from gui import NVDASettingsDialog, guiHelper, nvdaControls
 from gui.settingsDialogs import SettingsPanel
+from gui.message import MessageDialog
 from scriptHandler import script
 from logHandler import log
 import addonHandler
@@ -506,12 +507,11 @@ class AddonSettingsPanel(SettingsPanel):
 		notEmptyDots = [dot for dot in dots if dot != ""]
 		if 0 < len(notEmptyDots) and len(notEmptyDots) < 8:
 			log.debugWarning(f"pcKbBrl: configured {len(notEmptyDots)}.")
-			gui.messageBox(
+			MessageDialog.alert(
 				# Translators: Message to report wrong configuration.
 				_("None or all dots should be configured."),
-				# Translators: Title of message box
+				# Translators: Title of message dialog.
 				_("Error"),
-				wx.OK | wx.ICON_ERROR,
 				self,
 			)
 			return False
@@ -528,24 +528,22 @@ class AddonSettingsPanel(SettingsPanel):
 		)
 		if len(configuredKeys) != len(set(configuredKeys)):
 			log.debugWarning("pcKbBrl: repeated keys have been set.")
-			gui.messageBox(
+			MessageDialog.alert(
 				# Translators: Message to report wrong configuration.
 				_("Configured keys for pcKbBrl shouldn't be repeated."),
 				# Translators: Title of message box
 				_("Error"),
-				wx.OK | wx.ICON_ERROR,
 				self,
 			)
 			return False
 		timeout = self.timeoutSpinControl.GetValue()
 		if not timeout and not confirmKeys:
 			log.debugWarning("pcKbBrl: timeout without confirm keys.")
-			gui.messageBox(
+			MessageDialog.alert(
 				# Translators: Message to report wrong configuration.
 				_("Set at least a confirm key if timeout for one hand mode is 0."),
 				# Translators: Title of message box
 				_("Error"),
-				wx.OK | wx.ICON_ERROR,
 				self,
 			)
 			return False

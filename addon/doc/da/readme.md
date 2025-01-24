@@ -136,4 +136,3 @@ eller begge hænder, da dit tastatur muligvis tillader disse taster.
 * Abdel.
 
 [[!tag dev stable]]
-

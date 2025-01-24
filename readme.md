@@ -56,6 +56,9 @@ When this happens, certain keys are simply ignored.
 Unfortunately, there is nothing that can be done to fix this, as the keys are simply never received by Windows or NVDA.
 In some cases, using the upper row of keys with either or both hands might help, as your keyboard may allow these keys.
 
+## Changes for 44.0.0
+
+* Added kannada.cti table.
 
 ## Changes for 28.0.0
 
