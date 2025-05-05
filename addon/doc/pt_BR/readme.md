@@ -146,4 +146,3 @@ teclado pode liberar essas teclas.
 * Abdel.
 
 [[!tag dev stable]]
-

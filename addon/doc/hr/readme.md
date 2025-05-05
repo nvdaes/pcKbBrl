@@ -134,4 +134,3 @@ tipkovnice.
 * Abdel.
 
 [[!tag dev stable]]
-
