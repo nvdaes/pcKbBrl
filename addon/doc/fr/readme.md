@@ -148,4 +148,3 @@ permettre ces touches.
 * Abdel.
 
 [[!tag dev stable]]
-
