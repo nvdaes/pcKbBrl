@@ -93,6 +93,9 @@ recibidas por Windows ou NVDA. Nalgúns casos, o uso da fila superior de
 teclas cunha ou ambas mans pode axudar, así como que o teu teclado pode
 permitir estas teclas.
 
+## Changes for 44.0.0
+
+* Added kannada.cti table.
 
 ## Cambios para 2022.1
 

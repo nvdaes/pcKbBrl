@@ -93,6 +93,9 @@ Braille-Einstellungen.
 Einige Laptop-Tastaturen können nicht mit gedrückten Tastenkombinationen
 umgehen.
 
+## Changes for 44.0.0
+
+* Added kannada.cti table.
 
 ## Änderungen in 28.0.0
 

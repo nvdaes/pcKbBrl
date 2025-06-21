@@ -91,6 +91,9 @@ dette, da tasterne simpelthen aldrig modtages af Windows eller NVDA. I nogle
 tilfælde kan det være en hjælp at bruge den øverste række af taster med én
 eller begge hænder, da dit tastatur muligvis tillader disse taster.
 
+## Changes for 44.0.0
+
+* Added kannada.cti table.
 
 ## Changes for 28.0.0
 

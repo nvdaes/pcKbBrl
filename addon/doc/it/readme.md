@@ -98,6 +98,9 @@ vengono mai ricevuti da Windows o NVDA. In alcuni casi, utilizzare i tasti
 della riga superiore con una o entrambe le mani potrebbe aiutare, perché la
 vostra tastiera potrebbe gestirli.
 
+## Changes for 44.0.0
+
+* Added kannada.cti table.
 
 ## Changes for 28.0.0
 

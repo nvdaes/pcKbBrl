@@ -91,6 +91,9 @@ budući da tastere ne prima ni Windows ni NVDA.  U nekim slučajevima,
 korišćenjem gornjeg reda tastera sa jednom ili obe ruke može pomoći, budući
 da će vaša tastatura možda dozvoliti ove tastere.
 
+## Changes for 44.0.0
+
+* Added kannada.cti table.
 
 ## Changes for 28.0.0
 

@@ -88,6 +88,9 @@ alınmadığı için bunu düzeltmek için yapılabilecek bir şey yoktur.  Baz�
 durumlarda, klavyeniz bu tuşlara izin verebileceğinden, üst sıradaki tuşları
 bir veya iki elinizle kullanmak yardımcı olabilir.
 
+## 44.0.0 için değişiklikler
+
+* Kannada.cti tablosu eklendi.
 
 ## 28.0.0 için değişiklikler
 

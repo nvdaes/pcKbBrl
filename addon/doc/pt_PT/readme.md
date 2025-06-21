@@ -95,6 +95,9 @@ recebidas pelo Windows ou NVDA. Em alguns casos, usar a linha superior de
 teclas com uma ou ambas as mãos pode ajudar, pois o seu teclado pode
 permitir essas teclas.
 
+## Changes for 44.0.0
+
+* Added kannada.cti table.
 
 ## Changes for 28.0.0
 

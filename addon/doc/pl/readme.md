@@ -91,6 +91,9 @@ czy NVDA.  W niektórych przypadkach może pomóc użycie górnego rzędu klawis
 jedną lub obiema rękami, ponieważ twoja klawiatura może zezwalać na te
 klawisze.
 
+## Changes for 44.0.0
+
+* Added kannada.cti table.
 
 ## Changes for 28.0.0
 

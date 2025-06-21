@@ -97,6 +97,9 @@ recibidas por Windows o NVDA.  En algunos casos, utilizando la fila superior
 de teclas con una o ambas manos puede ayudar, ya que el teclado puede
 permitir estas teclas.
 
+## Cambios para 44.0.0
+
+* Se añade la tabla kannada.cti.
 
 ## Cambios para 28.0.0
 

@@ -100,6 +100,9 @@ reçus par Windows ou NVDA.  Dans certains cas, utiliser la rangée supérieure
 des touches avec une ou deux mains pourrait aider, car le clavier peut
 permettre ces touches.
 
+## Changements de la version 44.0.0
+
+* Ajout de la table kannada.cti.
 
 ## Changements de la version 28.0.0
 

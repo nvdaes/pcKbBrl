@@ -1,4 +1,4 @@
-# Pistekirjoituksen syöttäminen tietokoneen näppäimistöllä #
+# Pistekirjoituksen syöttö tietokoneen näppäimistöllä #
 
 * Tekijät: NV Access Limited ja Noelia Ruiz Martínez
 * Tekijänoikeus: 2012-2023 NV Access Limited ja Noelia Ruiz Martínez
@@ -97,6 +97,9 @@ näitä näppäinpainalluksia.  Ylärivin näppäinten käyttäminen jommallakum
 tai molemmilla käsillä saattaa joissain tapauksissa auttaa , koska
 näppäimistö saattaa sallia näiden näppäinten painamisen.
 
+## Muutokset versiossa 44.0.0
+
+* Lisätty kannada.cti-taulukko.
 
 ## Muutokset versiossa 28.0.0
 

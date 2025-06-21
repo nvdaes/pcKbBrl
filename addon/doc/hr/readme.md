@@ -89,6 +89,9 @@ tipke jednostavno ne prepoznaju od strane Windowsa ili NVDA čitača. U nekim
 slučajevima pomaže korištenje tipki gornjeg reda, ovisno o mogućnostima
 tipkovnice.
 
+## Changes for 44.0.0
+
+* Added kannada.cti table.
 
 ## Promjene za 28.0.0
 
