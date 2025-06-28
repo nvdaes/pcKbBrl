@@ -98,6 +98,7 @@ msgstr "&Восстановить значения по умолчанию"
 msgid "None or all dots should be configured."
 msgstr "Ни одна из точек или все точки должны быть настроены."
 
+#. Translators: Title of message dialog.
 #. Translators: Title of message box
 msgid "Error"
 msgstr "Ошибка"
@@ -108,7 +109,9 @@ msgstr "Настроенные клавиши для pcKbBrl не должны �
 
 #. Translators: Message to report wrong configuration.
 msgid "Set at least a confirm key if timeout for one hand mode is 0."
-msgstr "Установите хотя бы клавишу подтверждения, если время ожидания при наборе одной рукой равно 0."
+msgstr ""
+"Установите хотя бы клавишу подтверждения, если время ожидания при наборе "
+"одной рукой равно 0."
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
@@ -119,3 +122,7 @@ msgstr "Ввод брайля с клавиатуры ПК"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Allows braille to be entered via the PC keyboard."
 msgstr "Позволяет вводить шрифт Брайля с помощью клавиатуры компьютера."
+
+#. Translators: The display name of a braille table.
+msgid "Kannada cti"
+msgstr ""

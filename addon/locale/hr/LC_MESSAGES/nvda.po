@@ -98,6 +98,7 @@ msgstr "&Obnovi standardne vrijednosti"
 msgid "None or all dots should be configured."
 msgstr "Nijedna ili sve točkice moraju biti konfigurirane."
 
+#. Translators: Title of message dialog.
 #. Translators: Title of message box
 msgid "Error"
 msgstr "Greška"
@@ -108,7 +109,8 @@ msgstr "Konfigurirane tipke za pcKbBrl se ne smiju ponavljati."
 
 #. Translators: Message to report wrong configuration.
 msgid "Set at least a confirm key if timeout for one hand mode is 0."
-msgstr "Postavi barem jednu tipku za potvrdu ako je trajanje za jednoručni modus 0."
+msgstr ""
+"Postavi barem jednu tipku za potvrdu ako je trajanje za jednoručni modus 0."
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
@@ -119,3 +121,7 @@ msgstr "Brajični unos PC tipkovnicom"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Allows braille to be entered via the PC keyboard."
 msgstr "Omogućuje unos brajičnih znakova putem PC tipkovnice."
+
+#. Translators: The display name of a braille table.
+msgid "Kannada cti"
+msgstr ""

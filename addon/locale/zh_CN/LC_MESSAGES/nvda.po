@@ -98,6 +98,7 @@ msgstr "恢复默认(&R)"
 msgid "None or all dots should be configured."
 msgstr "应配置所有点位或不配置任何点位。"
 
+#. Translators: Title of message dialog.
 #. Translators: Title of message box
 msgid "Error"
 msgstr "错误"
@@ -119,3 +120,7 @@ msgstr "PC 键盘盲文输入"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Allows braille to be entered via the PC keyboard."
 msgstr "可以通过 PC 键盘输入盲文。"
+
+#. Translators: The display name of a braille table.
+msgid "Kannada cti"
+msgstr ""

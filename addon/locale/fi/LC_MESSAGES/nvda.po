@@ -102,6 +102,7 @@ msgstr "&Palauta oletukset"
 msgid "None or all dots should be configured."
 msgstr "Ei mitään tai kaikki pisteet pitää olla määritettyinä."
 
+#. Translators: Title of message dialog.
 #. Translators: Title of message box
 msgid "Error"
 msgstr "Virhe"
@@ -124,3 +125,7 @@ msgstr "Pistekirjoituksen syöttö PC:n näppäimistöllä"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Allows braille to be entered via the PC keyboard."
 msgstr "Mahdollistaa pistekirjoituksen syötön PC:n näppäimistöltä."
+
+#. Translators: The display name of a braille table.
+msgid "Kannada cti"
+msgstr ""

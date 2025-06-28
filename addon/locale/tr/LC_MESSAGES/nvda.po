@@ -98,6 +98,7 @@ msgstr "Va&rsayılanları geri yükle"
 msgid "None or all dots should be configured."
 msgstr "Hiçbiri veya tüm noktalar yapılandırılmalıdır."
 
+#. Translators: Title of message dialog.
 #. Translators: Title of message box
 msgid "Error"
 msgstr "Hata"
@@ -119,3 +120,7 @@ msgstr "PC Klavyeden Braille Girişi"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Allows braille to be entered via the PC keyboard."
 msgstr "PC klavyesi aracılığıyla braille girişine olanak tanır."
+
+#. Translators: The display name of a braille table.
+msgid "Kannada cti"
+msgstr ""

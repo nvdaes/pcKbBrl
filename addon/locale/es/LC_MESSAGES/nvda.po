@@ -44,7 +44,8 @@ msgstr "&Verbalizar puntos al escribir con una sola mano"
 
 #. Translators: label of a dialog.
 msgid "&Timeout to send dots when writing with one hand (in ms)"
-msgstr "&Tiempo de espera para enviar los puntos al escribir con una mano (en ms)"
+msgstr ""
+"&Tiempo de espera para enviar los puntos al escribir con una mano (en ms)"
 
 #. Translators: label of a dialog.
 msgid "Characters to con&firm when writing with one hand:"
@@ -98,6 +99,7 @@ msgstr "&Restaurar valores predeterminados"
 msgid "None or all dots should be configured."
 msgstr "Se deberían configurar todos o ningún punto."
 
+#. Translators: Title of message dialog.
 #. Translators: Title of message box
 msgid "Error"
 msgstr "Error"
@@ -108,7 +110,9 @@ msgstr "No deberían repetirse las teclas configuradas para PCKBBRL."
 
 #. Translators: Message to report wrong configuration.
 msgid "Set at least a confirm key if timeout for one hand mode is 0."
-msgstr "Configura al menos una tecla de confirmación si el tiempo de espera del modo de una mano es 0."
+msgstr ""
+"Configura al menos una tecla de confirmación si el tiempo de espera del modo "
+"de una mano es 0."
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
@@ -119,3 +123,7 @@ msgstr "Entrada Braille a través del teclado del PC"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Allows braille to be entered via the PC keyboard."
 msgstr "Permite introducir Braille mediante el teclado del PC."
+
+#. Translators: The display name of a braille table.
+msgid "Kannada cti"
+msgstr ""

@@ -98,6 +98,7 @@ msgstr "&Възстанови настройките по подразбиран
 msgid "None or all dots should be configured."
 msgstr "Нито една или всички точки трябва да бъдат конфигурирани."
 
+#. Translators: Title of message dialog.
 #. Translators: Title of message box
 msgid "Error"
 msgstr "Грешка"
@@ -124,3 +125,7 @@ msgstr ""
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Allows braille to be entered via the PC keyboard."
 msgstr "Позволява да се въвежда брайл чрез компютърната клавиатура."
+
+#. Translators: The display name of a braille table.
+msgid "Kannada cti"
+msgstr ""

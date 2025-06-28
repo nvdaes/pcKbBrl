@@ -98,6 +98,7 @@ msgstr "&بازگرداندن به پیشفرض"
 msgid "None or all dots should be configured."
 msgstr "هیچیک یا همه‌ی نقطه‌ها باید پیکربندی شوند."
 
+#. Translators: Title of message dialog.
 #. Translators: Title of message box
 msgid "Error"
 msgstr "خطا"
@@ -121,3 +122,7 @@ msgstr "ورودیِ بریل با صفحه‌کلیدِ رایانه"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Allows braille to be entered via the PC keyboard."
 msgstr "اجازه میدهد تا با صفحه‌کلیدِ رایانه، بریل وارد کنید."
+
+#. Translators: The display name of a braille table.
+msgid "Kannada cti"
+msgstr ""

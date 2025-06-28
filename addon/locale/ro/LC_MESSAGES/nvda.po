@@ -44,7 +44,9 @@ msgstr "&Pronunță punctul la scrierea cu o singură mână"
 
 #. Translators: label of a dialog.
 msgid "&Timeout to send dots when writing with one hand (in ms)"
-msgstr "&Timpul de expirare la trimiterea punctelor atunci când se scrie cu o singură mână (în milisecunde)"
+msgstr ""
+"&Timpul de expirare la trimiterea punctelor atunci când se scrie cu o "
+"singură mână (în milisecunde)"
 
 #. Translators: label of a dialog.
 msgid "Characters to con&firm when writing with one hand:"
@@ -98,6 +100,7 @@ msgstr "&Revino la setările din fabrică"
 msgid "None or all dots should be configured."
 msgstr "Trebuie să fie configurate fie toate punctele, fie niciunul."
 
+#. Translators: Title of message dialog.
 #. Translators: Title of message box
 msgid "Error"
 msgstr "Eroare"
@@ -108,7 +111,9 @@ msgstr "Nu trebuie să fie repetate tastele configurate pentru pcKbBrl."
 
 #. Translators: Message to report wrong configuration.
 msgid "Set at least a confirm key if timeout for one hand mode is 0."
-msgstr "Setează cel puțin o tastă de confirmare dacă timpul de expirare pentru modul one hand ( o singură mână) este setat la 0."
+msgstr ""
+"Setează cel puțin o tastă de confirmare dacă timpul de expirare pentru modul "
+"one hand ( o singură mână) este setat la 0."
 
 #. Add-on summary, usually the user visible name of the addon.
 #. Translators: Summary for this add-on to be shown on installation and add-on information.
@@ -119,3 +124,7 @@ msgstr "PC Keyboard Braille Input"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Allows braille to be entered via the PC keyboard."
 msgstr "Permite inserarea braille de la tastatura PC-ului."
+
+#. Translators: The display name of a braille table.
+msgid "Kannada cti"
+msgstr ""

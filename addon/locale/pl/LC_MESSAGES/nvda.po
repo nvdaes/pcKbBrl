@@ -98,6 +98,7 @@ msgstr "&Przywróć domyślne"
 msgid "None or all dots should be configured."
 msgstr "Nie należy konfigurować żadnych lub wszystkich kropek."
 
+#. Translators: Title of message dialog.
 #. Translators: Title of message box
 msgid "Error"
 msgstr "Błąd"
@@ -119,3 +120,7 @@ msgstr "PC Keyboard Braille Input"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Allows braille to be entered via the PC keyboard."
 msgstr "Umożliwia wprowadzanie brajla za pomocą klawiatury komputera."
+
+#. Translators: The display name of a braille table.
+msgid "Kannada cti"
+msgstr ""

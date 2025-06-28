@@ -99,6 +99,7 @@ msgstr "&Vrati na podrazumevana"
 msgid "None or all dots should be configured."
 msgstr "Nijedna ili sve tačkice trebaju biti podešene."
 
+#. Translators: Title of message dialog.
 #. Translators: Title of message box
 msgid "Error"
 msgstr "Greška"
@@ -122,3 +123,7 @@ msgstr "Brajev unos sa tastature računara"
 #. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Allows braille to be entered via the PC keyboard."
 msgstr "Dozvoljava brajev unos sa tastature računara."
+
+#. Translators: The display name of a braille table.
+msgid "Kannada cti"
+msgstr ""
