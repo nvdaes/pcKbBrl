@@ -12,4 +12,3 @@ on:
 jobs:
   pre-release:
     uses: nvdaes/nvdaAddonWorkflows/.github/workflows/automaticRelease.yaml@main
-    
