@@ -30,8 +30,8 @@ msgid "Braille input from PC keyboard enabled"
 msgstr "Въвеждането на брайл от компютърната клавиатура е включено"
 
 #. Translators: Describes a command.
-#, python-format
-msgid "Shows the %s settings."
+#, fuzzy, python-brace-format
+msgid "Shows the {summary} settings."
 msgstr "Извежда настройките за %s."
 
 #. Translators: label of a dialog.

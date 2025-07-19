@@ -33,8 +33,8 @@ msgid "Braille input from PC keyboard enabled"
 msgstr "Pistekirjoituksen syöttö PC:n näppäimistöltä käytössä"
 
 #. Translators: Describes a command.
-#, python-format
-msgid "Shows the %s settings."
+#, fuzzy, python-brace-format
+msgid "Shows the {summary} settings."
 msgstr "Näyttää %s -lisäosan asetukset."
 
 #. Translators: label of a dialog.
