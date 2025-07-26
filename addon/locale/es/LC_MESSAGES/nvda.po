@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pcKbBrl 2021.1\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2021-07-21 09:36+0000\n"
-"PO-Revision-Date: 2025-06-28 21:35+0200\n"
+"PO-Revision-Date: 2025-07-18 18:10+0200\n"
 "Last-Translator: José Manuel Delicado <jm.delicado@nvda.es>\n"
 "Language-Team: \n"
 "Language: es\n"
@@ -30,9 +30,9 @@ msgid "Braille input from PC keyboard enabled"
 msgstr "Entrada Braille desde el teclado del PC activada"
 
 #. Translators: Describes a command.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Shows the {summary} settings."
-msgstr "Muestra las opciones de %s."
+msgstr "Muestra las opciones de {summary}."
 
 #. Translators: label of a dialog.
 msgid "&Type using one hand"

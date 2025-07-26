@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pcKbBrl\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2021-07-21 09:36+0000\n"
-"PO-Revision-Date: 2025-07-07 11:25+0300\n"
+"PO-Revision-Date: 2025-07-22 21:15+0300\n"
 "Last-Translator: Jani Kinnunen <janikinnunen340@gmail.com>\n"
 "Language-Team: fi_FI <janikinnunen340@gmail.com>\n"
 "Language: fi\n"
@@ -33,9 +33,9 @@ msgid "Braille input from PC keyboard enabled"
 msgstr "Pistekirjoituksen syöttö PC:n näppäimistöltä käytössä"
 
 #. Translators: Describes a command.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Shows the {summary} settings."
-msgstr "Näyttää %s -lisäosan asetukset."
+msgstr "Näyttää {summary} -lisäosan asetukset."
 
 #. Translators: label of a dialog.
 msgid "&Type using one hand"

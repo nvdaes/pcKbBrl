@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PC Klavyesinden Braille Girişi\n"
 "Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
 "POT-Creation-Date: 2021-07-21 09:36+0000\n"
-"PO-Revision-Date: 2025-06-27 22:23+0300\n"
+"PO-Revision-Date: 2025-07-18 19:11+0300\n"
 "Last-Translator: Umut KORKMAZ <umutkork@gmail.com>\n"
 "Language-Team: Umut KORKMAZ <umutkork@gmail.com>\n"
 "Language: tr_TR\n"
@@ -30,9 +30,9 @@ msgid "Braille input from PC keyboard enabled"
 msgstr "PC klavyesinden Braille girişi etkin"
 
 #. Translators: Describes a command.
-#, fuzzy, python-brace-format
+#, python-brace-format
 msgid "Shows the {summary} settings."
-msgstr "%s ayarlarını gösterir."
+msgstr "{summary} Ayarlarını gösterir."
 
 #. Translators: label of a dialog.
 msgid "&Type using one hand"
