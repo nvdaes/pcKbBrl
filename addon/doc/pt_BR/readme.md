@@ -98,9 +98,9 @@ chegam a ser recebidas pelo Windows ou o NVDA. Nalguns casos, usar a
 carreira de teclas de cima com uma ou as duas mãos pode ajudar, pois seu
 teclado pode liberar essas teclas.
 
-## Changes for 44.0.0
+## Alterações para a versão 44.0.0Mudanças na 28.0.0
 
-* Added kannada.cti table.
+* Adicionada tabela kannada.cti.
 
 ## Mudanças na 28.0.0
 
