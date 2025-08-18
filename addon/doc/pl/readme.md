@@ -137,4 +137,3 @@ klawisze.
 * Abdel.
 
 [[!tag dev stable]]
-
