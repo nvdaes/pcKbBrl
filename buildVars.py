@@ -25,7 +25,10 @@ addon_info = AddonInfo(
 	addon_version='50.0.0',
 	# Brief changelog for this version
 	# Translators: what's new content for the add-on version to be shown in the add-on store
-	addon_changelog=_('* Compatible with NVDA 2026.1.'),
+	addon_changelog=_(
+"""* Restored Kannada cti input table.
+* Tested with NVDA 2026.2.""",
+	),
 	# Author(s)
 	addon_author='NV Access Limited, Noelia Ruiz Martínez <nrm1977@gmail.com>',
 	# URL for the add-on documentation support
@@ -88,7 +91,16 @@ markdownExtensions: list[str] = []
 # contracted (contracted (True) or uncontracted (False) braille code),
 # output (shown in output table list),
 # input (shown in input table list).
-brailleTables: BrailleTables = {}
+brailleTables: BrailleTables = {
+	"kannada.cti": {
+		# Translators: The display name of a braille table.
+		"displayName": _("Kannada cti"),
+		"input": True,
+        "contracted": False,
+        "output": False,
+	},
+
+}
 
 # Custom speech symbol dictionaries
 # Symbol dictionary files reside in the locale folder, e.g. `locale\en`, and are named `symbols-<name>.dic`.
