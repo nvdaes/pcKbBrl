@@ -24,8 +24,8 @@ addon_info = AddonInfo(
 	# version
 	addon_version='50.0.0',
 	# Brief changelog for this version
-	# Translators: what's new content for the add-on version to be shown in the add-on store
 	addon_changelog=_(
+# Translators: what's new content for the add-on version to be shown in the add-on store
 """* Restored Kannada cti input table.
 * Tested with NVDA 2026.2.""",
 	),
