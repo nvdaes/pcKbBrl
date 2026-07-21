@@ -1,0 +1,703 @@
+<?xml version="1.0"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" version="2.0" srcLang="en">
+<file id="readme.md" original="https://raw.githubusercontent.com/nvdaes/pcKbBrl/c9d2b20836af72317fd3f7224cf0648a7a6fbbdc/readme.md">
+<skeleton>
+# $(ID:bd365302-a0a1-4f0e-81a7-5c6f6779c80f)
+
+* $(ID:c730324e-3b2c-496b-b377-af0874233907)
+* $(ID:8490ccd7-fffa-4fbe-94ef-17c1503b098c)
+* $(ID:4c37ca39-5501-4c48-8fab-9fe73d47e265)
+
+$(ID:b88e62e5-8cc9-4052-97b0-ce025c3ec4af)
+$(ID:bc82d3ec-d70b-4737-a4e1-cde2f6e780bd)
+
+* $(ID:ccf0d78f-8fd1-49a9-bc4b-3f5f792cfdb5)
+* $(ID:ba6ed44b-e345-4002-b643-2462d7b4c2a4)
+* $(ID:0471edb8-833e-4a62-8ed2-649a9cfb2752)
+* $(ID:39cb5960-adf9-490a-978b-99273be1e4e5)
+* $(ID:71054202-8365-45c4-bce3-7b262b2a7ff6)
+* $(ID:8cd037eb-76b0-4cf9-a316-d456fe008cf9)
+* $(ID:b407d5d0-d13d-49ff-b5a2-dc472dc6aebe)
+* $(ID:0f5ac013-6cdd-4df8-9e02-c25b7177337c)
+
+## $(ID:3b5b446f-b337-497a-83fb-5a1080b8a8e5)
+
+$(ID:964b712f-6dbb-4360-b5e3-5f7279f28320)
+
+$(ID:38c5085f-275e-4e79-8fa1-34fc27409c2d)
+
+$(ID:fe41248d-87cf-48e6-9d83-af88a339594e)
+
+$(ID:0998c1d5-f9fd-440d-998e-db5faee31447)
+
+$(ID:a54f06f5-e8af-4b89-a54b-c5b9b10e3c7a)
+
+$(ID:8601ed11-90c1-4cf8-8733-53175bef2f2d)
+
+## $(ID:42e61052-eb52-4dd5-a9bf-679a0c2f2beb)
+
+1. $(ID:7ae57708-7e0e-47e0-898a-a956a4fb5b29)
+2. $(ID:193717c1-fd53-4997-b3fd-d821c4182208)
+	* $(ID:7ccb4b78-70be-4ec1-8d7e-f39127155f08)
+		* $(ID:9df71953-7e84-45ea-bf96-9ef43cc16cee)
+		* $(ID:c7c1885a-da5c-4f86-97e1-3dc87f0f7b37)
+		* $(ID:d2ad5349-dbd9-4ab3-88c4-3154151f0fee)
+		* $(ID:160ff81e-fc45-40aa-997b-ccea4e1a6bd6)
+	* $(ID:80251090-c623-48f6-91ad-d3707062fa13)
+		* $(ID:df6f54f3-4314-413a-b2fd-74766da7e939)
+		* $(ID:a3b58e98-906b-416a-883e-c9634d588d7a)
+3. $(ID:73240715-9650-49f1-a767-759624a8ce85)
+4. $(ID:6114fbe3-5061-4fd3-bc90-36a5b60ac05a)
+5. $(ID:189f0d20-2797-4dd3-83f2-e03dde29b45c)
+
+## $(ID:cb01424b-8872-4eae-98e8-b6b71955cc22)
+
+$(ID:aaf654ac-66d7-4991-b949-0e5046861db8)
+$(ID:6ddecf61-29a7-47da-b815-d5c1cb2a3e3f)
+
+$(ID:ab9ec370-0988-48f4-ae74-5fbf9addeb03)
+$(ID:40b0c969-30ac-4866-9a67-05313ea37b2a)
+$(ID:22d77df4-3c02-4bc5-aaee-d0fa9fa54501)
+$(ID:e43351cf-88ee-4f5d-bd1b-ef7874629fb8)
+
+## $(ID:92fda306-9d47-4bbe-979c-5229734f8991)
+
+* $(ID:83e9d9cc-787a-4b7e-b001-c40d670c48fb)
+
+## $(ID:6c1361f9-9e50-453a-8092-08716b090652)
+
+* $(ID:a9f2f2a6-149e-492a-801c-412a5bd9928d)
+
+## $(ID:10726286-ea8a-42e2-9673-1e6e3c863eb9)
+
+* $(ID:4837bbd7-d21f-4b46-8885-39dd9316c90f)
+* $(ID:6b828d7c-88a7-486f-9155-034b888049ee)
+* $(ID:55878ab4-ade9-4d19-8f3b-6aecb0e54538)
+* $(ID:04be6907-e9df-4847-a452-cbcb56ed84e5)
+
+## $(ID:87441ad1-7afb-4e5f-81c6-e474eb08f7dc)
+
+* $(ID:801f1155-fa84-4b52-8db5-949db350f330)
+
+## $(ID:82c785b2-425a-47bd-ade1-9a64f60962bb)
+
+* $(ID:92ab1b98-0a37-4403-80ef-530fcfdbe996)
+* $(ID:199dee45-b797-4dce-86dc-d7b31b4b2f07)
+
+## $(ID:ac8f66ad-98ce-43e5-9ebe-42f36842cc24)
+
+* $(ID:7ebb794d-2369-42b7-bd93-3d9fdab97117)
+* $(ID:76364386-00d8-4bdb-8fee-d9d3708fd43e)
+
+## $(ID:be9ae2f2-4e59-4025-ad56-a27b72375ac4)
+
+* $(ID:6f390cb2-d0f8-4851-a3d8-232c6a96e18a)
+* $(ID:f63d5478-0f8b-4978-8800-16a323a3d780)
+* $(ID:8e079e57-0898-4229-85d9-025bc706be8a)
+* $(ID:098a8516-4ea1-4b7b-801d-628164bcb154)
+* $(ID:c55e7820-0b21-49a6-b5d1-421a1af8d3f5)
+* $(ID:0e929f9c-1b57-47ce-afa1-7b61268b342d)
+* $(ID:86ecfffe-223e-4de1-a6b6-90d44d43454c)
+* $(ID:7736364f-c5de-4952-a330-0b5dc1c41a56)
+
+</skeleton>
+<unit id="bd365302-a0a1-4f0e-81a7-5c6f6779c80f">
+<notes>
+<note appliesTo="source">line: 2</note>
+<note appliesTo="source">prefix: # </note>
+</notes>
+<segment>
+<source>PC Keyboard Braille Input for NVDA</source>
+</segment>
+</unit>
+<unit id="c730324e-3b2c-496b-b377-af0874233907">
+<notes>
+<note appliesTo="source">line: 4</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Author: NV Access Limited, Noelia Ruiz Martínez</source>
+</segment>
+</unit>
+<unit id="8490ccd7-fffa-4fbe-94ef-17c1503b098c">
+<notes>
+<note appliesTo="source">line: 5</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Copyright: 2012-2023 NV Access Limited, Noelia Ruiz Martínez</source>
+</segment>
+</unit>
+<unit id="4c37ca39-5501-4c48-8fab-9fe73d47e265">
+<notes>
+<note appliesTo="source">line: 6</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>License: GNU General Public License version 2.0</source>
+</segment>
+</unit>
+<unit id="b88e62e5-8cc9-4052-97b0-ce025c3ec4af">
+<notes>
+<note appliesTo="source">line: 8</note>
+</notes>
+<segment>
+<source>This NVDA add-on allows braille to be entered via the PC keyboard.</source>
+</segment>
+</unit>
+<unit id="bc82d3ec-d70b-4737-a4e1-cde2f6e780bd">
+<notes>
+<note appliesTo="source">line: 9</note>
+</notes>
+<segment>
+<source>Currently, the following keyboard layouts are supported:</source>
+</segment>
+</unit>
+<unit id="ccf0d78f-8fd1-49a9-bc4b-3f5f792cfdb5">
+<notes>
+<note appliesTo="source">line: 11</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>English QWERTY keyboard.</source>
+</segment>
+</unit>
+<unit id="ba6ed44b-e345-4002-b643-2462d7b4c2a4">
+<notes>
+<note appliesTo="source">line: 12</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>French (France).</source>
+</segment>
+</unit>
+<unit id="0471edb8-833e-4a62-8ed2-649a9cfb2752">
+<notes>
+<note appliesTo="source">line: 13</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>German (Germany).</source>
+</segment>
+</unit>
+<unit id="39cb5960-adf9-490a-978b-99273be1e4e5">
+<notes>
+<note appliesTo="source">line: 14</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Italian (Italy).</source>
+</segment>
+</unit>
+<unit id="71054202-8365-45c4-bce3-7b262b2a7ff6">
+<notes>
+<note appliesTo="source">line: 15</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Persian.</source>
+</segment>
+</unit>
+<unit id="8cd037eb-76b0-4cf9-a316-d456fe008cf9">
+<notes>
+<note appliesTo="source">line: 16</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Portuguese (Portugal).</source>
+</segment>
+</unit>
+<unit id="b407d5d0-d13d-49ff-b5a2-dc472dc6aebe">
+<notes>
+<note appliesTo="source">line: 17</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Spanish (Spain and Mexico).</source>
+</segment>
+</unit>
+<unit id="0f5ac013-6cdd-4df8-9e02-c25b7177337c">
+<notes>
+<note appliesTo="source">line: 18</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Turkish.</source>
+</segment>
+</unit>
+<unit id="3b5b446f-b337-497a-83fb-5a1080b8a8e5">
+<notes>
+<note appliesTo="source">line: 20</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>How to configure</source>
+</segment>
+</unit>
+<unit id="964b712f-6dbb-4360-b5e3-5f7279f28320">
+<notes>
+<note appliesTo="source">line: 22</note>
+</notes>
+<segment>
+<source>The add-on can be configured from its category in the NVDA's settings dialog, under NVDA's menu, Preferences submenu. A gesture for opening the add-on settings panel can be assigned from Input gestures dialog, configuration category.</source>
+</segment>
+</unit>
+<unit id="38c5085f-275e-4e79-8fa1-34fc27409c2d">
+<notes>
+<note appliesTo="source">line: 24</note>
+</notes>
+<segment>
+<source>Check the corresponding checkbox if you want to type using only one hand, or ensure it's not checked if you prefer to type using the standard mode (two hands).</source>
+</segment>
+</unit>
+<unit id="fe41248d-87cf-48e6-9d83-af88a339594e">
+<notes>
+<note appliesTo="source">line: 26</note>
+</notes>
+<segment>
+<source>You can also select if NVDA should speak a single typed dot (using )the feature of "one hand mode").</source>
+</segment>
+</unit>
+<unit id="0998c1d5-f9fd-440d-998e-db5faee31447">
+<notes>
+<note appliesTo="source">line: 28</note>
+</notes>
+<segment>
+<source>If you want dots to be sent automatically when typing with one hand, use the spin control to set a timeout greater than 0.</source>
+</segment>
+</unit>
+<unit id="a54f06f5-e8af-4b89-a54b-c5b9b10e3c7a">
+<notes>
+<note appliesTo="source">line: 30</note>
+</notes>
+<segment>
+<source>In addition, you can set the characters to send, clear and compose dots when typing with one hand, as well as characters to be ignored in one hand or standard mode.</source>
+</segment>
+</unit>
+<unit id="8601ed11-90c1-4cf8-8733-53175bef2f2d">
+<notes>
+<note appliesTo="source">line: 32</note>
+</notes>
+<segment>
+<source>It's also possible to restore defaults in the add-on settings panel.</source>
+</segment>
+</unit>
+<unit id="42e61052-eb52-4dd5-a9bf-679a0c2f2beb">
+<notes>
+<note appliesTo="source">line: 34</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>How to Use</source>
+</segment>
+</unit>
+<unit id="7ae57708-7e0e-47e0-898a-a956a4fb5b29">
+<notes>
+<note appliesTo="source">line: 36</note>
+<note appliesTo="source">prefix: 1. </note>
+</notes>
+<segment>
+<source>Press NVDA+0 to enable braille input. This gesture can be changed from Input gestures dialog, Braille category.</source>
+</segment>
+</unit>
+<unit id="193717c1-fd53-4997-b3fd-d821c4182208">
+<notes>
+<note appliesTo="source">line: 37</note>
+<note appliesTo="source">prefix: 2. </note>
+</notes>
+<segment>
+<source>Type braille by pressing keys together on the PC keyboard as if it were a braille keyboard.</source>
+</segment>
+</unit>
+<unit id="7ccb4b78-70be-4ec1-8d7e-f39127155f08">
+<notes>
+<note appliesTo="source">line: 38</note>
+<note appliesTo="source">prefix: 	* </note>
+</notes>
+<segment>
+<source>If you want to enter text using two hands, use the following keys if you work with a QWERTY English keyboard, or the keys located at the corresponding positions in other layouts:</source>
+</segment>
+</unit>
+<unit id="9df71953-7e84-45ea-bf96-9ef43cc16cee">
+<notes>
+<note appliesTo="source">line: 39</note>
+<note appliesTo="source">prefix: 		* </note>
+</notes>
+<segment>
+<source>f, d and s for dots 1, 2 and 3 respectively.</source>
+</segment>
+</unit>
+<unit id="c7c1885a-da5c-4f86-97e1-3dc87f0f7b37">
+<notes>
+<note appliesTo="source">line: 40</note>
+<note appliesTo="source">prefix: 		* </note>
+</notes>
+<segment>
+<source>j, k and l for dots 4, 5 and 6 respectively.</source>
+</segment>
+</unit>
+<unit id="d2ad5349-dbd9-4ab3-88c4-3154151f0fee">
+<notes>
+<note appliesTo="source">line: 41</note>
+<note appliesTo="source">prefix: 		* </note>
+</notes>
+<segment>
+<source>Use the keys a and ; (semi-colon) for dots 7 and 8, respectively.</source>
+</segment>
+</unit>
+<unit id="160ff81e-fc45-40aa-997b-ccea4e1a6bd6">
+<notes>
+<note appliesTo="source">line: 42</note>
+<note appliesTo="source">prefix: 		* </note>
+</notes>
+<segment>
+<source>You can also use the keys on the row above; i.e. q, w, e, r, u, i, o and p.</source>
+</segment>
+</unit>
+<unit id="80251090-c623-48f6-91ad-d3707062fa13">
+<notes>
+<note appliesTo="source">line: 43</note>
+<note appliesTo="source">prefix: 	* </note>
+</notes>
+<segment>
+<source>If you want to type text using one hand, you can compose characters pressing keys simultaneously or in several keystrokes, adding the dots corresponding to the desired character. Press g or h to type the character when you have added all its dots. If you make a mistake building a character, you can clear the dots before typing it by pressing t or y. The keys used in QWERTY English keyboard are the following:</source>
+</segment>
+</unit>
+<unit id="df6f54f3-4314-413a-b2fd-74766da7e939">
+<notes>
+<note appliesTo="source">line: 44</note>
+<note appliesTo="source">prefix: 		* </note>
+</notes>
+<segment>
+<source>Left hand: f, d, s, r, e, w, a, q for dots 1, 2, 3, 4, 5, 6, 7 and 8.</source>
+</segment>
+</unit>
+<unit id="a3b58e98-906b-416a-883e-c9634d588d7a">
+<notes>
+<note appliesTo="source">line: 45</note>
+<note appliesTo="source">prefix: 		* </note>
+</notes>
+<segment>
+<source>Right hand: j, k, l, u, i, o, ; (semicolon), p for dots 1, 2, 3, 4, 5, 6, 7 and 8.</source>
+</segment>
+</unit>
+<unit id="73240715-9650-49f1-a767-759624a8ce85">
+<notes>
+<note appliesTo="source">line: 46</note>
+<note appliesTo="source">prefix: 3. </note>
+</notes>
+<segment>
+<source>You can press most other keys as normal, including space, backspace, enter and function keys. Take care about not pressing alt+shift, since changing the keyboard layout may affect the entered dots.</source>
+</segment>
+</unit>
+<unit id="6114fbe3-5061-4fd3-bc90-36a5b60ac05a">
+<notes>
+<note appliesTo="source">line: 47</note>
+<note appliesTo="source">prefix: 4. </note>
+</notes>
+<segment>
+<source>Press space bar in combination with braille dots to move the system cursor (or report the current line), just if you were using a braille display. For example, space+dot1 to emulate upArrow, space+dot4+dot5+dot6 to emulate control+end, space+dot1+dot4 to report the current line, etc.</source>
+</segment>
+</unit>
+<unit id="189f0d20-2797-4dd3-83f2-e03dde29b45c">
+<notes>
+<note appliesTo="source">line: 48</note>
+<note appliesTo="source">prefix: 5. </note>
+</notes>
+<segment>
+<source>Press NVDA+0 to disable braille input.</source>
+</segment>
+</unit>
+<unit id="cb01424b-8872-4eae-98e8-b6b71955cc22">
+<notes>
+<note appliesTo="source">line: 50</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Important Notes</source>
+</segment>
+</unit>
+<unit id="aaf654ac-66d7-4991-b949-0e5046861db8">
+<notes>
+<note appliesTo="source">line: 52</note>
+</notes>
+<segment>
+<source>This add-on uses NVDA's in-built braille input support.</source>
+</segment>
+</unit>
+<unit id="6ddecf61-29a7-47da-b815-d5c1cb2a3e3f">
+<notes>
+<note appliesTo="source">line: 53</note>
+</notes>
+<segment>
+<source>Therefore, the input table used is that specified in NVDA's Braille Settings dialog.</source>
+</segment>
+</unit>
+<unit id="ab9ec370-0988-48f4-ae74-5fbf9addeb03">
+<notes>
+<note appliesTo="source">line: 55</note>
+</notes>
+<segment>
+<source>Some keyboards, particularly laptop keyboards, cannot handle certain combinations of keys being pressed.</source>
+</segment>
+</unit>
+<unit id="40b0c969-30ac-4866-9a67-05313ea37b2a">
+<notes>
+<note appliesTo="source">line: 56</note>
+</notes>
+<segment>
+<source>When this happens, certain keys are simply ignored.</source>
+</segment>
+</unit>
+<unit id="22d77df4-3c02-4bc5-aaee-d0fa9fa54501">
+<notes>
+<note appliesTo="source">line: 57</note>
+</notes>
+<segment>
+<source>Unfortunately, there is nothing that can be done to fix this, as the keys are simply never received by Windows or NVDA.</source>
+</segment>
+</unit>
+<unit id="e43351cf-88ee-4f5d-bd1b-ef7874629fb8">
+<notes>
+<note appliesTo="source">line: 58</note>
+</notes>
+<segment>
+<source>In some cases, using the upper row of keys with either or both hands might help, as your keyboard may allow these keys.</source>
+</segment>
+</unit>
+<unit id="92fda306-9d47-4bbe-979c-5229734f8991">
+<notes>
+<note appliesTo="source">line: 60</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Changes for 44.0.0</source>
+</segment>
+</unit>
+<unit id="83e9d9cc-787a-4b7e-b001-c40d670c48fb">
+<notes>
+<note appliesTo="source">line: 62</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Added kannada.cti table.</source>
+</segment>
+</unit>
+<unit id="6c1361f9-9e50-453a-8092-08716b090652">
+<notes>
+<note appliesTo="source">line: 64</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Changes for 28.0.0</source>
+</segment>
+</unit>
+<unit id="a9f2f2a6-149e-492a-801c-412a5bd9928d">
+<notes>
+<note appliesTo="source">line: 66</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Changed default values for One hand mode.</source>
+</segment>
+</unit>
+<unit id="10726286-ea8a-42e2-9673-1e6e3c863eb9">
+<notes>
+<note appliesTo="source">line: 68</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Changes for 2023.02.23</source>
+</segment>
+</unit>
+<unit id="4837bbd7-d21f-4b46-8885-39dd9316c90f">
+<notes>
+<note appliesTo="source">line: 70</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Added ability to configure keys used to type dots in one hand mode.</source>
+</segment>
+</unit>
+<unit id="6b828d7c-88a7-486f-9155-034b888049ee">
+<notes>
+<note appliesTo="source">line: 71</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Now you can configure keys that should be ignored when typing in braille.</source>
+</segment>
+</unit>
+<unit id="55878ab4-ade9-4d19-8f3b-6aecb0e54538">
+<notes>
+<note appliesTo="source">line: 72</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>A restore to defaults button has been added to the add-on settings panel.</source>
+</segment>
+</unit>
+<unit id="04be6907-e9df-4847-a452-cbcb56ed84e5">
+<notes>
+<note appliesTo="source">line: 73</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Compatible with NVDA 2023.1.</source>
+</segment>
+</unit>
+<unit id="87441ad1-7afb-4e5f-81c6-e474eb08f7dc">
+<notes>
+<note appliesTo="source">line: 75</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Changes for 2022.1</source>
+</segment>
+</unit>
+<unit id="801f1155-fa84-4b52-8db5-949db350f330">
+<notes>
+<note appliesTo="source">line: 77</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Added ability to configure keys to send and clear dots when writing with one hand. Also, it's possible to set a timeout to send dots automatically, without pressing confirmation keys.</source>
+</segment>
+</unit>
+<unit id="82c785b2-425a-47bd-ade1-9a64f60962bb">
+<notes>
+<note appliesTo="source">line: 79</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Changes for 2021.1</source>
+</segment>
+</unit>
+<unit id="92ab1b98-0a37-4403-80ef-530fcfdbe996">
+<notes>
+<note appliesTo="source">line: 81</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>NVDA won't try to speak dots when One hand mode is not active or if space has been pressed.</source>
+</segment>
+</unit>
+<unit id="199dee45-b797-4dce-86dc-d7b31b4b2f07">
+<notes>
+<note appliesTo="source">line: 82</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Compatible with NVDA 2021.1.</source>
+</segment>
+</unit>
+<unit id="ac8f66ad-98ce-43e5-9ebe-42f36842cc24">
+<notes>
+<note appliesTo="source">line: 84</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Changes for 2020.1</source>
+</segment>
+</unit>
+<unit id="7ebb794d-2369-42b7-bd93-3d9fdab97117">
+<notes>
+<note appliesTo="source">line: 86</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>You can press space bar in combination with braille dots to emulate gestures, similar to commands available in braille displays.</source>
+</segment>
+</unit>
+<unit id="76364386-00d8-4bdb-8fee-d9d3708fd43e">
+<notes>
+<note appliesTo="source">line: 87</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Added an option to speak single dots typed in one hand mode.</source>
+</segment>
+</unit>
+<unit id="be9ae2f2-4e59-4025-ad56-a27b72375ac4">
+<notes>
+<note appliesTo="source">line: 89</note>
+<note appliesTo="source">prefix: ## </note>
+</notes>
+<segment>
+<source>Contributors</source>
+</segment>
+</unit>
+<unit id="6f390cb2-d0f8-4851-a3d8-232c6a96e18a">
+<notes>
+<note appliesTo="source">line: 91</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>James Teh</source>
+</segment>
+</unit>
+<unit id="f63d5478-0f8b-4978-8800-16a323a3d780">
+<notes>
+<note appliesTo="source">line: 92</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Noelia.</source>
+</segment>
+</unit>
+<unit id="8e079e57-0898-4229-85d9-025bc706be8a">
+<notes>
+<note appliesTo="source">line: 93</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Mohammadreza Rashad</source>
+</segment>
+</unit>
+<unit id="098a8516-4ea1-4b7b-801d-628164bcb154">
+<notes>
+<note appliesTo="source">line: 94</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Cagri Dogan</source>
+</segment>
+</unit>
+<unit id="c55e7820-0b21-49a6-b5d1-421a1af8d3f5">
+<notes>
+<note appliesTo="source">line: 95</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Bernd Dorer</source>
+</segment>
+</unit>
+<unit id="0e929f9c-1b57-47ce-afa1-7b61268b342d">
+<notes>
+<note appliesTo="source">line: 96</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Ângelo Abrantes</source>
+</segment>
+</unit>
+<unit id="86ecfffe-223e-4de1-a6b6-90d44d43454c">
+<notes>
+<note appliesTo="source">line: 97</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Cyrille Bougot</source>
+</segment>
+</unit>
+<unit id="7736364f-c5de-4952-a330-0b5dc1c41a56">
+<notes>
+<note appliesTo="source">line: 98</note>
+<note appliesTo="source">prefix: * </note>
+</notes>
+<segment>
+<source>Abdel.</source>
+</segment>
+</unit>
+</file>
+</xliff>
