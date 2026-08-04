@@ -1,129 +1,161 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the pcKbBrl package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
 msgid ""
 msgstr ""
-"Project-Id-Version: pcKbBrl 2021.1\n"
-"Report-Msgid-Bugs-To: nvda-translations@freelists.org\n"
-"POT-Creation-Date: 2021-07-21 09:36+0000\n"
-"PO-Revision-Date: 2025-06-28 17:21+0200\n"
-"Last-Translator: Nikola Jović <wwenikola123@gmail.com>\n"
-"Language-Team: Serbian <LL@li.org>\n"
-"Language: sr\n"
+"Project-Id-Version: nvdaaddons\n"
+"Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
+"POT-Creation-Date: 2026-07-21 06:02+0000\n"
+"PO-Revision-Date: 2026-07-31 15:51\n"
+"Last-Translator: \n"
+"Language-Team: Serbian (Latin)\n"
+"Language: sr_CS\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.6\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Crowdin-Project: nvdaaddons\n"
+"X-Crowdin-Project-ID: 780748\n"
+"X-Crowdin-Language: sr-CS\n"
+"X-Crowdin-File: pcKbBrl.pot\n"
+"X-Crowdin-File-ID: 228\n"
 
 #. Translators: Describes a command.
+#: addon\globalPlugins\pcKbBrl.py:378
 msgid "Toggles braille input from the PC keyboard."
 msgstr "Uključuje i isključuje brajev unos sa tastature računara."
 
 #. Translators: Reported when braille input from the PC keyboard is disabled.
+#: addon\globalPlugins\pcKbBrl.py:385
 msgid "Braille input from PC keyboard disabled"
 msgstr "Onemogućen brajev unos sa tastature računara"
 
 #. Translators: Reported when braille input from the PC keyboard is enabled.
+#: addon\globalPlugins\pcKbBrl.py:389
 msgid "Braille input from PC keyboard enabled"
 msgstr "Omogućen brajev unos sa tastature računara"
 
 #. Translators: Describes a command.
-#, fuzzy, python-brace-format
+#: addon\globalPlugins\pcKbBrl.py:397
+#, python-brace-format
 msgid "Shows the {summary} settings."
-msgstr "Prikazuje podešavanja za %s."
+msgstr ""
 
 #. Translators: label of a dialog.
+#: addon\globalPlugins\pcKbBrl.py:410
 msgid "&Type using one hand"
 msgstr "&Unos korišćenjem jedne ruke"
 
 #. Translators: label of a dialog.
+#: addon\globalPlugins\pcKbBrl.py:414
 msgid "&Speak dot when typing with one hand"
 msgstr "&Izgovaraj tačkice kada se koristi unos jednom rukom"
 
 #. Translators: label of a dialog.
+#: addon\globalPlugins\pcKbBrl.py:418
 msgid "&Timeout to send dots when writing with one hand (in ms)"
-msgstr ""
-"&Vreme isteka za unos tačkica kada se piše jednom rukom (u milisekundama)"
+msgstr "&Vreme isteka za unos tačkica kada se piše jednom rukom (u milisekundama)"
 
 #. Translators: label of a dialog.
+#: addon\globalPlugins\pcKbBrl.py:427
 msgid "Characters to con&firm when writing with one hand:"
 msgstr "Znakovi za &potvrdu kada se piše jednom rukom:"
 
 #. Translators: label of a dialog.
+#: addon\globalPlugins\pcKbBrl.py:431
 msgid "Characters to cance&l when writing with one hand:"
 msgstr "Znakovi za &otkazivanje kada se piše jednom rukom:"
 
 #. Translators: label of a dialog.
+#: addon\globalPlugins\pcKbBrl.py:435
 msgid "Characters for &dot1 when writing with one hand:"
 msgstr "Znakovi za &tačkicu 1 kada se piše jednom rukom:"
 
 #. Translators: label of a dialog.
+#: addon\globalPlugins\pcKbBrl.py:439
 msgid "Characters for dot2 when writing with one hand:"
 msgstr "Znakovi za tačkicu 2 kada se piše jednom rukom:"
 
 #. Translators: label of a dialog.
+#: addon\globalPlugins\pcKbBrl.py:443
 msgid "Characters for dot3 when writing with one hand:"
 msgstr "Znakovi za tačkicu 3 kada se piše jednom rukom:"
 
 #. Translators: label of a dialog.
+#: addon\globalPlugins\pcKbBrl.py:447
 msgid "Characters for dot4 when writing with one hand:"
 msgstr "Znakovi za tačkicu 4 kada se piše jednom rukom:"
 
 #. Translators: label of a dialog.
+#: addon\globalPlugins\pcKbBrl.py:451
 msgid "Characters for dot5 when writing with one hand:"
 msgstr "Znakovi za tačkicu 5 kada se piše jednom rukom:"
 
 #. Translators: label of a dialog.
+#: addon\globalPlugins\pcKbBrl.py:455
 msgid "Characters for dot6 when writing with one hand:"
 msgstr "Znakovi za tačkicu 6 kada se piše jednom rukom:"
 
 #. Translators: label of a dialog.
+#: addon\globalPlugins\pcKbBrl.py:459
 msgid "Characters for dot7 when writing with one hand:"
 msgstr "Znakovi za tačkicu 7 kada se piše jednom rukom:"
 
 #. Translators: label of a dialog.
+#: addon\globalPlugins\pcKbBrl.py:463
 msgid "Characters for dot8 when writing with one hand:"
 msgstr "Znakovi za tačkicu 8 kada se piše jednom rukom:"
 
 #. Translators: label of a dialog.
+#: addon\globalPlugins\pcKbBrl.py:467
 msgid "Characters to be &ignored when typing in braille:"
 msgstr "Znakove koje treba &ignorisati u brajevom unosu:"
 
 #. Translators: label of a dialog.
+#: addon\globalPlugins\pcKbBrl.py:471
 msgid "&Restore defaults"
 msgstr "&Vrati na podrazumevana"
 
 #. Translators: Message to report wrong configuration.
+#: addon\globalPlugins\pcKbBrl.py:512
 msgid "None or all dots should be configured."
 msgstr "Nijedna ili sve tačkice trebaju biti podešene."
 
 #. Translators: Title of message dialog.
 #. Translators: Title of message box
+#: addon\globalPlugins\pcKbBrl.py:514 addon\globalPlugins\pcKbBrl.py:535
+#: addon\globalPlugins\pcKbBrl.py:546
 msgid "Error"
 msgstr "Greška"
 
 #. Translators: Message to report wrong configuration.
+#: addon\globalPlugins\pcKbBrl.py:533
 msgid "Configured keys for pcKbBrl shouldn't be repeated."
 msgstr "Podešeni tasteri za brajev unos se ne smeju ponavljati."
 
 #. Translators: Message to report wrong configuration.
+#: addon\globalPlugins\pcKbBrl.py:544
 msgid "Set at least a confirm key if timeout for one hand mode is 0."
-msgstr ""
-"Podesite bar taster za potrdu ako je vreme isteka za režim unosa jednom "
-"rukom 0."
+msgstr "Podesite bar taster za potrdu ako je vreme isteka za režim unosa jednom rukom 0."
 
-#. Add-on summary, usually the user visible name of the addon.
-#. Translators: Summary for this add-on to be shown on installation and add-on information.
+#. Add-on summary/title, usually the user visible name of the add-on
+#. Translators: Summary/title for this add-on
+#. to be shown on installation and add-on information found in add-on store
+#: buildVars.py:20
 msgid "PC Keyboard Braille Input"
 msgstr "Brajev unos sa tastature računara"
 
 #. Add-on description
-#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+#. Translators: Long description to be shown for this add-on on add-on information from add-on store
+#: buildVars.py:23
 msgid "Allows braille to be entered via the PC keyboard."
 msgstr "Dozvoljava brajev unos sa tastature računara."
 
+#. Translators: what's new content for the add-on version to be shown in the add-on store
+#: buildVars.py:29
+msgid "* Restored Kannada cti input table.\n"
+"* Tested with NVDA 2026.2."
+msgstr ""
+
 #. Translators: The display name of a braille table.
+#: buildVars.py:97
 msgid "Kannada cti"
 msgstr "Kannada cti"
+
