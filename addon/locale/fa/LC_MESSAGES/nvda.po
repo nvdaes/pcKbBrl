@@ -1,161 +1,128 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the pcKbBrl package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: nvdaaddons\n"
-"Report-Msgid-Bugs-To: 'nvda-translations@groups.io'\n"
-"POT-Creation-Date: 2026-07-21 06:02+0000\n"
-"PO-Revision-Date: 2026-07-29 15:38\n"
-"Last-Translator: \n"
-"Language-Team: Persian\n"
-"Language: fa_IR\n"
+"Project-Id-Version: pcKbBrl 2021.5\n"
+"Report-Msgid-Bugs-To: nvda-translations@groups.io\n"
+"POT-Creation-Date: 2021-10-08 16:05+0000\n"
+"PO-Revision-Date: 2023-06-09 20:49+0330\n"
+"Last-Translator: Mohammadreza Rashad <mohammadreza5712@gmail.com>\n"
+"Language-Team: NVDA Translation Team <nvda-translations@groups.io>\n"
+"Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Crowdin-Project: nvdaaddons\n"
-"X-Crowdin-Project-ID: 780748\n"
-"X-Crowdin-Language: fa\n"
-"X-Crowdin-File: pcKbBrl.pot\n"
-"X-Crowdin-File-ID: 228\n"
+"X-Generator: Poedit 1.6.10\n"
 
 #. Translators: Describes a command.
-#: addon\globalPlugins\pcKbBrl.py:378
 msgid "Toggles braille input from the PC keyboard."
 msgstr "ورودیِ بریل را از صفحه‌کلیدِ رایانه فعال یا غیر فعال میکند."
 
 #. Translators: Reported when braille input from the PC keyboard is disabled.
-#: addon\globalPlugins\pcKbBrl.py:385
 msgid "Braille input from PC keyboard disabled"
 msgstr "ورودیِ بریل از صفحه‌کلیدِ رایانه غیرفعال شد"
 
 #. Translators: Reported when braille input from the PC keyboard is enabled.
-#: addon\globalPlugins\pcKbBrl.py:389
 msgid "Braille input from PC keyboard enabled"
 msgstr "ورودیِ بریل از صفحه‌کلیدِ رایانه فعال شد"
 
 #. Translators: Describes a command.
-#: addon\globalPlugins\pcKbBrl.py:397
-#, python-brace-format
+#, fuzzy, python-brace-format
 msgid "Shows the {summary} settings."
-msgstr ""
+msgstr "تنظیماتِ %s را نشان میدهد."
 
 #. Translators: label of a dialog.
-#: addon\globalPlugins\pcKbBrl.py:410
 msgid "&Type using one hand"
 msgstr "&تایپ کردن با یک دست"
 
 #. Translators: label of a dialog.
-#: addon\globalPlugins\pcKbBrl.py:414
 msgid "&Speak dot when typing with one hand"
 msgstr "&گُفتنِ نقطه‌ها هنگامِ تایپ با یک دست"
 
 #. Translators: label of a dialog.
-#: addon\globalPlugins\pcKbBrl.py:418
 msgid "&Timeout to send dots when writing with one hand (in ms)"
 msgstr "مدت زمانِ ارسال نقطه‌ها هنگامِ نوشتن با یک دست (به هزارمِ ثانیه)"
 
 #. Translators: label of a dialog.
-#: addon\globalPlugins\pcKbBrl.py:427
 msgid "Characters to con&firm when writing with one hand:"
 msgstr "نویسه‌هایی که برای &تایید هنگامِ تایپ با یک دست به کار میروند:"
 
 #. Translators: label of a dialog.
-#: addon\globalPlugins\pcKbBrl.py:431
 msgid "Characters to cance&l when writing with one hand:"
 msgstr "نویسه‌هایی که برای &لغو هنگامِ تایپ با یک دست به کار میروند:"
 
 #. Translators: label of a dialog.
-#: addon\globalPlugins\pcKbBrl.py:435
 msgid "Characters for &dot1 when writing with one hand:"
 msgstr "نویسه‌هایی که برای نقطه‌ی &۱ هنگامِ تایپ با یک دست به کار میروند:"
 
 #. Translators: label of a dialog.
-#: addon\globalPlugins\pcKbBrl.py:439
 msgid "Characters for dot2 when writing with one hand:"
 msgstr "نویسه‌هایی که برای نقطه‌ی &۲ هنگامِ تایپ با یک دست به کار میروند:"
 
 #. Translators: label of a dialog.
-#: addon\globalPlugins\pcKbBrl.py:443
 msgid "Characters for dot3 when writing with one hand:"
 msgstr "نویسه‌هایی که برای نقطه‌ی &۳ هنگامِ تایپ با یک دست به کار میروند:"
 
 #. Translators: label of a dialog.
-#: addon\globalPlugins\pcKbBrl.py:447
 msgid "Characters for dot4 when writing with one hand:"
 msgstr "نویسه‌هایی که برای نقطه‌ی &۴ هنگامِ تایپ با یک دست به کار میروند:"
 
 #. Translators: label of a dialog.
-#: addon\globalPlugins\pcKbBrl.py:451
 msgid "Characters for dot5 when writing with one hand:"
 msgstr "نویسه‌هایی که برای نقطه‌ی &۵ هنگامِ تایپ با یک دست به کار میروند:"
 
 #. Translators: label of a dialog.
-#: addon\globalPlugins\pcKbBrl.py:455
 msgid "Characters for dot6 when writing with one hand:"
 msgstr "نویسه‌هایی که برای نقطه‌ی &۶ هنگامِ تایپ با یک دست به کار میروند:"
 
 #. Translators: label of a dialog.
-#: addon\globalPlugins\pcKbBrl.py:459
 msgid "Characters for dot7 when writing with one hand:"
 msgstr "نویسه‌هایی که برای نقطه‌ی &۷ هنگامِ تایپ با یک دست به کار میروند:"
 
 #. Translators: label of a dialog.
-#: addon\globalPlugins\pcKbBrl.py:463
 msgid "Characters for dot8 when writing with one hand:"
 msgstr "نویسه‌هایی که برای نقطه‌ی &۸ هنگامِ تایپ با یک دست به کار میروند:"
 
 #. Translators: label of a dialog.
-#: addon\globalPlugins\pcKbBrl.py:467
 msgid "Characters to be &ignored when typing in braille:"
 msgstr "نویسه‌هایی که هنگامِ تایپ در بریل باید &نادیده گرفته شوند:"
 
 #. Translators: label of a dialog.
-#: addon\globalPlugins\pcKbBrl.py:471
 msgid "&Restore defaults"
 msgstr "&بازگرداندن به پیشفرض"
 
 #. Translators: Message to report wrong configuration.
-#: addon\globalPlugins\pcKbBrl.py:512
 msgid "None or all dots should be configured."
 msgstr "هیچیک یا همه‌ی نقطه‌ها باید پیکربندی شوند."
 
 #. Translators: Title of message dialog.
 #. Translators: Title of message box
-#: addon\globalPlugins\pcKbBrl.py:514 addon\globalPlugins\pcKbBrl.py:535
-#: addon\globalPlugins\pcKbBrl.py:546
 msgid "Error"
 msgstr "خطا"
 
 #. Translators: Message to report wrong configuration.
-#: addon\globalPlugins\pcKbBrl.py:533
 msgid "Configured keys for pcKbBrl shouldn't be repeated."
 msgstr "کلیدهای پیکربندی‌شده برای افزونه نباید تکراری باشند."
 
 #. Translators: Message to report wrong configuration.
-#: addon\globalPlugins\pcKbBrl.py:544
 msgid "Set at least a confirm key if timeout for one hand mode is 0."
-msgstr "چنانچه مدت زمان برای حالتِ یکدستی صفر است، دستکم یک کلید تایید برای آن تعیین کنید."
+msgstr ""
+"چنانچه مدت زمان برای حالتِ یکدستی صفر است، دستکم یک کلید تایید برای آن تعیین "
+"کنید."
 
-#. Add-on summary/title, usually the user visible name of the add-on
-#. Translators: Summary/title for this add-on
-#. to be shown on installation and add-on information found in add-on store
-#: buildVars.py:20
+#. Add-on summary, usually the user visible name of the addon.
+#. Translators: Summary for this add-on to be shown on installation and add-on information.
 msgid "PC Keyboard Braille Input"
 msgstr "ورودیِ بریل با صفحه‌کلیدِ رایانه"
 
 #. Add-on description
-#. Translators: Long description to be shown for this add-on on add-on information from add-on store
-#: buildVars.py:23
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
 msgid "Allows braille to be entered via the PC keyboard."
 msgstr "اجازه میدهد تا با صفحه‌کلیدِ رایانه، بریل وارد کنید."
 
-#. Translators: what's new content for the add-on version to be shown in the add-on store
-#: buildVars.py:29
-msgid "* Restored Kannada cti input table.\n"
-"* Tested with NVDA 2026.2."
-msgstr ""
-
 #. Translators: The display name of a braille table.
-#: buildVars.py:97
 msgid "Kannada cti"
 msgstr ""
-
