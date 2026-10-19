@@ -27,6 +27,7 @@ addon_info = AddonInfo(
 	addon_changelog=_(
 # Translators: what's new content for the add-on version to be shown in the add-on store
 """* Restored Kannada cti input table.
+* Updated deprecated symbols in source code.
 * Updates to translations.""",
 	),
 	# Author(s)
