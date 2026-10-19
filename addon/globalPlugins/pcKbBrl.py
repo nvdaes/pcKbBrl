@@ -18,7 +18,7 @@ import ui
 import speech
 import inputCore
 import keyboardHandler
-import brailleInput
+import braille.input
 import globalCommands
 import gui
 from gui import NVDASettingsDialog, guiHelper, nvdaControls
@@ -331,7 +331,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			return True
 		self._trappedKeys.add(vkCode)
 		if not self._gesture:
-			self._gesture = brailleInput.BrailleInputGesture()
+			self._gesture = braille.input.gesture.BrailleInputGesture()
 		if self._dot is not None:
 			if self._dot == " ":
 				self._gesture.space = True
@@ -362,7 +362,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			self._gesture = None
 		else:
 			if self._oneHandMode and self._speakDot and isinstance(self._dot, int):
-				brailleInput.speakDots(self._dot)
+				braille.input.inputHandler.speakDots(self._dot)
 		return False
 
 	def sendDots(self):
