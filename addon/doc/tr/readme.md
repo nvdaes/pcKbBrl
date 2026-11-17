@@ -1,11 +1,11 @@
-# NVDA için bilgisayar klavyesiyle braille giriş desteği #
+# NVDA İçin PC Klavyesinden Braille Girişi
 
-* Yazar: NV Access Limited, Noelia Ruiz Martínez
-* Telif Hakkı: 2012-2023 NV Access Limited, Noelia Ruiz Martínez
-* Lisans: GNU General Public lisansı sürüm 2.0
+* Yazarlar: NV Access Limited, Noelia Ruiz Martínez
+* Telif hakkı: 2012-2023 NV Access Limited, Noelia Ruiz Martínez
+* Lisans: GNU Genel Kamu Lisansı sürüm 2.0
 
-Bu eklenti bilgisayar klavyesiyle braille yazabilmenizi sağlar. Şimdilik
-aşağıdaki klavye düzenleri desteklenmektedir:
+Bu NVDA eklentisi, bilgisayar klavyesi aracılığıyla Braille olarak metin girilmesine olanak tanır.
+Şu anda aşağıdaki klavye düzenleri desteklenmektedir:
 
 * İngilizce QWERTY klavye.
 * Fransızca (Fransa).
@@ -18,75 +18,43 @@ aşağıdaki klavye düzenleri desteklenmektedir:
 
 ## Nasıl yapılandırılır
 
-NVDA menüsü tercihler alt menüsünde bulunan NVDA ayarları iletişim
-kutusundaki NVDA için bilgisayar klavyesinden braille giriş desteği
-kategorisinden eklentiyi ayarlayabilirsiniz. Eklentinin ayarlar iletişim
-kutusunu açmak için girdi hareketleri iletişim kutusunun konfigürasyon
-kategorisinden kısayol tuşu da atayabilirsiniz.
+Eklenti, NVDA menüsünün “Tercihler” alt menüsü altında yer alan Ayarlar iletişim kutusundaki ilgili kategoriden yapılandırılabilir. Eklenti ayarları panelini açmaya yarayan bir hareket, “Girdi hareketleri” iletişim kutusundaki “Yapılandırma” kategorisinden atanabilir.
 
-Tek elle yazmak istiyorsanız ilgili onay kutusunu işaretleyin. İki elle
-yazmak istiyorsanız onay kutusunu işaretsiz bırakın.
+Tek elle yazmak istiyorsanız ilgili onay kutusunu işaretleyin veya standart kipte (iki elle) yazmayı tercih ediyorsanız işaretli olmadığından emin olun.
 
-Tek elle yazarken NVDA'nın noktaları söylemesini de sağlayabilirsiniz.
+Ayrıca, "tek el modu" özelliğini kullanarak NVDA'nın tek bir nokta yazıp yazmayacağını da seçebilirsiniz.
 
-Tek elle yazarken noktaların otomatik olarak gönderilmesini istiyorsanız,
-0'dan büyük bir zaman aşımı ayarlamak için döndürme kontrolünü kullanın.
+Tek elle yazarken noktaların otomatik olarak gönderilmesini istiyorsanız, zaman aşımını 0'dan büyük bir değere ayarlamak için döndürme kontrolünü kullanın.
 
-Ayrıca, tek elle yazarken nokta göndermek, temizlemek ve oluşturmak için
-karakterlerin yanı sıra tek elde veya standart modda yok sayılacak
-karakterleri de ayarlayabilirsiniz.
+Ayrıca, tek elle yazarken gönderilecek, silinecek ve oluşturulacak noktaları belirleyebileceğiniz gibi, tek elle veya standart kipte göz ardı edilecek karakterleri de ayarlayabilirsiniz.
 
-Eklenti ayarları panelinde varsayılanları geri yüklemek de mümkündür.
+Eklenti ayarları panelinden varsayılan ayarlara geri dönmek de mümkündür.
 
-## Nasıl kullanılır
+## Nasıl Kullanılır
 
-1. Braille girişi etkinleştirmek için NVDA+0 kısayol tuşunu
-   kullanın. Kısayolu girdi hareketleri iletişim kutusunun braille
-   kategorisinden değiştirebilirsiniz.
-2. Braille klavyede yazıyormuş gibi bilgisayar klavyesindeki tuşlara aynı
-   anda basın.
-
-	* İki elle yazmak istiyorsanız aşağıdaki tuşları kullanın. Tuşlar Türkçe
-	  QWERTY klavyeye göre belirtilmiştir. Başka bir klavye düzeni
-	  kullanıyorsanız belirtilen tuşlara denk gelen tuşları kullanın:
-
-		* 1, 2 ve 3. noktalar için f, d ve s.
-		* 4, 5 ve 6. noktalar için j, k ve l.
-		* 7 ve 8. noktalar için a ve ş tuşlarını kullanın.
-		* Bir üst sıradaki tuşları da kullanabilirsiniz. Yani q, w, e, r, u, ı, o
-		  ve p.
-
-	* Tek elle yazmak isterseniz tuşlara aynı anda veya teker teker
-	  basabilirsiniz. İstediğiniz harfi yazdığınızda g veya h'ye
-	  basın. Yazarken yanlış nokta kullanırsanız t veya y tuşuna basarak harfi
-	  yeniden yazabilirsiniz. Türkçe QWERTY klavyede kullanılan tuşlar
-	  aşağıdadır:
-
+1. Braille girişini etkinleştirmek için NVDA+0 tuşlarına basın. Bu hareket, Girdi hareketleri iletişim kutusundaki Braille kategorisinden değiştirilebilir.
+2. PC klavyesindeki tuşlara, sanki bir braille klavyesiymiş gibi aynı anda basarak braille yazın.
+	* İki elinizi kullanarak metin girmek istiyorsanız, QWERTY İngilizce klavye kullanıyorsanız aşağıdaki tuşları, diğer klavye düzenlerinde ise ilgili konumlardaki tuşları kullanın:
+		* 1, 2 ve 3 numaralı noktalar için sırasıyla f, d ve s harfleri kullanılmıştır.
+		* 4, 5 ve 6 numaralı noktalar için sırasıyla j, k ve l harfleri kullanılmıştır.
+		* 7 ve 8 numaralı noktalar için sırasıyla a ve ş tuşlarını kullanın.
+		* Yukarıdaki satırdaki tuşları da kullanabilirsiniz; yani q, w, e, r, u, ı, o ve p.
+	* Tek elle metin yazmak istiyorsanız, tuşlara aynı anda veya birkaç tuş vuruşuyla basarak, istediğiniz karaktere karşılık gelen noktaları ekleyerek karakterleri oluşturabilirsiniz. Tüm noktaları ekledikten sonra karakteri yazmak için g veya h tuşuna basın. Bir karakter oluştururken hata yaparsanız, yazmadan önce t veya y tuşuna basarak noktaları silebilirsiniz. QWERTY İngilizce klavyede kullanılan tuşlar şunlardır:
 		* Sol el: 1, 2, 3, 4, 5, 6, 7 ve 8 noktaları için f, d, s, r, e, w, a, q.
-		* Sağ elle yazmak için j, k, l, u, ı, o, ş ve p tuşlarını
-		  kullanabilirsiniz.
+		* Sağ el: j, k, l, u, ı, o, ş, p (1, 2, 3, 4, 5, 6, 7 ve 8 numaralı noktalar için).
+3. Aralık tuşu, geri tuşu, enter tuşu ve fonksiyon tuşları dahil olmak üzere diğer tuşların çoğuna normal şekilde basabilirsiniz. Alt+Shift tuşlarına basmamaya dikkat edin, çünkü klavye düzenini değiştirmek girilen noktaları etkileyebilir.
+4. Sistemin imlecini hareket ettirmek (veya geçerli satırı bildirmek) için, tıpkı bir braille ekranı kullanıyormuşsunuz gibi, aralık tuşuna braille noktalarıyla birlikte basın. Örneğin, yukarı ok tuşunu taklit etmek için aralık+nokta 1, control+end tuşlarını taklit etmek için aralık+nokta 4+nokta 5+nokta 6, geçerli satırı bildirmek için aralık+nokta 1+nokta 4 vb.
+5. Braille girişini devre dışı bırakmak için NVDA+0 tuşlarına basın.
 
-3. Boşluk, back space, enter ve f tuşları gibi diğer çoğu tuş normal
-   işlevini gerçekleştirir. Alt+shift tuşlarına birlikte basmamaya dikkat
-   edin. Klavye düzeni değişeceğinden girilen noktalar değişebilir.
-4. Braille ekran kullanıyormuş gibi sistem imlecini hareket ettirmek veya
-   üzerinde bulunduğunuz satırı okutmak için boşluk tuşuyla birlikte braille
-   noktalara basın. Örneğin Boşluk+1. nokta yukarı ok, boşluk+4, 5 ve
-   6. noktalar ctrl+end tuşu işlevini görür. Boşluk+1 ve 4. noktalar
-   üzerinde bulunduğunuz satırı okur.
-5. Braille girişini devredışı bırakmak için NVDA+0 kısayol tuşunu kullanın.
+## Önemli Notlar
 
-## Önemli notlar
+Bu eklenti, NVDA'nın yerleşik Braille giriş desteğini kullanır.
+Bu nedenle, kullanılan girdi tablosu, NVDA'nın Braille Ayarları iletişim kutusunda belirtilen tablodur.
 
-Eklenti NVDA'nın braille girişi desteğini kullanır. NVDA'nın braille
-ayarları iletişim kutusunda seçilen braille tablosu kullanılır.
-
-Bazı klavyeler, özellikle de dizüstü bilgisayar klavyeleri, basılan belirli
-tuş kombinasyonlarını kaldıramaz.  Bu durumda, belirli tuşlar basitçe yok
-sayılır.  Ne yazık ki, tuşlar Windows veya NVDA tarafından hiçbir zaman
-alınmadığı için bunu düzeltmek için yapılabilecek bir şey yoktur.  Bazı
-durumlarda, klavyeniz bu tuşlara izin verebileceğinden, üst sıradaki tuşları
-bir veya iki elinizle kullanmak yardımcı olabilir.
+Bazı klavyeler, özellikle dizüstü bilgisayar klavyeleri, belirli tuş kombinasyonlarına basılmasını desteklemez.
+Bu durumda, bazı tuşlar basitçe göz ardı edilir.
+Ne yazık ki, bu sorunu gidermek için yapılabilecek hiçbir şey yoktur; zira tuşlara basıldığında Windows ya da NVDA tarafından hiçbir zaman algılanmamaktadır.
+Bazı durumlarda, klavyeniz bu tuşlara izin veriyorsa, üst sıradaki tuşları tek elle veya iki elle kullanmak yardımcı olabilir.
 
 ## 44.0.0 için değişiklikler
 
@@ -96,34 +64,28 @@ bir veya iki elinizle kullanmak yardımcı olabilir.
 
 * Tek el modu için varsayılan değerler değiştirildi.
 
-## 2023.02.23 için değişiklikler
+## 2023.02.23 Tarihine Ait Değişiklikler
 
-* Noktaları tek el modunda yazmak için kullanılan tuşları yapılandırma
-  özelliği eklendi.
-* Artık braille ile yazarken göz ardı edilmesi gereken tuşları
-  yapılandırabilirsiniz.
-* Eklenti ayarları paneline varsayılanlara geri yükle düğmesi eklendi.
+* Tek elle nokta yazma modunda kullanılan tuşları yapılandırma özelliği eklendi.
+* Artık Braille alfabesiyle yazarken göz ardı edilmesi gereken tuşları yapılandırabilirsiniz.
+* Eklenti ayarları paneline "Varsayılan ayarlara geri yükle" düğmesi eklendi.
 * NVDA 2023.1 ile uyumlu.
 
-## 2022.1 için değişiklikler
+## 2022.1 için Değişiklikler
 
-* Tek elle yazarken noktaları göndermek ve silmek için tuşları yapılandırma
-  yeteneği eklendi. Ayrıca, onay tuşlarına basmadan noktaların otomatik
-  olarak gönderilmesi için bir zaman aşımı süresi ayarlamak da mümkündür.
+* Tek elle yazarken nokta gönderme ve silme tuşlarını yapılandırma özelliği eklendi. Ayrıca, onay tuşlarına basmadan noktaları otomatik olarak göndermek için bir zaman aşımı ayarlamak da mümkün.
 
-## 2021.1 için değişiklikler
+## 2021.1 için Değişiklikler
 
-* NVDA, Tek el modu etkin olmadığında veya boşluğa basıldığında noktaları
-  söylemeye çalışmaz.
+* NVDA, tek el kipi etkin değilken veya boşluk tuşuna basıldığında noktaları seslendirmeye çalışmaz.
 * NVDA 2021.1 ile uyumlu.
 
-## 2020.1 sürümü için değişiklikler
+## 2020.1 için Değişiklikler
 
-* Braille ekranlardaki komutlara benzer olarak boşluk tuşuyla birlikte
-  braille noktalara basarak bazı komutları uygulayabilirsiniz.
-* Tek el modunda tek noktaları söyleme seçeneği eklendi.
+* Braille ekranlarında bulunan komutlara benzer şekilde, hareketleri taklit etmek için aralık tuşuna braille noktalarıyla birlikte basabilirsiniz.
+* Tek elle yazılan noktalara sesli komut ekleme seçeneği eklendi.
 
-## Katkıda bulunanlar
+## Katkıda Bulunanlar
 
 * James Teh
 * Noelia.
@@ -133,6 +95,3 @@ bir veya iki elinizle kullanmak yardımcı olabilir.
 * Ângelo Abrantes
 * Cyrille Bougot
 * Abdel.
-
-[[!tag dev stable]]
-
